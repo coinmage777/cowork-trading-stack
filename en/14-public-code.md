@@ -1,8 +1,6 @@
 # 14. Public Code
 
-This guide does not include the full source of the main bot. This is partly to protect alpha, and partly because copying full code into a different environment usually causes accidents instead of profits.
-
-This chapter lists open-source resources useful for learning or starting out, along with some mini tools that may be published later.
+This chapter lists open-source resources, SDKs, and tooling that are useful when building a trading automation stack.
 
 ## Open-source bots for learning
 
@@ -100,48 +98,6 @@ Freqtrade's backtesting module is a useful reference when learning pair trading.
 ### OpenAI Codex / GPT
 - ChatGPT
 - Code review / algorithm design
-
-## Mini tools that may be published
-
-As of writing, the following tools are candidates for publication once cleaned up:
-
-### 1) PnL Reporter
-Daily / weekly PnL reports from exchange balance snapshots. A generalized version of the internal tool.
-
-### 2) Funding Rate Monitor
-Compares funding rates across N exchanges → Telegram alert when threshold gap. For monitoring before building an arb bot.
-
-### 3) Cross-Exchange Price Aggregator
-Real-time mark price across exchanges into one dashboard. WebSocket-based.
-
-### 4) Backtest Skeleton
-Mini pair-trading backtest framework. config.yaml in → metrics out. A learning version of Ch 8.
-
-### 5) Bot Health Monitor
-Separate process that monitors bot state → detects zombie / hung → Telegram alert + auto-restart.
-
-If published, they would appear in a separate repo or as a `tools/` directory in this one.
-
-## What will not be published (and why)
-
-### 1) Full main pair-trading bot code
-Why:
-- Alpha protection
-- Built around a specific environment / exchanges / capital scale, does not generalize
-- Copy-running risks accidents
-
-### 2) Exact signal weights / parameters
-Why:
-- Time-varying (adjusted with market shifts)
-- May be overfit to the original dataset
-- No guarantee they work in different setups
-
-### 3) Specific exchanges / sizes in use
-Why:
-- Avoid self-trading / bot fingerprinting
-- Avoid capital exposure
-
-What this guide provides instead is **framework and mindset**. Use that to build original alpha.
 
 ## Recommended learning order
 
