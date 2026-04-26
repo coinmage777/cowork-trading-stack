@@ -1,17 +1,17 @@
 # 00. Before You Start
 
-A few things I want to clear up before you read further.
+A few points to clarify before reading further.
 
 ## What this guide is, and isn't
 
-**This is** working notes on the crypto trading automation setup I actually run: pair trading bots, [Polymarket](https://polymarket.com/?ref=coinmage) auto-trading, kimchi premium arbitrage, cross-exchange arb, an Obsidian-based research pipeline, and AI agent integrations. Tools I use almost daily.
+**This is** working notes on a crypto trading automation setup actually in production: pair trading bots, [Polymarket](https://polymarket.com/?ref=coinmage) auto-trading, kimchi premium arbitrage, cross-exchange arb, an Obsidian-based research pipeline, and AI agent integrations. Tools used almost daily.
 
 **This is not**:
-- A get-rich-quick guide. I will be very surprised if anyone reads this and immediately makes serious money.
-- A collection of guaranteed-profit strategies. Every strategy here can break, and most of mine have spent stretches in the red.
-- Polished, production-grade code. The bots I run break, get patched, and break again. That cycle is the work.
+- A get-rich-quick guide. Reading this and immediately making serious money would be a surprising outcome.
+- A collection of guaranteed-profit strategies. Every strategy here can break, and most have spent stretches in the red.
+- Polished, production-grade code. The bots described here break, get patched, and break again. That cycle is the work.
 
-This is not investment advice. It's a record of how I do this job.
+This is not investment advice. It is a record of how the work is done.
 
 ## Prerequisites
 
@@ -29,8 +29,8 @@ This is not investment advice. It's a record of how I do this job.
 - **Telegram** — alerts and remote control
 
 ### Capital
-- Start small. Genuinely small. Don't deposit serious capital until a bot has run stable for a week.
-- I started with maybe $50–$100 per exchange.
+- Start small. Genuinely small. Serious capital should not be deposited until a bot has run stable for a week.
+- A reasonable starting point is roughly $50–$100 per exchange.
 - Capital scales after the strategy is verified, not before.
 
 ### Time
@@ -58,7 +58,7 @@ Every chapter is meant to stand on its own, but the order builds naturally:
 - Turn on IP whitelisting wherever it's available
 - For meaningful capital, use multisig or hardware wallets
 
-Every code example in this guide has sensitive material replaced with placeholders. When you fill in your own keys, double-check that line.
+Every code example in this guide has sensitive material replaced with placeholders. When filling in real keys, double-check that line.
 
 ## On the nature of this material
 

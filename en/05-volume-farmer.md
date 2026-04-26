@@ -1,6 +1,6 @@
 # 05. Volume Farmer
 
-Before any serious trading bot, the simplest piece of automation — the volume farmer. Extremely useful when an exchange runs a points / rewards season based on trade volume.
+Before any serious trading bot, the simplest piece of automation is the volume farmer. It is useful when an exchange runs a points / rewards season based on trade volume.
 
 ## What is a volume farmer
 
@@ -8,7 +8,7 @@ The basic idea: **enter and exit both sides simultaneously, accumulating volume 
 
 Example: BTC long $1000 + BTC short $1000 → price moves but PnL ≈ 0, while $2000 of volume gets logged.
 
-Run this every N minutes and by season's end you've farmed points.
+Running this every N minutes accumulates points by season's end.
 
 ### Where it works
 
@@ -64,11 +64,11 @@ async def main():
 asyncio.run(main())
 ```
 
-That gives roughly $1200 volume per hour, ~$30k per day. Modest capital is enough.
+That gives roughly $1200 volume per hour, ~$30k per day. Modest capital is sufficient.
 
 ## Why the above breaks in production
 
-That naive version is illustrative, not production-ready. Issues I've actually hit:
+The naive version is illustrative, not production-ready. Common issues encountered in practice:
 
 ### 1) Slippage means PnL never converges to zero
 
@@ -84,11 +84,11 @@ best_ask = ob["asks"][0][0]
 # short: limit sell at best_ask (maker)
 ```
 
-You pay only maker fees, and on some exchanges, get rebates.
+Only maker fees apply, and on some exchanges, rebates are received.
 
 ### 2) One-sided fills create exposure
 
-Market orders fill almost instantly, but limits may not. If only one side fills, you're suddenly directional.
+Market orders fill almost instantly, but limits may not. If only one side fills, the position becomes directional.
 
 **Fix**:
 - After one side fills, if the other doesn't fill within N seconds, cancel and retry
@@ -136,17 +136,17 @@ If price moves 1% from entry to exit, both sides combined may not zero out (beca
 
 ### 5) Funding
 
-Perps have funding every 8 hours. While both legs are held, long pays + short receives = 0. But during the brief moment one leg is closed, you take funding cost.
+Perps have funding every 8 hours. While both legs are held, long pays + short receives = 0. During the brief moment one leg is closed, however, funding cost is incurred.
 
 **Fix**: avoid the 00, 08, 16 UTC funding windows.
 
-## My established pattern
+## Established pattern
 
-After lots of iteration, this is what I run:
+After repeated iteration, the following pattern has proven reliable:
 
 ### Per-exchange modularization
 
-An adapter layer hiding exchange differences:
+An adapter layer hides exchange differences:
 
 ```python
 class ExchangeAdapter:
@@ -176,7 +176,7 @@ Each exchange (`hyperliquid.py`, `bybit.py`, ...) implements this. The bot core 
 
 ### Choosing exchanges
 
-Metrics I watch:
+Metrics worth tracking:
 
 | Metric | Good value |
 |--------|------------|
@@ -189,13 +189,13 @@ Metrics I watch:
 
 ### Capital efficiency
 
-You don't need $100k of capital to push $100k of volume. With $1k size per cycle and 100 cycles, that's $100k volume on $1k capital.
+$100k of capital is not required to push $100k of volume. With $1k size per cycle and 100 cycles, that's $100k volume on $1k capital.
 
 Leverage shrinks it further. 5x leverage means $200 capital can support $1k size. Liquidation risk applies — manage it.
 
-## My exchange grouping
+## Exchange grouping
 
-I run multiple exchanges in parallel. If they all enter at the same instant, market impact is large and detection risk grows. So I stagger:
+Running multiple exchanges in parallel is common. If they all enter at the same instant, market impact is large and detection risk grows. Staggering helps:
 
 | Group | Stagger | Size mult | Exchanges |
 |-------|---------|-----------|-----------|
@@ -204,8 +204,8 @@ I run multiple exchanges in parallel. If they all enter at the same instant, mar
 | GC | 60s | 1.5x | 6 exchanges |
 | GD | 90s | 2.0x | 4 exchanges |
 
-Distributes market impact and reduces algorithmic detection risk.
+This distributes market impact and reduces algorithmic detection risk.
 
 ## Next chapter
 
-Next: real trading bot territory — multi Perp DEX pair trading. The core strategy of my main bot.
+Next: real trading bot territory — multi Perp DEX pair trading. The core strategy of the main bot.

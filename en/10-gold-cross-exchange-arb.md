@@ -1,8 +1,8 @@
 # 10. Gold Cross-Exchange Arb
 
-The arb pattern from my collection most worth generalizing — when a tokenized asset, or the same asset on different venues, trades at different prices.
+An arb pattern worth generalizing — when a tokenized asset, or the same asset on different venues, trades at different prices.
 
-The "Gold" name comes from where I first applied this — tokenized gold (PAXG, XAUT, etc.). The same pattern applies to other assets.
+The "Gold" name comes from an early application — tokenized gold (PAXG, XAUT, etc.). The same pattern applies to other assets.
 
 ## The tokenized gold market
 
@@ -21,7 +21,7 @@ In theory all of these represent the same asset (1 oz gold), but:
 
 The **tradable** subset of those gaps is what an automated bot captures.
 
-## My general pattern
+## General pattern
 
 ### Pattern 1: same asset across venues
 
@@ -180,15 +180,15 @@ def estimate_execution_price(order_book, side, qty):
 
 ### 3) Capital allocation
 
-How to split capital across N exchanges? My rules:
+How to split capital across N exchanges? Working rules:
 - At least 3–5x minimum size at each
 - Pair structure means one leg negative is offset by the other → liquidation risk modest
 - But if one exchange halts withdrawals, big problem → don't concentrate
-- My rule: max 25% of total capital at any one exchange
+- Rule of thumb: max 25% of total capital at any one exchange
 
 ### 4) Exchange trust tiers
 
-Newly launched venues carry withdrawal-halt / hack risk. My tiers:
+Newly launched venues carry withdrawal-halt / hack risk. Tiers:
 - **Tier 1** (trusted): Binance, OKX, Bybit, [Hyperliquid](https://miracletrade.com/?ref=coinmage), Coinbase
 - **Tier 2**: well-known DEXs (Lighter, dYdX, GMX)
 - **Tier 3**: new DEXs, small exchanges
@@ -204,7 +204,7 @@ Once entered, hold until convergence. During hold, anomaly detection matters:
 
 → check both mark prices + funding every 30 seconds, alert on threshold breach.
 
-## What I've actually run
+## Observed results in practice
 
 ### Successes (intermittent)
 
@@ -219,11 +219,11 @@ Once entered, hold until convergence. During hold, anomaly detection matters:
 
 ## Conclusion
 
-Cross-exchange arb is appealing but trades off capital efficiency / operational complexity / exchange risk. I don't run it as a main strategy — only as a side track.
+Cross-exchange arb is appealing but trades off capital efficiency / operational complexity / exchange risk. It works better as a side track than a main strategy.
 
-**My main strategy remains pair trading (BTC vs ETH within one exchange) for capital efficiency and operational simplicity.**
+**The main strategy remains pair trading (BTC vs ETH within one exchange) for capital efficiency and operational simplicity.**
 
-For arb, my best practice is alerting on rare windows of dislocation and entering manually.
+For arb, a practical approach is alerting on rare windows of dislocation and entering manually.
 
 ## Next chapter
 

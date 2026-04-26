@@ -1,10 +1,10 @@
 # 04. Obsidian + Telegram
 
-Knowledge has to compound to become alpha, and alerts have to fire for systems to actually run. Obsidian and Telegram are the two pillars of my workflow.
+Knowledge has to compound to become alpha, and alerts have to fire for systems to actually run. Obsidian and Telegram are the two pillars of this workflow.
 
 ## Obsidian — research compounding system
 
-My vault has 145+ notes and 670+ wikilinks. It contains 30+ project research files, 90+ tracked airdrops, 20+ blog guides, and trading journals.
+A mature vault can hold 145+ notes and 670+ wikilinks, covering 30+ project research files, 90+ tracked airdrops, 20+ blog guides, and trading journals.
 
 ### Why Obsidian
 
@@ -15,7 +15,7 @@ My vault has 145+ notes and 670+ wikilinks. It contains 30+ project research fil
 
 ### Vault structure
 
-My top-level folders:
+A typical top-level folder layout:
 
 ```
 Obsidian Vault/
@@ -39,7 +39,7 @@ Obsidian Vault/
 - **Trading/daily/YYYY-MM-DD.md** — daily trade journal, auto-generated from template
 - **Memory/MEMORY.md** — AI agent memory index (paired with MemKraft from Ch 3)
 
-### Plugins I run
+### Plugins in use
 
 Eight:
 1. **Dataview** — query notes like a database. Core of dashboards.
@@ -104,15 +104,15 @@ exchanges:
 - [ ]
 ```
 
-I auto-generate this note every day with a script that pulls from the bot DB.
+This note can be auto-generated daily by a script that pulls from the bot DB.
 
 ### Graph view
 
-Obsidian's real weapon. Wikilinks form a graph automatically. My vault has clear clusters around 47 core notes — "exchange-related notes" / "strategy-related notes" emerge visually.
+Obsidian's real strength. Wikilinks form a graph automatically. A vault with around 47 core notes typically forms clear clusters — "exchange-related notes" / "strategy-related notes" emerge visually.
 
 ### Backup
 
-I sync the entire vault to a private git repo:
+Sync the entire vault to a private git repo:
 
 ```bash
 cd "$OBSIDIAN_VAULT"
@@ -128,17 +128,17 @@ Then daily:
 git add . && git commit -m "$(date +%Y-%m-%d)" && git push
 ```
 
-Cron does this daily for me automatically.
+Cron handles this daily on an automated schedule.
 
 ## Telegram — alerts + remote control
 
-Telegram is half my bot's UI. Alerts, commands, PnL reports, kill-switch — all there.
+Telegram serves as half of the bot's UI. Alerts, commands, PnL reports, kill-switch — all there.
 
 ### Create the bot
 
 1. On Telegram, find [@BotFather](https://t.me/BotFather)
 2. `/newbot` → name → token returned
-3. Start a chat with your new bot → `/start`
+3. Start a chat with the new bot → `/start`
 4. Visit `https://api.telegram.org/bot<TOKEN>/getUpdates` → grab `chat.id`
 
 ### Env vars
@@ -171,7 +171,7 @@ await notify(f"Position opened: BTC short, est PnL +0.5%")
 
 ### Dedup / throttle
 
-Avoiding alert spam matters. My pattern:
+Avoiding alert spam matters. A common pattern:
 
 ```python
 class Notifier:
@@ -187,11 +187,11 @@ class Notifier:
         await notify(text)
 ```
 
-Same alert key won't fire twice within 10 minutes.
+The same alert key won't fire twice within 10 minutes.
 
 ### Alert priorities
 
-What my bots send:
+Typical bot alert categories:
 
 | Priority | Cases | Frequency |
 |----------|-------|-----------|
@@ -202,7 +202,7 @@ What my bots send:
 
 ### Remote control — Telegram Commander
 
-A separate bot that accepts commands. My commander supports:
+A separate bot that accepts commands. A typical commander supports:
 
 | Command | Action |
 |---------|--------|
@@ -230,11 +230,11 @@ async def handle(update):
     # ...
 ```
 
-Without this, anyone who finds your token can `/close` your positions. Game over.
+Without this, anyone who finds the token can `/close` open positions. Game over.
 
 ### File-trigger pattern (Windows-friendly)
 
-Windows doesn't accept SIGHUP / SIGTERM from outside processes. So I use a file-trigger pattern:
+Windows doesn't accept SIGHUP / SIGTERM from outside processes. A file-trigger pattern works around this:
 
 ```python
 # trigger_watcher.py
@@ -254,7 +254,7 @@ async def watch():
         await asyncio.sleep(2)
 ```
 
-The commander bot, when receiving `/restart`, writes `triggers/restart.trigger`. The bot detects within 2 seconds → handles → deletes the file.
+When the commander bot receives `/restart`, it writes `triggers/restart.trigger`. The bot detects it within 2 seconds → handles it → deletes the file.
 
 OS-independent and clean for mobile control via Telegram.
 

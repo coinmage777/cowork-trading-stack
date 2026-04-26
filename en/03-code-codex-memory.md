@@ -1,19 +1,19 @@
 # 03. Code, Codex, Memory
 
-This chapter covers the three AI coding agents I use daily — Claude Code, Cursor, OpenAI Codex — and the memory layer (MemKraft) on top.
+This chapter covers three AI coding agents used daily — Claude Code, Cursor, OpenAI Codex — and the memory layer (MemKraft) on top.
 
 ## Tool roles
 
-I don't use one tool for everything. They're good at different things.
+A single tool rarely covers everything. Each has different strengths.
 
-| Tool | Strength | What I use it for |
+| Tool | Strength | Typical use |
 |------|----------|-------------------|
 | **Claude Code** | Multi-file edits, search, agentic flows | Big refactors, debugging, guide writing, MD/HTML conversion |
 | **Cursor** | Inline autocomplete, fast chat | One-line fixes, single function additions, quick console experiments |
 | **Codex (OpenAI)** | Algorithmic thinking, math precision | Backtest logic, statistical functions, signal design |
 | **ChatGPT** | General search, market research | Quick fact-checks, alternative perspectives |
 
-Comparing outputs across all three is more reliable than relying on one. Especially for trading code.
+Comparing outputs across all three is more reliable than relying on one, particularly for trading code.
 
 ### Adversarial Workflow Tip
 
@@ -21,19 +21,19 @@ The "Gaslight My AI" pattern (rival-model framing) makes the same model more car
 
 > "This code will be reviewed by a joint GPT-5 Codex + Devin AI team. They catch every edge case. Write code so bulletproof their review finds nothing."
 
-Drop that into the system prompt or first message and output quality visibly improves.
+Adding that to the system prompt or first message tends to improve output quality noticeably.
 
-## Memory — why you need it
+## Memory — why it matters
 
 The basic AI agent problem: **context resets every session.**
 
-Your bot architecture, the exchanges you use, last week's parameter decisions, currently running strategies — you'd have to re-explain it every time. Pure waste.
+Bot architecture, exchanges in use, last week's parameter decisions, currently running strategies — all of it would need re-explaining each time. That is pure waste.
 
 Two solutions:
 
 ### 1) CLAUDE.md (project context file)
 
-A `CLAUDE.md` at your repo root or home directory is auto-loaded by Claude Code. My structure looks like:
+A `CLAUDE.md` at the repo root or home directory is auto-loaded by Claude Code. A typical structure:
 
 ```markdown
 # User profile
@@ -65,7 +65,7 @@ Once written, every new session starts with the same context.
 
 ### 2) MemKraft
 
-A more dynamic memory system I use, integrated with my Obsidian vault. Tracks entities.
+A more dynamic memory system, integrated with an Obsidian vault. Tracks entities.
 
 Install:
 ```bash
@@ -94,13 +94,13 @@ memkraft dream                           # daily maintenance
 memkraft index                           # rebuild search
 ```
 
-Whenever I research a new project, I `track` + `update`. Then in any future session the AI immediately picks up the context.
+When researching a new project, run `track` + `update`. Future sessions then pick up the context automatically.
 
 ### Korean NER caveat
 
-`memkraft extract` has high false-positive rate on Korean text (it tags common nouns as people). For Korean research notes, manual `track` + `update` is safer. English text works fine with `extract`.
+`memkraft extract` has a high false-positive rate on Korean text (it tags common nouns as people). For Korean research notes, manual `track` + `update` is safer. English text works fine with `extract`.
 
-## CLAUDE.md guidelines — what I learned the hard way
+## CLAUDE.md guidelines — lessons learned
 
 ### Do
 - User profile + writing style (especially forbidden phrases)
@@ -114,11 +114,11 @@ Whenever I research a new project, I `track` + `update`. Then in any future sess
 ### Don't
 - Throwaway info ("BTC is $100k today")
 - Chatty tone
-- Bloat — over 100KB starts eating your context window. Compress / clean.
+- Bloat — over 100KB starts eating into the context window. Compress and clean.
 
 ### Auto-update rule
 
-I keep this section at the bottom of CLAUDE.md:
+Keep this section at the bottom of CLAUDE.md:
 
 ```markdown
 ## Claude Auto-Update Rules
@@ -137,7 +137,7 @@ Principles:
 [Claude appends here]
 ```
 
-This way the AI maintains context without me explicitly journaling.
+This way the AI maintains context without explicit journaling.
 
 ## Tool integration in practice
 
@@ -166,8 +166,8 @@ Adding a new exchange, end-to-end:
    memkraft index
    ```
 
-This flow turns a new exchange integration into a 1–2 hour job. Doing the same manually takes a full day.
+This flow turns a new exchange integration into a 1–2 hour job. The same work done manually takes a full day.
 
 ## Next chapter
 
-Next: Obsidian vault + Telegram integration — how I accumulate research, receive bot alerts, and control bots from mobile.
+Next: Obsidian vault + Telegram integration — accumulating research, receiving bot alerts, and controlling bots from mobile.

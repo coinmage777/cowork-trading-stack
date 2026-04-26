@@ -1,8 +1,8 @@
 # 14. Public Code
 
-This guide doesn't include the full source of my main bot. Partly to protect alpha, partly because copying full code into a different environment usually causes accidents instead of profits.
+This guide does not include the full source of the main bot. This is partly to protect alpha, and partly because copying full code into a different environment usually causes accidents instead of profits.
 
-This chapter lists open-source resources useful for learning / starting, and some mini tools I might publish later.
+This chapter lists open-source resources useful for learning or starting out, along with some mini tools that may be published later.
 
 ## Open-source bots for learning
 
@@ -13,12 +13,12 @@ This chapter lists open-source resources useful for learning / starting, and som
 - Wide CEX support (ccxt-based)
 - Best starting point
 
-I referenced freqtrade's backtesting module while learning pair trading.
+Freqtrade's backtesting module is a useful reference when learning pair trading.
 
 ### Hummingbot
 - https://github.com/hummingbot/hummingbot
 - Specialized for market making and arbitrage
-- Strong recommendation for algo-trading entrants
+- Recommended for algo-trading entrants
 
 ### Jesse
 - https://github.com/jesse-ai/jesse
@@ -28,7 +28,7 @@ I referenced freqtrade's backtesting module while learning pair trading.
 ### CCXT
 - https://github.com/ccxt/ccxt
 - 100+ exchange unified library
-- I rely on ccxt for the CEX side
+- A common dependency on the CEX side
 
 ## SDKs / official per-exchange
 
@@ -48,13 +48,13 @@ I referenced freqtrade's backtesting module while learning pair trading.
 ### [Polymarket](https://polymarket.com/?ref=coinmage)
 - https://github.com/Polymarket/py-clob-client
 - CLOB client (Python)
-- My Polymarket bot is built on this SDK
+- The Polymarket bot referenced in this guide is built on this SDK
 
 ## Data / analysis
 
 ### Pandas + NumPy + SciPy
 - Standard for backtests / stats / signal design
-- All my backtest code sits on top of these
+- Backtest code generally sits on top of these
 
 ### Vectorbt
 - https://github.com/polakowo/vectorbt
@@ -78,7 +78,7 @@ I referenced freqtrade's backtesting module while learning pair trading.
 - Watchdog + auto-restart
 
 ### Docker
-- Bot isolation / deployment — I don't, but if you're comfortable, fine
+- Bot isolation / deployment — optional, suitable for those comfortable with it
 - Useful for dependency conflicts
 
 ### rclone
@@ -88,7 +88,7 @@ I referenced freqtrade's backtesting module while learning pair trading.
 ## AI tools
 
 ### Claude (Anthropic)
-- My main. API + Claude Code
+- Primary tool. API + Claude Code
 
 ### Cursor
 - VS Code fork, AI integrated
@@ -101,12 +101,12 @@ I referenced freqtrade's backtesting module while learning pair trading.
 - ChatGPT
 - Code review / algorithm design
 
-## Mini tools I might publish
+## Mini tools that may be published
 
-As of writing, these are tools I'd consider publishing once cleaned up:
+As of writing, the following tools are candidates for publication once cleaned up:
 
 ### 1) PnL Reporter
-Daily / weekly PnL reports from exchange balance snapshots. A generalized version of what I run.
+Daily / weekly PnL reports from exchange balance snapshots. A generalized version of the internal tool.
 
 ### 2) Funding Rate Monitor
 Compares funding rates across N exchanges → Telegram alert when threshold gap. For monitoring before building an arb bot.
@@ -120,28 +120,28 @@ Mini pair-trading backtest framework. config.yaml in → metrics out. A learning
 ### 5) Bot Health Monitor
 Separate process that monitors bot state → detects zombie / hung → Telegram alert + auto-restart.
 
-If published, they'd appear in a separate repo or as a `tools/` directory in this one.
+If published, they would appear in a separate repo or as a `tools/` directory in this one.
 
-## What I won't publish (and why)
+## What will not be published (and why)
 
 ### 1) Full main pair-trading bot code
 Why:
 - Alpha protection
-- Built around my environment / exchanges / capital scale, doesn't generalize
+- Built around a specific environment / exchanges / capital scale, does not generalize
 - Copy-running risks accidents
 
 ### 2) Exact signal weights / parameters
 Why:
 - Time-varying (adjusted with market shifts)
-- May be overfit to my data
+- May be overfit to the original dataset
 - No guarantee they work in different setups
 
-### 3) Specific exchanges / sizes I run
+### 3) Specific exchanges / sizes in use
 Why:
 - Avoid self-trading / bot fingerprinting
 - Avoid capital exposure
 
-What this guide gives instead is **framework and mindset**. Use that to build your own alpha.
+What this guide provides instead is **framework and mindset**. Use that to build original alpha.
 
 ## Recommended learning order
 
@@ -151,11 +151,11 @@ What this guide gives instead is **framework and mindset**. Use that to build yo
 4. **Hyperliquid SDK** — first DEX bot (paper)
 5. **Build your own bot** — from scratch, fitted to your environment
 
-If you can't write a single line of code yourself, AI can do 90% of it, but you can't operate what you don't understand. Anything you don't understand will cause an incident.
+If you cannot write a single line of code yourself, AI can do 90% of it, but a system you do not understand cannot be operated. Anything not understood will cause an incident.
 
-## My GitHub
+## GitHub
 
-Mini tools and guide updates I publish:
+Mini tools and guide updates published here:
 - https://github.com/coinmage777
 
 This repo (`cowork-trading-stack`) may receive updates over time. Watch / Star to be notified.

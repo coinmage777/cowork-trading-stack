@@ -1,17 +1,17 @@
 # 13. Step-by-Step Roadmap
 
-The path I took from zero to where I am, organized by time / milestones. This is my experience, not a universal answer. Pace yourself.
+A path from zero to operational, organized by time / milestones. This represents one trajectory, not a universal answer. Pace accordingly.
 
 ## Before week 0
 
-Capital: small. I started with $50–$100 per exchange.
+Capital: small. Starting size around $50–$100 per exchange.
 Time: weekends + 1–2 evening hours weekdays.
-Knowledge: basic Python + can read a chart.
+Knowledge: basic Python + ability to read a chart.
 
 ## Week 1 — environment setup
 
 ### Goal
-Tools should feel natural in your hands.
+Tools should feel natural in hand.
 
 ### To do
 - [ ] Install VS Code / Cursor
@@ -111,11 +111,11 @@ Build a knowledge base. Trade / research / content compounding.
 - [ ] Set up vault folder structure (Ch 4)
 - [ ] Write daily trade journal template
 - [ ] Daily journaling on trades / bot ops
-- [ ] Write CLAUDE.md (your context)
+- [ ] Write CLAUDE.md (project context)
 - [ ] MemKraft setup (optional)
-- [ ] First project research note (an exchange / token you care about)
+- [ ] First project research note (an exchange / token of interest)
 
-At this point, you stop "trading" and start systems thinking.
+At this point, the activity shifts from "trading" to systems thinking.
 
 ## Weeks 9–12 — pair trading, phase 1
 
@@ -140,7 +140,7 @@ Backtest + paper trade.
 Small-size live + stability verification.
 
 ### To do
-- [ ] Live on one exchange (I recommend [Hyperliquid](https://miracletrade.com/?ref=coinmage) — my main)
+- [ ] Live on one exchange ([Hyperliquid](https://miracletrade.com/?ref=coinmage) is one option)
 - [ ] Very small size (5% of capital)
 - [ ] All trades logged to DB
 - [ ] Daily PnL report (cron / daily_report.py)
@@ -153,7 +153,7 @@ Small-size live + stability verification.
 - Exchange API change / rate limits
 - Market regime change
 
-This is when you fully apply Ch 11 (operational infra).
+This is the point where Ch 11 (operational infra) applies in full.
 
 ## Weeks 17–24 — multi-exchange / advanced
 
@@ -179,7 +179,7 @@ One thing at a time.
 ## Weeks 25–36 — infrastructure deepening
 
 ### Goal
-Systems thinking matures. You spend more time on infra / monitoring than on bot code.
+Systems thinking matures. More time goes to infra / monitoring than to bot code.
 
 ### To do
 - [ ] VPS setup (Contabo / Hetzner)
@@ -191,7 +191,7 @@ Systems thinking matures. You spend more time on infra / monitoring than on bot 
 - [ ] Backup automation (DB / code)
 - [ ] AI memory system (CLAUDE.md + MemKraft)
 
-At this point, the bot can run for days without you. Your time is freed.
+At this point, the bot can run for days unattended. Time is freed.
 
 ## Week 37+ — diversify
 
@@ -205,18 +205,18 @@ Strategies beyond pair trading.
 - New signals / new asset pairs
 - Content (blog / YouTube)
 
-Each new strategy as a separate bot track. Don't let breakage in one kill all of them.
+Each new strategy belongs on a separate bot track. Breakage in one should not kill the others.
 
 ## End of year 1
 
-By now you should:
-- Run 1–2 bots stably
-- Receive auto daily PnL reports
-- Add new exchanges / signals in 1–2 days
-- Self-analyze incidents and loss patterns
-- Have your own alpha hypotheses + a verification system
+By this point, the expected baseline:
+- 1–2 bots running stably
+- Auto daily PnL reports received
+- New exchanges / signals added in 1–2 days
+- Self-analysis of incidents and loss patterns
+- Personal alpha hypotheses + a verification system
 
-Whether profits are large depends. Mine were near break-even for the first year. Real returns came in years 2–3.
+Profit magnitude varies. Year-one results often land near break-even. Real returns tend to arrive in years 2–3.
 
 ## Years 2–3 — scale
 
@@ -227,9 +227,9 @@ Grow capital + new domains.
 - Grow capital (only on verified strategies)
 - New markets (prediction markets / options / DeFi yields)
 
-One thing I'd recommend: **even as profits grow, don't deploy all your capital.** Scale slowly, diversify for risk.
+A general principle: **even as profits grow, do not deploy all available capital.** Scale slowly, diversify for risk.
 
-## Common mistakes — ones I made
+## Common mistakes
 
 ### 1) Going full size on day 1
 Untested strategy at full size → big loss. Always 5% → 25% → 50% → 100% staircase.
@@ -238,7 +238,7 @@ Untested strategy at full size → big loss. Always 5% → 25% → 50% → 100% 
 "This feels right" → live → 27 days red. One hour of backtest catches it.
 
 ### 3) Leaking alpha
-Bragging "my bot does this" kills the alpha. I don't share specific details (this guide is framework only).
+Bragging "my bot does this" kills the alpha. Specific details should stay private (this guide is framework only).
 
 ### 4) Too many exchanges / strategies at once
 Three new exchanges in a week = debugging hell. One at a time.
@@ -247,11 +247,11 @@ Three new exchanges in a week = debugging hell. One at a time.
 "It's running fine" → days later, big loss discovered. Five minutes a day at minimum.
 
 ### 6) Ignoring data
-Decide by feel without checking the DB → always work on the wrong thing.
+Decisions made by feel without checking the DB tend to focus on the wrong thing.
 
 ### 7) Zombie processes
 Old instance still alive after restart → duplicate orders → big loss. Always `ps aux` confirm.
 
 ## Next chapter
 
-Next: public code — open-source projects worth using and tools I might publish later.
+Next: public code — open-source projects worth using and tools that may be published later.
