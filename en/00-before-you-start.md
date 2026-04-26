@@ -62,7 +62,7 @@ Every code example in this guide has sensitive material replaced with placeholde
 
 ## One more disclaimer
 
-I may or may not be an ambassador / partner / advisor at any given exchange. What tokens I hold, what positions I have, what alpha I'm running — all of that changes constantly and isn't relevant to this document. I use referral links because almost everyone does, and I won't pretend otherwise. I try not to let that affect the guide's objectivity, but I'm human, so I can't promise 100%.
+I may or may not be an ambassador / partner / advisor at any given exchange. What tokens I hold, what positions I have, what alpha I'm running — all of that changes constantly and isn't relevant to this document. I use exchange sign-up links because almost everyone does, and I won't pretend otherwise. I try not to let that affect the guide's objectivity, but I'm human, so I can't promise 100%.
 
 The strategies I actually run are more numerous than what's described here, and some of what's described may already be a strategy I don't run anymore. Treat this as a snapshot at the moment of publication.
 
