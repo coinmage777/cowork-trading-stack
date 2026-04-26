@@ -371,7 +371,7 @@ Only **hedge_arb** can run in live mode. **expiry_snipe is disabled** due to rev
 |---------|------|-------|---------|-----------------|
 | `_balance_snapshot_loop` | main.py | 346–376 | Record USDC balance every 10min | Active |
 | `_weather_loop` | main.py | 436–530 | Weather market trading (paper/live) | Disabled in config |
-| `_predict_loop` | main.py | 609–641 | Predict.fun crypto sniper | Active (live) |
+| `_predict_loop` | main.py | 609–641 | [Predict.fun](https://predict.fun?ref=5302B) crypto sniper | Active (live) |
 | `_close_trade_if_resolved` | main.py | 1258–1334 | Resolution & PnL settlement | Active |
 | `hedge_arb strategy` | market_scanner.py | 533–554 | Risk-free arbitrage (up+down<1.00) | Whitelisted (not in live) |
 

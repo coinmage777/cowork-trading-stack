@@ -4,7 +4,7 @@ This file provides guidance to Claude Code when working with this repository.
 
 ## Project Overview
 
-예측 시장(Polymarket, Predict.fun) 자동 베팅 봇. USDC 기반 포지션 관리, 자동 리딤, 잔고 추적.
+예측 시장(Polymarket, [Predict.fun](https://predict.fun?ref=5302B)) 자동 베팅 봇. USDC 기반 포지션 관리, 자동 리딤, 잔고 추적.
 
 ## Commands
 
@@ -32,7 +32,7 @@ python -c "import json; d=json.load(open('balance_snapshots.json')); print(d[-1]
 ## 현재 상태 (2026-03-31)
 
 - **expiry_snipe**: LIVE 비활성 (역선택 문제, 체결 시 29% WR)
-- **Predict.fun**: 유일한 라이브 전략 (스나이프 + 자동 클레임)
+- **[Predict.fun](https://predict.fun?ref=5302B)**: 유일한 라이브 전략 (스나이프 + 자동 클레임)
 - **날씨**: 비활성 (ghost position, 중복 진입 문제)
 - **USDC 잔고**: ~$99 (보존 중)
 - **시작 잔고**: ~$249 → $99 (손실 -$150)
@@ -42,7 +42,7 @@ python -c "import json; d=json.load(open('balance_snapshots.json')); print(d[-1]
 - **DB PnL은 참고용** — 온체인 USDC 잔고가 진실의 원천
 - **side 파라미터**: DOWN 베팅 = DOWN 토큰 BUY. side는 항상 BUY
 - **verify_order_fill + cancel = 절대 금지** (ghost position 생성)
-- **Predict.fun 가스비**: Signer EOA에 BNB 필요 (Predict Account 아님)
+- **[Predict.fun](https://predict.fun?ref=5302B) 가스비**: Signer EOA에 BNB 필요 (Predict Account 아님)
 
 ---
 
@@ -62,7 +62,7 @@ python -c "import json; d=json.load(open('balance_snapshots.json')); print(d[-1]
 > - side/token_id 혼동 (UP/DOWN 토큰 방향 실수 → 반대 베팅)
 > - Polymarket CLOB 최소가 0.001 미만 주문 차단
 > - auto_claimer fetch_all_redeemable에서 percentPnl 필터 버그 재발
-> - Predict.fun 가스비 부족 시 클레임 루프 무한 반복
+> - [Predict.fun](https://predict.fun?ref=5302B) 가스비 부족 시 클레임 루프 무한 반복
 > - SQLite busy (동시 접근), DB 에러 시 봇 크래시
 > - balance_snapshots.json 오염 (리딤 전후 잔고 점프)
 >
@@ -84,8 +84,8 @@ python -c "import json; d=json.load(open('balance_snapshots.json')); print(d[-1]
 
 > GPT-5 Codex가 이 계획을 구현한다. 이 봇의 실패 이력을 고려하라:
 > - Polymarket CLOB의 UP/DOWN 토큰 구조와 오더북 특성
-> - Predict.fun SDK의 Signer EOA vs Predict Account 지갑 구조
+> - [Predict.fun](https://predict.fun?ref=5302B) SDK의 Signer EOA vs Predict Account 지갑 구조
 > - .env 설정과 config.py 설정의 우선순위
 > - balance_snapshots.json 기반 실제 수익 추적 파이프라인
 > - claim_venv 격리 환경 의존성
-> - 기존 라이브 전략(Predict.fun)에 대한 하위 호환성
+> - 기존 라이브 전략([Predict.fun](https://predict.fun?ref=5302B))에 대한 하위 호환성

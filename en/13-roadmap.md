@@ -199,7 +199,7 @@ At this point, the bot can run for days unattended. Time is freed.
 Strategies beyond pair trading.
 
 ### Candidates
-- [Polymarket](https://polymarket.com/?ref=coinmage) / [Predict.fun](https://predict.fun/?ref=coinmage) (Ch 9)
+- [Polymarket](https://polymarket.com/?ref=coinmage) / [Predict.fun](https://predict.fun?ref=5302B) (Ch 9)
 - Cross-exchange arb (Ch 10)
 - Funding arb
 - New signals / new asset pairs
