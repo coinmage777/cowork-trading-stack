@@ -11,6 +11,8 @@ A few points to clarify before reading further.
 - A collection of guaranteed-profit strategies. Every strategy here can break, and most have spent stretches in the red.
 - Polished, production-grade code. The bots described here break, get patched, and break again. That cycle is the work.
 
+The core orientation: these bots are not profit engines. They keep market exposure close to zero (delta-neutral) while accumulating the volume that exchange points and airdrop programs reward. Expected return is in the points and airdrops that volume earns, not in trading PnL.
+
 This is not investment advice. It is a record of how the work is done.
 
 ## Prerequisites
