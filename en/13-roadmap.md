@@ -225,9 +225,7 @@ Grow capital + new domains.
 
 ### Candidates
 - Grow capital (only on verified strategies)
-- Content (blog / YouTube)
 - New markets (prediction markets / options / DeFi yields)
-- KOL / ambassador (selectively)
 
 One thing I'd recommend: **even as profits grow, don't deploy all your capital.** Scale slowly, diversify for risk.
 

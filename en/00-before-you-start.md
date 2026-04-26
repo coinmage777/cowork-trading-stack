@@ -60,12 +60,8 @@ Every chapter is meant to stand on its own, but the order builds naturally:
 
 Every code example in this guide has sensitive material replaced with placeholders. When you fill in your own keys, double-check that line.
 
-## One more disclaimer
+## On the nature of this material
 
-I may or may not be an ambassador / partner / advisor at any given exchange. What tokens I hold, what positions I have, what alpha I'm running — all of that changes constantly and isn't relevant to this document. I use exchange sign-up links because almost everyone does, and I won't pretend otherwise. I try not to let that affect the guide's objectivity, but I'm human, so I can't promise 100%.
+This material is a snapshot at the moment of publication. Strategies and tools change continuously, so some of what is described may already be out of date by the time it is read. Treat the chapters as a working framework rather than a fixed playbook.
 
-The strategies I actually run are more numerous than what's described here, and some of what's described may already be a strategy I don't run anymore. Treat this as a snapshot at the moment of publication.
-
-Good alpha stops being alpha the moment it's written down. So this guide is not "the secret to making money right now" — it's closer to "a framework for building your own alpha by working this way."
-
-If you're ready, on to chapter 1.
+Good alpha stops being alpha the moment it is written down. The goal here is not "the secret to making money right now" — it is closer to "a framework for working this way and building your own approach."

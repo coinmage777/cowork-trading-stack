@@ -15,7 +15,6 @@ It is written for someone who can code a little, has read a few DeFi posts, and 
 
 - Builders who want to ship trading bots without an institutional team
 - Researchers who farm airdrops and need a structured workflow
-- Content creators who treat trading as both a livelihood and a topic
 - Anyone allergic to manual order entry who has decided to automate
 
 ### Table of Contents (English)
@@ -41,16 +40,15 @@ It is written for someone who can code a little, has read a few DeFi posts, and 
 
 ## 한국어 (Korean — Original)
 
-이 가이드는 크립토 트레이딩 자동화를 어떻게 생각하고, 어떤 툴을 쓰고, 어떤 전략을 굴리고, 어떻게 운영하는지를 한 번에 정리한 문서다.
+이 자료는 크립토 트레이딩 자동화를 어떻게 접근하고, 어떤 도구를 쓰고, 어떤 전략을 운영하며, 어떤 원칙으로 굴리는지를 정리한 문서입니다.
 
-코드를 조금 쓸 수 있고, DeFi 글을 몇 편 읽어봤고, 더 이상 수동으로 버튼 누르고 싶지 않은 사람을 위해 썼다. 투자 권유가 아니다. 확정 수익을 약속하지도 않는다. 실제로 굴러가는 시스템이 어떻게 생겼는지 — 그 안에서 깨지면서 배운 것까지 — 적은 글이다.
+코드를 조금 쓸 수 있고, DeFi 글을 몇 편 읽어봤으며, 수동 주문에서 벗어나려는 분들을 위한 자료입니다. 투자 권유가 아닙니다. 확정 수익을 약속하지도 않습니다. 실제로 굴러가는 시스템이 어떻게 생겼는지, 그 안에서 깨지며 배운 것까지 정리한 글입니다.
 
-### 누구에게 도움이 되나
+### 누구를 위한 자료인지
 
 - 팀 없이 혼자 트레이딩 봇을 만드는 빌더
 - 에어드랍 파밍을 체계적으로 하고 싶은 리서처
-- 트레이딩이 직업이자 콘텐츠 소재인 크리에이터
-- 수동 주문이 지긋지긋해서 자동화로 넘어가려는 모두
+- 수동 주문에서 벗어나 자동화로 넘어가려는 분
 
 ### 목차 (한국어)
 
@@ -132,19 +130,13 @@ Per-module ENV variables and entry points are documented inside each module's ow
 - **Kill switches** — every automation has (a) kill file, (b) daily PnL stop, (c) consecutive-failure cap, (d) min collateral floor / 모든 자동화에 4종 킬스위치
 - **State persistence** — `trader_state.json` style file-based managers so bots restore positions on restart / 파일 기반 상태 매니저로 재시작 복원
 
-### Sanitization Notice / 보안 안내
-
-All secrets, private keys, and personal wallet addresses have been stripped from this repository. Placeholders use the form `<...>` or `<DESCRIPTOR>`. You must inject your own credentials via environment variables — never commit them.
-
-이 레포에서는 모든 시크릿/프라이빗 키/개인 지갑 주소가 제거되어 있습니다. 자리표시자는 `<...>` 또는 `<DESCRIPTOR>` 형태입니다. 본인 크리덴셜은 환경변수로 주입하시고, 절대 커밋하지 마세요.
-
 ---
 
 ## Disclaimer / 면책
 
 **English**: Nothing in this repository is financial, legal, or tax advice. Crypto trading involves substantial risk of loss. Code samples are illustrative; do not run them with real funds without auditing them yourself. The author has no fiduciary duty to readers. Past performance — yours, mine, or anyone else's — does not predict future returns. Use of any exchange link is at your own discretion.
 
-**한국어**: 이 저장소의 어떤 내용도 투자/법률/세무 조언이 아니다. 크립토 트레이딩은 큰 손실 가능성을 동반한다. 코드 예시는 어디까지나 설명용이며, 직접 감사하지 않은 코드를 실자금으로 돌리지 마라. 저자는 독자에 대한 어떤 신탁의무도 없다. 과거 성과는 — 것이든 타인 것이든 — 미래를 보장하지 않는다. 거래소 사용과 가입 링크 클릭은 전적으로 본인 판단이다.
+**한국어**: 이 저장소의 어떤 내용도 투자/법률/세무 조언이 아닙니다. 크립토 트레이딩은 큰 손실 가능성을 동반합니다. 코드 예시는 설명용이며, 직접 감사하지 않은 코드를 실자금으로 돌리지 마시기 바랍니다. 저자는 독자에 대한 어떤 신탁의무도 없습니다. 과거 성과는 운영자 것이든 타인 것이든 미래를 보장하지 않습니다. 거래소 사용과 가입 링크 클릭은 본인 판단입니다.
 
 ## License
 
