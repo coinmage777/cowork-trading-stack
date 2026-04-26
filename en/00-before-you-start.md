@@ -4,7 +4,7 @@ A few things I want to clear up before you read further.
 
 ## What this guide is, and isn't
 
-**This is** working notes on the crypto trading automation setup I actually run: pair trading bots, Polymarket auto-trading, kimchi premium arbitrage, cross-exchange arb, an Obsidian-based research pipeline, and AI agent integrations. Tools I use almost daily.
+**This is** working notes on the crypto trading automation setup I actually run: pair trading bots, [Polymarket](https://polymarket.com/?ref=coinmage) auto-trading, kimchi premium arbitrage, cross-exchange arb, an Obsidian-based research pipeline, and AI agent integrations. Tools I use almost daily.
 
 **This is not**:
 - A get-rich-quick guide. I will be very surprised if anyone reads this and immediately makes serious money.

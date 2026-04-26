@@ -32,7 +32,7 @@ I referenced freqtrade's backtesting module while learning pair trading.
 
 ## SDKs / official per-exchange
 
-### Hyperliquid
+### [Hyperliquid](https://miracletrade.com/?ref=coinmage)
 - https://github.com/hyperliquid-dex/hyperliquid-python-sdk
 - Official Python SDK
 - Agent wallet system / EIP-712 signing all included
@@ -45,7 +45,7 @@ I referenced freqtrade's backtesting module while learning pair trading.
 - https://github.com/backpack-exchange/backpack-api
 - ed25519 signing examples
 
-### Polymarket
+### [Polymarket](https://polymarket.com/?ref=coinmage)
 - https://github.com/Polymarket/py-clob-client
 - CLOB client (Python)
 - My Polymarket bot is built on this SDK
@@ -158,7 +158,7 @@ If you can't write a single line of code yourself, AI can do 90% of it, but you 
 Mini tools and guide updates I publish:
 - https://github.com/coinmage777
 
-This repo (`cryptomage-trading-guide`) may receive updates over time. Watch / Star to be notified.
+This repo (`cowork-trading-stack`) may receive updates over time. Watch / Star to be notified.
 
 ## Next chapter
 

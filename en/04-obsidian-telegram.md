@@ -215,7 +215,7 @@ A separate bot that accepts commands. My commander supports:
 | `/close` | Close all + exit (`/yes` two-step confirm) |
 | `/kill <ex>` | Disable a specific exchange |
 | `/revive <ex>` | Re-enable a disabled exchange |
-| `/bnb` | BNB gas balance (for Polymarket) |
+| `/bnb` | BNB gas balance (for [Polymarket](https://polymarket.com/?ref=coinmage)) |
 
 ### Whitelist security
 

@@ -1,7 +1,7 @@
-# Cryptomage Trading Guide
+# Cowork Trading Stack
 
-> A practitioner's playbook for automating crypto trading across Perp DEXs, prediction markets, and cross-venue arbitrage — built and battle-tested in production.
-> 페어 트레이딩, 김프, 폴리마켓, 크로스 거래소 차익까지 — 실전에서 굴러가는 자동화 시스템 풀 가이드.
+> A Claude-Cowork-built crypto trading automation stack: Perp DEX trading, prediction markets, cross-venue arbitrage, volume farming. Bilingual guide + 14 self-contained code modules.
+> 클로드 코워크로 만든 크립토 트레이딩 자동화 풀스택. Perp DEX 트레이딩, 예측시장, 크로스 거래소 차익, 볼륨 파밍까지. 양방향 가이드 + 14개 자가완결 코드 모듈.
 
 ---
 
@@ -83,15 +83,15 @@ The full infrastructure that powers the strategies in this guide is included in 
 
 | Module | Description |
 |--------|-------------|
-| [`perp-dex-wrappers/`](./perp-dex-wrappers/) | 22 Perp DEX integrations behind a unified factory. HL / Lighter / GRVT / Paradex / Backpack / Aster / Pacifica / EdgeX / Reya and more. <br>22개 Perp DEX 통합 래퍼 (factory + 공통 인터페이스) |
+| [`perp-dex-wrappers/`](./perp-dex-wrappers/) | 22 Perp DEX integrations behind a unified factory. [Hyperliquid](https://miracletrade.com/?ref=coinmage) / Lighter / [GRVT](https://grvt.io/exchange/sign-up?ref=1O9U2GG) / Paradex / Backpack / [Aster](https://www.asterdex.com/en/referral/e70505) / [Pacifica](https://app.pacifica.fi?referral=cryptocurrencymage) / [EdgeX](https://pro.edgex.exchange/referral/570254647) / [Reya](https://app.reya.xyz/trade?referredBy=8src0ch8) / [Extended](https://app.extended.exchange/join/COINMAGE) / [Variational](https://omni.variational.io/?ref=OMNICOINMAGE) / [Standx](https://standx.com/referral?code=coinmage) and more. <br>22개 Perp DEX 통합 래퍼 (factory + 공통 인터페이스) |
 | [`perp-dex-setup-guides/`](./perp-dex-setup-guides/) | API key issuance + WebSocket reference per exchange. <br>거래소별 API key 발급 + WebSocket 연동 레퍼런스 |
 | [`volume-farmer-templates/`](./volume-farmer-templates/) | Cross-venue delta-neutral volume farmers (Rise / Lighter / Var-Aster / Ethereal-Aster) + funding-arb. <br>크로스-베뉴 델타뉴트럴 볼륨 파머 + 펀딩 아비 템플릿 |
 | [`cross-venue-arb-scanner/`](./cross-venue-arb-scanner/) | Multi-exchange concurrent ticker fetch → spread divergence detection (new listings like HYPER). <br>다중 거래소 동시 ticker fetch → spread 발산 탐지 |
 | [`spot-spot-arb/`](./spot-spot-arb/) | KR (Bithumb / Upbit) ↔ global CEX/DEX spot arbitrage (FastAPI backend + React frontend + Rust services). <br>김프(빗썸/업비트) ↔ 글로벌 CEX/DEX 차익거래 풀스택 |
-| [`aster-spot-buyer/`](./aster-spot-buyer/) | Aster (BSC) spot auto-buyer + farmer hedge leg. <br>Aster 현물 자동 매수 + farmer 헷지 레그 |
+| [`aster-spot-buyer/`](./aster-spot-buyer/) | [Aster](https://www.asterdex.com/en/referral/e70505) (BSC) spot auto-buyer + farmer hedge leg. <br>[Aster](https://www.asterdex.com/en/referral/e70505) 현물 자동 매수 + farmer 헷지 레그 |
 | [`pancake-deposit-helper/`](./pancake-deposit-helper/) | PancakeSwap V2 swap + Stargate / Across V3 cross-chain bridge helper. <br>팬케이크 V2 스왑 + 크로스체인 브릿지 헬퍼 |
-| [`polymarket-bot/`](./polymarket-bot/) | Polymarket Up/Down sniper + auto_claimer + Stoikov MM + Bayesian prior + reversal/merge_split. <br>폴리마켓 스나이퍼 + 자동 클레임 + Stoikov MM |
-| [`predict-fun-sniper/`](./predict-fun-sniper/) | Predict.fun (BSC) 1-hour market mid-time sniper + JWT auth + BNB gas monitor. <br>Predict.fun 1시간 마켓 mid-time 스나이퍼 |
+| [`polymarket-bot/`](./polymarket-bot/) | [Polymarket](https://polymarket.com/?ref=coinmage) Up/Down sniper + auto_claimer + Stoikov MM + Bayesian prior + reversal/merge_split. <br>[폴리마켓](https://polymarket.com/?ref=coinmage) 스나이퍼 + 자동 클레임 + Stoikov MM |
+| [`predict-fun-sniper/`](./predict-fun-sniper/) | [Predict.fun](https://predict.fun/?ref=coinmage) (BSC) 1-hour market mid-time sniper + JWT auth + BNB gas monitor. <br>[Predict.fun](https://predict.fun/?ref=coinmage) 1시간 마켓 mid-time 스나이퍼 |
 | [`rust-services/`](./rust-services/) | hl-sign (HL signature, 3.5x speedup) + gap-recorder (SQLite WAL batched, 169K rows/sec). PyO3 + maturin. <br>HL 서명 가속 + gap-recorder 고속 기록 (PyO3 + maturin) |
 | [`shared-utils/`](./shared-utils/) | Telegram notifier, subprocess_wrapper (isolated venv), health_monitor, file-based trigger_watcher, state/equity tracker. <br>공용 유틸: Telegram, 격리 venv subprocess, 헬스체크, 파일 트리거, 상태/잔고 트래커 |
 | [`strategy-templates/`](./strategy-templates/) | pair_trader, nado_pair_scalper (regime filter + DCA), strategy_evolver (GA), momentum / donchian / grid signals. <br>전략 템플릿: 페어 / 스캘퍼 / 자가진화 / 모멘텀 / 돈치안 / 그리드 |
@@ -123,12 +123,6 @@ Per-module ENV variables and entry points are documented inside each module's ow
 
 모듈마다 필요한 환경변수와 실행 명령은 해당 모듈 README에 적혀 있습니다.
 
-### Exchanges / 거래소
-
-이 인프라에서 사용하는 거래소와 가입 링크는 [EXCHANGES.md](./EXCHANGES.md)에 정리되어 있습니다.
-
-The exchanges and protocols used in this infrastructure are listed in [EXCHANGES.md](./EXCHANGES.md).
-
 ### Architecture Principles / 아키텍처 원칙
 
 - **Async-first** — every exchange wrapper is `asyncio`-based; concurrent fetch/order is natural / 모든 래퍼 asyncio 기반
@@ -157,6 +151,14 @@ All secrets, private keys, and personal wallet addresses have been stripped from
 Content: CC BY-NC 4.0 (attribution, non-commercial). Code snippets within: MIT.
 콘텐츠: CC BY-NC 4.0 (출처 표기, 비상업적 이용). 본문 내 코드 스니펫: MIT.
 
-## Contact
+## Channels / 채널
 
-GitHub: [@coinmage777](https://github.com/coinmage777)
+운영 노하우와 자료 업데이트는 아래 채널에서 공유됩니다.
+
+Live operations notes and updates are posted here:
+
+- GitHub: [@coinmage777](https://github.com/coinmage777)
+- YouTube: https://www.youtube.com/@cryptocurrencymage
+- Telegram: https://t.me/cryptocurrencymage
+- Blog: https://blog.naver.com/coinmage
+- Twitter: [@coinmage](https://x.com/coinmage)

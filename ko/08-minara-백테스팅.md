@@ -248,4 +248,4 @@ Sharpe:         2.1
 
 ## 다음 장
 
-다음은 Polymarket 봇 — 예측 시장 자동매매. Perp 봇과 완전히 다른 시장 구조.
+다음은 [Polymarket](https://polymarket.com/?ref=coinmage) 봇 — 예측 시장 자동매매. Perp 봇과 완전히 다른 시장 구조.

@@ -55,7 +55,7 @@ ccxt provides unified abstraction across most exchanges. Great for fast starts.
 - **Sub-accounts**: main vs sub — trading / arb on a sub recommended (isolation)
 - **Rate limits**: exchange-specific. Hitting them throttles or blocks. Read each exchange's docs.
 
-## Hyperliquid and HL-based front-ends
+## [Hyperliquid](https://miracletrade.com/?ref=coinmage) and HL-based front-ends
 
 ### Hyperliquid directly
 
@@ -114,12 +114,12 @@ Round-robin per order. One wallet farms multiple front-ends' points simultaneous
 - SDK exists but has gotchas (signature mismatches etc.)
 - Python SDK runs sync HTTP at init → deadlocks async bots → solved with isolated venv + subprocess bridge
 
-### EdgeX
+### [EdgeX](https://pro.edgex.exchange/referral/570254647)
 - StarkNet-based
 - Auth: account_id (StarkNet) + StarkNet private key
 - StarkNet signing yourself or via SDK
 
-### GRVT
+### [GRVT](https://grvt.io/exchange/sign-up?ref=1O9U2GG)
 - Standalone DEX
 - account_id (numeric) + API key
 - Isolated venv required (SDK compatibility)
@@ -129,7 +129,7 @@ Round-robin per order. One wallet farms multiple front-ends' points simultaneous
 - Auth: BIP39 mnemonic
 - Use SDK directly (dydx-v4-client-py)
 
-### Reya
+### [Reya](https://app.reya.xyz/trade?referredBy=8src0ch8)
 - Arbitrum Orbit
 - EIP-712 signing
 - Official SDK (Python 3.12 required → isolated venv)
@@ -143,7 +143,7 @@ Round-robin per order. One wallet farms multiple front-ends' points simultaneous
 - StarkNet-based
 - Native SDK
 
-### Aster, Ostium, etc.
+### [Aster](https://www.asterdex.com/en/referral/e70505), Ostium, etc.
 - Each has its own auth pattern
 - Usually SDK or REST + signing
 

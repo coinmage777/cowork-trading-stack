@@ -14,29 +14,29 @@
 
 | 거래소 | 폴더 | 특이사항 |
 |--------|------|----------|
-| Hyperliquid | `hyperliquid/` | HL 메인 + builder code rotation 지원 |
+| [Hyperliquid](https://miracletrade.com/?ref=coinmage) | `hyperliquid/` | HL 메인 + builder code rotation 지원 |
 | Lighter | `lighter/` | 격리 venv (SDK sync init) |
-| GRVT | `grvt/` | 격리 venv, account_id + EIP-712 |
+| [GRVT](https://grvt.io/exchange/sign-up?ref=1O9U2GG) | `grvt/` | 격리 venv, account_id + EIP-712 |
 | Paradex | `paradex/` | StarkNet, JWT + L1/L2 키 분리 |
 | Backpack | `backpack/` | API key + ED25519 signing |
-| Aster | `aster/` | BSC perp DEX, USDT-M futures |
-| Pacifica | `pacifica/` | HL HIP-3 builder, hyna:BTC 심볼 |
-| EdgeX | `edgex/` | StarkNet DEX, account_id + StarkNet PK |
-| Reya | `reya/` | Arbitrum Orbit, Python 3.12 필수, 격리 venv |
+| [Aster](https://www.asterdex.com/en/referral/e70505) | `aster/` | BSC perp DEX, USDT-M futures |
+| [Pacifica](https://app.pacifica.fi?referral=cryptocurrencymage) | `pacifica/` | HL HIP-3 builder, hyna:BTC 심볼 |
+| [EdgeX](https://pro.edgex.exchange/referral/570254647) | `edgex/` | StarkNet DEX, account_id + StarkNet PK |
+| [Reya](https://app.reya.xyz/trade?referredBy=8src0ch8) | `reya/` | Arbitrum Orbit, Python 3.12 필수, 격리 venv |
 | RiseX | `risex/` | RISE Chain, EIP-712 VerifyWitness/RegisterSigner |
-| Standx | `standx/` | BSC DEX |
+| [Standx](https://standx.com/referral?code=coinmage) | `standx/` | BSC DEX |
 | TreadFi | `treadfi/` | HL 기반 builder |
 | HyENA | `hyena/` | HL HIP-3 builder, USDe 마진 통합 |
 | Decibel | `decibel/` | pre-launch perp DEX |
-| Variational | `variational/` | RFQ 방식 (funding feed 없음) |
+| [Variational](https://omni.variational.io/?ref=OMNICOINMAGE) | `variational/` | RFQ 방식 (funding feed 없음) |
 | Ostium | `ostium/` | RWA perp DEX |
 | Katana | `katana/` | Hyperliquid 기반 |
 | Ethereal | `ethereal/` | Ethena 생태계 (USDe perp) |
 | Bulk | `bulk/` | 테스트넷 (격리 venv, Ed25519) |
-| Extended | `extended/` | StarkNet DEX |
+| [Extended](https://app.extended.exchange/join/COINMAGE) | `extended/` | StarkNet DEX |
 | Hotstuff | `hotstuff/` | HL 기반 |
 | Nado | `nado/` | HL 기반 |
-| Miracle / DreamCash / Bullpen | (HL aliases) | builder code only, base wrapper 공유 |
+| [Miracle](https://miracletrade.com/?ref=coinmage) / DreamCash / [Bullpen](https://miracletrade.com/?ref=coinmage) | (HL aliases) | builder code only, base wrapper 공유 |
 
 ## 파일 구조
 

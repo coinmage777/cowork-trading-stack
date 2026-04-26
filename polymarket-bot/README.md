@@ -1,6 +1,6 @@
 # polymarket-bot
 
-Polymarket Up/Down 단기 마켓 + Predict.fun 1시간 마켓 자동 베팅 봇. 5+ 전략 (expiry_snipe / reversal / Stoikov MM / Bayesian directional / merge_split arb / cold_split) + 자동 리딤 + 잔고 추적 + Telegram 통제.
+[Polymarket](https://polymarket.com/?ref=coinmage) Up/Down 단기 마켓 + [Predict.fun](https://predict.fun/?ref=coinmage) 1시간 마켓 자동 베팅 봇. 5+ 전략 (expiry_snipe / reversal / Stoikov MM / Bayesian directional / merge_split arb / cold_split) + 자동 리딤 + 잔고 추적 + Telegram 통제.
 
 ## 핵심 기능
 

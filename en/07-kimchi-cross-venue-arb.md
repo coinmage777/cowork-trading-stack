@@ -66,7 +66,7 @@ Kimchi is a special case of cross-venue arb. More generally:
 ### What price gaps can you target
 
 1. **CEX vs CEX** — rare but appear in big moves (e.g., Binance -1% / OKX +0.5%)
-2. **CEX vs DEX** — Hyperliquid / dYdX vs Binance during liquidation cascades
+2. **CEX vs DEX** — [Hyperliquid](https://miracletrade.com/?ref=coinmage) / dYdX vs Binance during liquidation cascades
 3. **Spot vs Perp basis** — buy spot + short perp
 4. **Funding-rate differential** — same asset, different funding on two exchanges
 

@@ -6,7 +6,7 @@ Every term used in this guide, alphabetical. For quick lookup.
 
 **Adverse Selection** — In a market, your fills tend to come when the counterparty has informational advantage. For bots, the fill itself can be a negative signal.
 
-**Agent Wallet** — A separate key delegated trading rights by a main wallet. On DEXs like Hyperliquid, lets bots trade without exposing the main key.
+**Agent Wallet** — A separate key delegated trading rights by a main wallet. On DEXs like [Hyperliquid](https://miracletrade.com/?ref=coinmage), lets bots trade without exposing the main key.
 
 **Aiohttp** — Python async HTTP library. Standard for async exchange API calls.
 
@@ -40,7 +40,7 @@ Every term used in this guide, alphabetical. For quick lookup.
 
 **Clearinghouse State** — Hyperliquid-style DEX user balance / position state.
 
-**CLOB (Central Limit Order Book)** — Central order book matching. Polymarket uses this.
+**CLOB (Central Limit Order Book)** — Central order book matching. [Polymarket](https://polymarket.com/?ref=coinmage) uses this.
 
 **Cloid** — Client Order ID. Exchange order identifier. Front-ends like Miracle require a specific cloid prefix.
 
@@ -58,7 +58,7 @@ Every term used in this guide, alphabetical. For quick lookup.
 
 ## E
 
-**EIP-712** — Ethereum standard for typed-data signing. Used by Hyperliquid, Reya, etc.
+**EIP-712** — Ethereum standard for typed-data signing. Used by Hyperliquid, [Reya](https://app.reya.xyz/trade?referredBy=8src0ch8), etc.
 
 **Equity Tracker** — Periodically snapshots per-exchange balance. Source of truth for real PnL.
 
@@ -190,7 +190,7 @@ Every term used in this guide, alphabetical. For quick lookup.
 
 **Strategy Evolver** — Auto-tunes signal weights, every 6 hours, based on performance.
 
-**StarkNet** — Layer 2. Used by EdgeX, Paradex, etc.
+**StarkNet** — Layer 2. Used by [EdgeX](https://pro.edgex.exchange/referral/570254647), Paradex, etc.
 
 ## T
 

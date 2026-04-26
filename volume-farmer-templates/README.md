@@ -39,10 +39,10 @@ t=6m+: 다음 cycle (자산 random rotation, direction random)
 
 ```
 volume-farmer-templates/
-├── rise_volume_farmer.py        — Rise (RISE Chain) ↔ HL 페어
-├── lighter_volume_farmer.py     — Lighter ↔ HL 페어
-├── var_aster_farmer.py          — Variational ↔ Aster 페어
-├── ethereal_aster_farmer.py     — Ethereal ↔ Aster 페어
+├── rise_volume_farmer.py        — Rise (RISE Chain) ↔ [Hyperliquid](https://miracletrade.com/?ref=coinmage) 페어
+├── lighter_volume_farmer.py     — Lighter ↔ [Hyperliquid](https://miracletrade.com/?ref=coinmage) 페어
+├── var_aster_farmer.py          — [Variational](https://omni.variational.io/?ref=OMNICOINMAGE) ↔ [Aster](https://www.asterdex.com/en/referral/e70505) 페어
+├── ethereal_aster_farmer.py     — Ethereal ↔ [Aster](https://www.asterdex.com/en/referral/e70505) 페어
 ├── xyz_volume_farmer.py         — XYZ chain volume farmer
 └── funding_arb_trader.py        — Funding rate arbitrage farmer (8h cycle)
 ```
