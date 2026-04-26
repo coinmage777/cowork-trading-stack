@@ -12,7 +12,7 @@
 
 ### 어디서 유용한가
 
-- **에어드랍 시즌의 Perp DEX** ([Hyperliquid](https://miracletrade.com/?ref=coinmage), Lighter, [EdgeX](https://pro.edgex.exchange/referral/570254647), Nado, [GRVT](https://grvt.io/exchange/sign-up?ref=1O9U2GG) 등)
+- **에어드랍 시즌의 Perp DEX** ([Hyperliquid](https://miracletrade.com/?ref=coinmage), [Lighter](https://app.lighter.xyz/?referral=GMYPZWQK69X4), [EdgeX](https://pro.edgex.exchange/referral/570254647), Nado, [GRVT](https://grvt.io/exchange/sign-up?ref=1O9U2GG) 등)
 - **거래량 기반 거래소 캠페인** (Bybit, OKX 등 종종 진행)
 - **메이커 리베이트 거래소** — 메이커 수수료가 음수면 볼륨 자체가 수익
 

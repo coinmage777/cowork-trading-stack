@@ -190,7 +190,7 @@ How to split capital across N exchanges? Working rules:
 
 Newly launched venues carry withdrawal-halt / hack risk. Tiers:
 - **Tier 1** (trusted): Binance, OKX, Bybit, [Hyperliquid](https://miracletrade.com/?ref=coinmage), Coinbase
-- **Tier 2**: well-known DEXs (Lighter, dYdX, GMX)
+- **Tier 2**: well-known DEXs ([Lighter](https://app.lighter.xyz/?referral=GMYPZWQK69X4), dYdX, GMX)
 - **Tier 3**: new DEXs, small exchanges
 
 For Tier 3, keep arb size small (≤ 5% of capital).

@@ -287,7 +287,7 @@ Used in: Account All Assets, Account Market, Account All.
 
 Channels
 Order Book
-The order book channel sends the new ask and bid orders for the given market in batches, every 50ms. While the nonce is tied to Lighter's matching engine, the offset is tied to the API servers; hence, you can expect the offset to change on reconnection if you're routed to a different server. Additionally, this channel sends a complete snapshot on subscription, but only state changes after that. To verify the continuity of the data, you can check that begin_nonce on the current update matches the nonce (i.e. last_nonce) of the previous update.
+The order book channel sends the new ask and bid orders for the given market in batches, every 50ms. While the nonce is tied to [Lighter](https://app.lighter.xyz/?referral=GMYPZWQK69X4)'s matching engine, the offset is tied to the API servers; hence, you can expect the offset to change on reconnection if you're routed to a different server. Additionally, this channel sends a complete snapshot on subscription, but only state changes after that. To verify the continuity of the data, you can check that begin_nonce on the current update matches the nonce (i.e. last_nonce) of the previous update.
 
 JSON
 
