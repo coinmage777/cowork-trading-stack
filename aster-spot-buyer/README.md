@@ -1,6 +1,6 @@
 # aster-spot-buyer
 
-Aster (BSC perp DEX) 현물 자동 매수 + farmer hedge leg. BNB Smart Chain의 저비용 perp 인터페이스로 빠른 진입/청산. var_aster_farmer / ethereal_aster_farmer의 hedge venue로 활용 가능.
+[Aster](https://www.asterdex.com/en/referral/e70505) (BSC perp DEX) 현물 자동 매수 + farmer hedge leg. BNB Smart Chain의 저비용 perp 인터페이스로 빠른 진입/청산. var_aster_farmer / ethereal_aster_farmer의 hedge venue로 활용 가능.
 
 ## 핵심 기능
 

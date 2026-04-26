@@ -67,7 +67,7 @@
 ### 어떤 차이를 노릴 수 있나
 
 1. **CEX vs CEX 가격 차이** — 흔치 않지만 큰 변동 시 발생 (예: 바이낸스 -1% / OKX +0.5%)
-2. **CEX vs DEX 가격 차이** — Hyperliquid / dYdX vs 바이낸스 (펀딩 / 청산 캐스케이드 시)
+2. **CEX vs DEX 가격 차이** — [Hyperliquid](https://miracletrade.com/?ref=coinmage) / dYdX vs 바이낸스 (펀딩 / 청산 캐스케이드 시)
 3. **현물 vs Perp 베이시스** — 현물 거래소에서 매수 + Perp에서 short
 4. **A 거래소 펀딩 vs B 거래소 펀딩** — 같은 자산, 펀딩비 차이로 차익
 

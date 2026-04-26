@@ -246,4 +246,4 @@ All of this was first verified in backtest, then applied live.
 
 ## Next chapter
 
-Next: Polymarket bot — auto-trading prediction markets. A completely different market structure from Perps.
+Next: [Polymarket](https://polymarket.com/?ref=coinmage) bot — auto-trading prediction markets. A completely different market structure from Perps.

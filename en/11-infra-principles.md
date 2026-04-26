@@ -51,7 +51,7 @@ When isolated venvs are needed (SDK conflict / Python version):
 - `nado_venv/` — Python 3.10
 - `reya_venv/` — Python 3.12 (mandatory)
 - `bulk_venv/` — bulk-keychain (needs Rust build)
-- `claim_venv/` — Polymarket claim-only
+- `claim_venv/` — [Polymarket](https://polymarket.com/?ref=coinmage) claim-only
 
 Each venv runs independently, communicating with the main bot via subprocess bridge.
 

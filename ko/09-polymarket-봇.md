@@ -1,4 +1,4 @@
-# 09. Polymarket 봇
+# 09. [Polymarket](https://polymarket.com/?ref=coinmage) 봇
 
 운영해온 봇 중 Perp DEX와 별개의 트랙. 예측 시장(prediction market) 자동매매다.
 
@@ -21,7 +21,7 @@
 1. **expiry_snipe** — 임박한 만료 시점 가격이 떨어진 토큰 매수
 2. **hedge_arb** — 같은 마켓 YES + NO 합계 < 0.99 (또는 결합 다른 거래소)일 때 차익
 3. **weather** — 날씨 마켓 전용 (이미 비활성화)
-4. **predict_snipe** — Predict.fun (Polymarket 비슷한 BSC 기반 예측 시장)
+4. **predict_snipe** — [Predict.fun](https://predict.fun/?ref=coinmage) (Polymarket 비슷한 BSC 기반 예측 시장)
 
 ## 왜 예측 시장이 매력적인가
 

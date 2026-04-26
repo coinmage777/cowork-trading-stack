@@ -94,7 +94,7 @@ That kind of thing fits in a weekend. And once you've shipped one, your relation
 
 ## My experience
 
-I lost money manually for almost a year before I built a small funding rate arb bot. It was tiny. But it was the first thing I traded that didn't lose. From there I built more — pair trading, Polymarket, kimchi, cross-exchange — and now I run several at once.
+I lost money manually for almost a year before I built a small funding rate arb bot. It was tiny. But it was the first thing I traded that didn't lose. From there I built more — pair trading, [Polymarket](https://polymarket.com/?ref=coinmage), kimchi, cross-exchange — and now I run several at once.
 
 Looking back, I should have spent the first year on automation. If I'd put even half of my chart-staring hours into building bots, I would have cut my losses in half.
 

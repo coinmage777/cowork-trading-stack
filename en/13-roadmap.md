@@ -140,7 +140,7 @@ Backtest + paper trade.
 Small-size live + stability verification.
 
 ### To do
-- [ ] Live on one exchange (I recommend Hyperliquid — my main)
+- [ ] Live on one exchange (I recommend [Hyperliquid](https://miracletrade.com/?ref=coinmage) — my main)
 - [ ] Very small size (5% of capital)
 - [ ] All trades logged to DB
 - [ ] Daily PnL report (cron / daily_report.py)
@@ -199,7 +199,7 @@ At this point, the bot can run for days without you. Your time is freed.
 Strategies beyond pair trading.
 
 ### Candidates
-- Polymarket / Predict.fun (Ch 9)
+- [Polymarket](https://polymarket.com/?ref=coinmage) / [Predict.fun](https://predict.fun/?ref=coinmage) (Ch 9)
 - Cross-exchange arb (Ch 10)
 - Funding arb
 - New signals / new asset pairs

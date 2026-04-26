@@ -1,6 +1,6 @@
 # predict-fun-sniper
 
-Predict.fun (BSC 기반 1시간 prediction market) mid-time sniper. JWT auth + asset 회전 + 변동성 기반 확률 모델 + BNB 가스 monitor.
+[Predict.fun](https://predict.fun/?ref=coinmage) (BSC 기반 1시간 prediction market) mid-time sniper. JWT auth + asset 회전 + 변동성 기반 확률 모델 + BNB 가스 monitor.
 
 ## 핵심 기능
 

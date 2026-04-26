@@ -189,7 +189,7 @@ How to split capital across N exchanges? My rules:
 ### 4) Exchange trust tiers
 
 Newly launched venues carry withdrawal-halt / hack risk. My tiers:
-- **Tier 1** (trusted): Binance, OKX, Bybit, Hyperliquid, Coinbase
+- **Tier 1** (trusted): Binance, OKX, Bybit, [Hyperliquid](https://miracletrade.com/?ref=coinmage), Coinbase
 - **Tier 2**: well-known DEXs (Lighter, dYdX, GMX)
 - **Tier 3**: new DEXs, small exchanges
 

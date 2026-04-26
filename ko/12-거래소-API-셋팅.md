@@ -55,7 +55,7 @@ ccxt가 대부분 거래소 통합 추상화 제공. 빠른 시작에 유용.
 - **Sub-account**: 메인 계정 vs 서브 계정 — 트레이딩 / 차익은 서브 권장 (격리)
 - **Rate Limit**: 거래소마다 다름. 초과 시 IP / 키 일시 차단. 개별 거래소 docs 참조
 
-## Hyperliquid 및 HL 기반 프론트엔드
+## [Hyperliquid](https://miracletrade.com/?ref=coinmage) 및 HL 기반 프론트엔드
 
 ### Hyperliquid 직접
 
@@ -115,13 +115,13 @@ builder_rotation:
 - SDK 있지만 서명 불일치 등 함정 많음
 - Python SDK가 sync HTTP 호출을 init에서 함 → async 봇과 deadlock → 격리 venv + subprocess bridge로 해결
 
-### EdgeX
+### [EdgeX](https://pro.edgex.exchange/referral/570254647)
 
 - StarkNet 기반
 - 인증: account_id (StarkNet) + StarkNet private key
 - StarkNet 서명 직접 구현 또는 SDK
 
-### GRVT
+### [GRVT](https://grvt.io/exchange/sign-up?ref=1O9U2GG)
 
 - 독립 DEX
 - account_id (숫자) + API key
@@ -133,7 +133,7 @@ builder_rotation:
 - 인증: BIP39 mnemonic
 - 직접 SDK 사용 (dydx-v4-client-py)
 
-### Reya
+### [Reya](https://app.reya.xyz/trade?referredBy=8src0ch8)
 
 - Arbitrum Orbit 위
 - EIP-712 서명
@@ -150,7 +150,7 @@ builder_rotation:
 - StarkNet 기반
 - 자체 SDK
 
-### Aster, Ostium 등
+### [Aster](https://www.asterdex.com/en/referral/e70505), Ostium 등
 
 - 각자 독자 인증 패턴
 - 보통 SDK 또는 REST + 서명

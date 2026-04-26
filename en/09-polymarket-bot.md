@@ -1,4 +1,4 @@
-# 09. Polymarket Bot
+# 09. [Polymarket](https://polymarket.com/?ref=coinmage) Bot
 
 A bot track separate from Perp DEXs. Auto-trading on prediction markets.
 
@@ -21,7 +21,7 @@ A bot track separate from Perp DEXs. Auto-trading on prediction markets.
 1. **expiry_snipe** — buy tokens whose price drops near expiry
 2. **hedge_arb** — when YES + NO sums to < 0.99 (or via cross-venue), capture the gap
 3. **weather** — weather markets only (currently disabled)
-4. **predict_snipe** — Predict.fun (similar BSC-based prediction market)
+4. **predict_snipe** — [Predict.fun](https://predict.fun/?ref=coinmage) (similar BSC-based prediction market)
 
 ## Why prediction markets are attractive
 
