@@ -22,11 +22,11 @@ t=6m+: 다음 cycle (자산 random rotation, direction random)
 | 정교화 | 환경변수 | 효과 |
 |--------|---------|------|
 | **Asset rotation** | `*_ASSET_POOL=BTC,ETH,SOL,HYPE` | 자산 random 선택, BTC만 반복 X |
-| **Size jitter** | `*_SIZE_JITTER_PCT=0.30` | $50 ± 30% (= $35~65) random |
-| **Hold jitter** | `*_HOLD_MIN=180`, `*_HOLD_MAX=600` | 3~10분 random |
-| **Cycle gap** | `*_CYCLE_GAP_MIN=60`, `*_CYCLE_GAP_MAX=180` | 다음 cycle 전 1~3분 random |
+| **Size jitter** | `*_SIZE_JITTER_PCT=0.30` | $50 ± 30% (= $35–65) random |
+| **Hold jitter** | `*_HOLD_MIN=180`, `*_HOLD_MAX=600` | 3–10분 random |
+| **Cycle gap** | `*_CYCLE_GAP_MIN=60`, `*_CYCLE_GAP_MAX=180` | 다음 cycle 전 1–3분 random |
 | **Direction random** | `*_DIRECTION_RANDOM=true` | long+short 또는 short+long 50/50 |
-| **Timing micro-jitter** | (자동) | 진입 시 50~500ms random sleep |
+| **Timing micro-jitter** | (자동) | 진입 시 50–500ms random sleep |
 
 ## 4 Kill Switches (모든 farmer 공통)
 
@@ -131,4 +131,4 @@ FUNDING_ARB_HOLD_HOURS=8           # 한 funding cycle hold
 FUNDING_ARB_EXIT_DIFF_8H=0.0001    # 0.01% 미만 시 exit
 ```
 
-기대 수익 (실증): APR 0.5~3% (단순 wash farmer는 -fee drag, funding-arb 결합 시 +EV)
+기대 수익 (실증): APR 0.5–3% (단순 wash farmer는 -fee drag, funding-arb 결합 시 +EV)

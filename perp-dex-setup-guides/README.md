@@ -49,7 +49,7 @@ perp-dex-setup-guides/docs_ref/
 ### 3. SDK 또는 wrapper 통합
 - 각 거래소 README의 `사용 예시` 따라 wrapper 호출
 - 첫 호출은 `get_collateral()`로 연결 검증
-- 작은 주문 ($5~10) 1건으로 fill 확인
+- 작은 주문 ($5–10) 1건으로 fill 확인
 
 ### 4. 위험 관리
 - `manual_equity` 설정으로 거래소별 cap (예: $20-$50)

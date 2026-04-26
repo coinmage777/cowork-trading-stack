@@ -34,7 +34,7 @@
   |-------------------------|---------------------|-------------------------------|
   | price                   | 91238.14 → 91216.25 | perpetual future 가격         |
   | underlying_price        | ~91277              | BTC 현물 가격                 |
-  | native_price            | 0.9993~0.9996       | 정규화 가격                   |
+  | native_price            | 0.9993–0.9996       | 정규화 가격                   |
   | interest_rate           | -0.00000241         | funding rate                  |
   | delta                   | 1                   | perpetual은 항상 1            |
   | gamma/theta/vega/rho/iv | 0                   | 옵션용 그릭스 (perpetual은 0) |

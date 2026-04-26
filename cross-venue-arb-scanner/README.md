@@ -97,4 +97,4 @@ B funding -0.2% (short pays long)
 A short + B long → 차이 +0.7%/8h 자동 수익
 ```
 
-기대 APR 0.5~3% (변동성 큼).
+기대 APR 0.5–3% (변동성 큼).
