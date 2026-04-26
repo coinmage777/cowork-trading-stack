@@ -1,18 +1,18 @@
 # 11. Operational Infrastructure & Principles
 
-Writing the bot is half the work. Running it 24/7 reliably is the other half. What I've learned about infrastructure and principles.
+Writing the bot is half the work. Running it 24/7 reliably is the other half. The following covers infrastructure and principles drawn from operational experience.
 
 ## VPS setup
 
 ### Choosing a VPS
 
-What I've used:
+Common options:
 - **Contabo** — best value (≈$10–30/mo). Reasonable stability.
 - **Hetzner** — Europe-based, very stable
 - **DigitalOcean / Vultr** — standard
 - **AWS / GCP** — only when scale demands
 
-My recommendation: start small with a Contabo VPS, 4GB RAM, Ubuntu 22.04, ~$15/mo.
+A reasonable starting point: a Contabo VPS, 4GB RAM, Ubuntu 22.04, ~$15/mo.
 
 ### Base setup
 
@@ -57,7 +57,7 @@ Each venv runs independently, communicating with the main bot via subprocess bri
 
 ### Google Drive integration (optional)
 
-I keep content / notes on Google Drive and mount it on the VPS so files are the same locally and remotely.
+Content and notes can be kept on Google Drive and mounted on the VPS so files are the same locally and remotely.
 
 ```bash
 # Install rclone
@@ -121,7 +121,7 @@ journalctl -u perp-bot -f  # live logs
 
 ### Watchdog
 
-I run systemd + a separate watchdog. systemd catches process death; watchdog catches "alive but hung."
+A typical setup combines systemd with a separate watchdog. systemd catches process death; the watchdog catches "alive but hung."
 
 ```bash
 # watchdog.sh
@@ -211,7 +211,7 @@ Balance snapshots every 10 minutes are the source of truth. Log PnL % can be ina
 
 ### Equity Tracker
 
-Core infrastructure of mine:
+Core infrastructure:
 
 ```python
 async def equity_tracker_loop():
@@ -314,7 +314,7 @@ sqlite3 trades.db ".backup '/mnt/gdrive/backups/trades_$(date +%Y%m%d).db'"
 
 ### Graceful restart
 
-If the bot has open positions, restart can lose state. My pattern:
+If the bot has open positions, restart can lose state. A working pattern:
 
 1. **State manager**: persist DCA / trailing state to JSON on every change
 ```python
@@ -372,11 +372,11 @@ Five params at once = no attribution. A/B style.
 
 ### 3) Data-driven decisions
 
-"Let me cut SL by feel" is forbidden. Pull DB data, decide. Before any change I review SL distribution / WR distribution / WR by DCA depth.
+"Cut SL by feel" is forbidden. Pull DB data, decide. Before any change, review SL distribution / WR distribution / WR by DCA depth.
 
 ### 4) Circuit breaker mandatory
 
-Daily -X% loss → auto-stop. The safety net for unbounded loss. My defaults: 5–10% of capital.
+Daily -X% loss → auto-stop. The safety net for unbounded loss. Typical defaults: 5–10% of capital.
 
 ### 5) Alert priorities
 
@@ -385,7 +385,7 @@ Daily -X% loss → auto-stop. The safety net for unbounded loss. My defaults: 5�
 - INFO (daily): PnL summary → Telegram only
 - DEBUG: every entry / exit → log only
 
-Too many alerts and you tune them out. Only what matters.
+Too many alerts and they get tuned out. Only what matters.
 
 ### 6) Post-mortems
 
@@ -412,7 +412,7 @@ Cause: pnl_percent designed on margin basis. R:R math not verified.
 - Backtest PF > 1.5 mandatory
 ```
 
-These accumulate as personal capital. You don't repeat the same mistake twice.
+These accumulate as operational capital. The same mistake should not recur twice.
 
 ### 7) Zombie process check
 

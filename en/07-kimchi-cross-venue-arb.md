@@ -32,9 +32,9 @@ Sites like [kimpga.com](https://kimpga.com) or [coinview.io](https://coinview.io
 - Buy coin with USDT on global exchange
 - Transfer to Korean exchange
 - Sell for KRW (sells at the premium)
-- Need to convert KRW back to USDT to exit — **this is the hard part**
+- KRW must be converted back to USDT to exit — **this is the hard part**
 
-**Problem**: Korean exchanges don't let you buy/withdraw USD/USDT directly. KRW exit channels are limited.
+**Problem**: Korean exchanges don't allow direct buying or withdrawal of USD/USDT. KRW exit channels are limited.
 
 Traditional methods:
 - Buy a different coin with KRW → transfer out → sell on global (loss if reverse premium)
@@ -46,13 +46,13 @@ Traditional methods:
 - Sell for KRW (at normal premium time)
 - Profit
 
-This requires a long time horizon and reverse-premium windows are rare and short.
+This requires a long time horizon, and reverse-premium windows are rare and short.
 
-### My realistic take
+### A realistic take
 
-Pure kimchi arb is hard. The reason is **asymmetric capital flow** — leaving Korea is hard, which is exactly why the gap survives. You face the same friction.
+Pure kimchi arb is hard. The reason is **asymmetric capital flow** — leaving Korea is hard, which is exactly why the gap survives. The same friction applies to anyone attempting it.
 
-So the more practical form for me is:
+So the more practical form is:
 
 ## Cross-venue arb — the general pattern
 
@@ -63,14 +63,14 @@ Kimchi is a special case of cross-venue arb. More generally:
 - Buy A + sell B (or short A + long B)
 - Hold until convergence
 
-### What price gaps can you target
+### What price gaps can be targeted
 
 1. **CEX vs CEX** — rare but appear in big moves (e.g., Binance -1% / OKX +0.5%)
 2. **CEX vs DEX** — [Hyperliquid](https://miracletrade.com/?ref=coinmage) / dYdX vs Binance during liquidation cascades
 3. **Spot vs Perp basis** — buy spot + short perp
 4. **Funding-rate differential** — same asset, different funding on two exchanges
 
-### Funding arbitrage — what I run most
+### Funding arbitrage — the most commonly run form
 
 Same asset, different funding by exchange. Example:
 - Binance BTC perp funding: +0.05% (longs pay shorts)
@@ -90,7 +90,7 @@ Trade:
 - **Exchange risk** — one exchange halts withdrawals or liquidates
 - **Capital lock-up** — both legs tie up capital → factor cost-of-capital into ROI
 
-Minimum I require:
+Minimum requirements:
 - Same asset, |funding diff| > 0.03% / 8h sustained 6+ hours
 - Exchange stability verified
 - High-beta-1 asset (BTC, ETH)
@@ -110,7 +110,7 @@ To automate:
 - Exit on recovery (≤ 0.1%)
 - Sufficient liquidity on both sides
 
-I've only paper-tested this pattern. Big moves are rare and synchronized two-sided fills are tough.
+This pattern has only been paper-tested. Big moves are rare and synchronized two-sided fills are tough.
 
 ## Real-world kimchi automation
 
@@ -120,9 +120,9 @@ For genuinely automated kimchi arb, two operators is more efficient:
 
 Solo, the KRW → USDT conversion becomes the bottleneck.
 
-### What I actually run
+### A pragmatic approach
 
-I don't run a full kimchi bot. Instead, I have an **alert when premium is unusually high** → manual judgment to enter. Big premiums are rare enough that the ROI on automation isn't justified.
+A full kimchi bot is generally unnecessary. Instead, an **alert when premium is unusually high** → manual judgment to enter works well. Big premiums are rare enough that the ROI on automation isn't justified.
 
 Alert bot (simple):
 
@@ -141,11 +141,11 @@ async def kimchi_monitor():
         await asyncio.sleep(60)
 ```
 
-That's about as far as my kimchi automation goes pragmatically.
+That's about as far as kimchi automation goes pragmatically.
 
 ## More practical: funding monitor
 
-What I actually run more often is a funding-rate monitor:
+A more frequently used tool is a funding-rate monitor:
 
 ```python
 async def funding_monitor():
@@ -168,7 +168,7 @@ async def funding_monitor():
         await asyncio.sleep(300)
 ```
 
-Polled every 5 minutes, this surfaces funding-arb candidates. Whether to enter is my call.
+Polled every 5 minutes, this surfaces funding-arb candidates. Entry remains a manual decision.
 
 ## Next chapter
 

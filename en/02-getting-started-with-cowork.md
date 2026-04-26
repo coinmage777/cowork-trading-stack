@@ -1,16 +1,16 @@
 # 02. Getting Started with Claude + Cowork
 
-Half my workflow is delegated to AI agents — coding, research, documentation, debugging, data analysis, content drafting.
+A significant portion of a typical workflow can be delegated to AI agents — coding, research, documentation, debugging, data analysis, content drafting.
 
 This chapter covers **Claude** and **Cowork** setup. The next chapter handles Code, Codex, and the memory system.
 
 ## Why Claude as the primary
 
-I've used ChatGPT, Gemini, and Grok seriously. Each has strengths. Why I default to Claude:
+ChatGPT, Gemini, and Grok each have strengths. Reasons to default to Claude:
 
-- **Large context window** — up to 1M tokens depending on the model. You can dump an entire codebase and it stays coherent.
-- **Stable long-form output** — Korean guides, English reports, both come out natural.
-- **Strong agentic workflow** — chains tool calls, file edits, searches, code execution well.
+- **Large context window** — up to 1M tokens depending on the model. An entire codebase can be loaded while remaining coherent.
+- **Stable long-form output** — Korean guides and English reports both come out natural.
+- **Strong agentic workflow** — chains tool calls, file edits, searches, and code execution well.
 - **Less hallucination** — other models will confidently invent things; Claude is more likely to say "I don't know." Not perfect, but better.
 
 ## Setup
@@ -18,7 +18,7 @@ I've used ChatGPT, Gemini, and Grok seriously. Each has strengths. Why I default
 ### 1) Claude API key
 - Sign up at [console.anthropic.com](https://console.anthropic.com)
 - Generate an API key (`Settings → API Keys`)
-- Set a budget — start small ($50/month is plenty)
+- Set a budget — starting small is fine ($50/month is plenty)
 - Save to `.env`:
 
 ```bash
@@ -42,12 +42,12 @@ OAuth in the browser. Done.
 
 ### 3) Cowork
 
-Cowork is a Claude-API-based workflow tool I use daily, especially for:
+Cowork is a Claude-API-based workflow tool suited for daily use, especially for:
 - Long research (multi-agent / deep research)
 - Multi-step document writing
 - Coding + content work in parallel
 
-The Cowork install itself is out of scope here, but the core setup I run:
+The Cowork install itself is out of scope here. The core setup:
 
 ```bash
 # At session start
@@ -59,13 +59,13 @@ cd "$MEMKRAFT_HOME" && memkraft index
 
 ### 4) Cursor (optional)
 
-A VS Code fork with strong AI integration. I use it alongside Claude Code — Cursor for fast one-line edits, Claude Code for multi-file refactors.
+A VS Code fork with strong AI integration. It pairs well with Claude Code — Cursor for fast one-line edits, Claude Code for multi-file refactors.
 
 [cursor.sh](https://cursor.sh) → install → settings → API key (Claude / GPT / both)
 
-## Your first workflow — automate one line
+## A first workflow — automate one line
 
-Try this right now:
+Try this:
 
 ```
 Prompt:
@@ -75,13 +75,13 @@ Read API key/secret from BYBIT_API_KEY and BYBIT_SECRET env vars.
 Include error handling."
 ```
 
-You get a working script in five seconds. The point isn't that you never write code again — it's that **you don't have to rewrite the same boilerplate every time.**
+A working script appears in five seconds. The point isn't never writing code again — it's that **the same boilerplate need not be rewritten every time.**
 
-## Prompting patterns I use daily
+## Prompting patterns for daily use
 
 ### 1) Plan-then-Execute
 
-Never let the model code complex tasks in one shot. Get a plan first.
+The model should not code complex tasks in one shot. Get a plan first.
 
 ```
 "Design this in plan mode — no code, just steps:
@@ -102,7 +102,7 @@ Review the plan, edit, then have it implement.
 
 ### 2) Adversarial Review
 
-Whether code was written by you or by AI, framing the review as "a rival wrote this, prove it's wrong" gets sharper bug-finding.
+Whether code was written by a human or by AI, framing the review as "a rival wrote this, prove it's wrong" produces sharper bug-finding.
 
 ```
 "This code was written by GPT-5 Codex. They claim it's perfect.
@@ -116,11 +116,11 @@ Prove them wrong:
 Report severity: CRITICAL → WARNING → SUGGESTION."
 ```
 
-In my experience, this single framing materially raises bug detection.
+In practice, this single framing materially raises bug detection.
 
 ### 3) Diff-only Edit
 
-When modifying a large existing file, don't ask for the whole file back. Wastes tokens, raises error rate. Instead:
+When modifying a large existing file, requesting the whole file back wastes tokens and raises error rate. Instead:
 
 ```
 "Modify only this function in this file:
@@ -144,20 +144,20 @@ After it codes, send it back to itself:
 Fix what you find immediately."
 ```
 
-## AI anti-patterns (cases I've burned myself on)
+## AI anti-patterns (common failure cases)
 
 ### "Just figure it out"
-You'll get a plausible-looking result that breaks in production. Always specify requirements + verification criteria.
+The result will look plausible but break in production. Always specify requirements + verification criteria.
 
 ### Multiple asks in one prompt
 "Do X and Y and Z while making it like W" — the model drops one or two. One thing at a time.
 
 ### Skipping verification on AI-generated code
-Don't put AI code straight on real money. Minimum: syntax check → paper trade → small live → verify → scale.
+AI code should not go straight onto real money. Minimum: syntax check → paper trade → small live → verify → scale.
 
 ### No context provided
-Without project structure, existing functions, or conventions, the model improvises. The result conflicts with your existing code.
+Without project structure, existing functions, or conventions, the model improvises. The result conflicts with existing code.
 
 ## Next chapter
 
-Next: how Claude Code, Cursor, and Codex divide labor in my workflow, and how I set up the memory layer (MemKraft) on top.
+Next: how Claude Code, Cursor, and Codex divide labor across a workflow, and how the memory layer (MemKraft) is set up on top.

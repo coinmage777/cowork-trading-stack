@@ -1,6 +1,6 @@
 # 06. Multi-Perp Pair Trading
 
-The core strategy of my main bot. Across multiple Perp DEXs, I run BTC/ETH-style pairs simultaneously long-short, extracting alpha from the relative movement of two correlated assets.
+A core strategy for the main bot. Across multiple Perp DEXs, BTC/ETH-style pairs run simultaneously long-short, extracting alpha from the relative movement of two correlated assets.
 
 ## What is pair trading
 
@@ -24,9 +24,9 @@ In crypto the most common pair is **BTC vs ETH**. Both have similar market beta 
 - Cross-exchange operation doubles capital, API, monitoring needs
 - Sudden one-asset moves (an "ETH alpha unwind") cause sharp losses
 
-## My bot structure — overview
+## Bot structure — overview
 
-The multi-Perp pair trading bot I run (built on top of my `mpdex` framework):
+The multi-Perp pair trading bot (built on top of the `mpdex` framework):
 
 ```
 config.yaml          → exchanges / strategy / sizing
@@ -102,7 +102,7 @@ def calc_spread_zscore(prices_btc, prices_eth, lookback=60):
 
 ### 3) Bollinger breakout / RSI divergence (auxiliary)
 
-My main signals are the two above. Auxiliaries:
+The two signals above serve as primary. Auxiliaries:
 - Bollinger: spread outside 2σ
 - RSI divergence: BTC RSI 70+ paired with ETH RSI 50- etc.
 
@@ -119,13 +119,13 @@ def regime_ok(prices_btc, prices_eth, window=24):
     return corr >= 0.7  # block entries below 0.7
 ```
 
-Adding this filter visibly cut down my daily loss frequency.
+Adding this filter visibly reduces daily loss frequency.
 
 ### 5) Direction asymmetry — data-driven
 
-My data: ETH long (coin2_long) WR 80% vs BTC long (coin1_long) WR 70%.
+Observed data: ETH long (coin2_long) WR 80% vs BTC long (coin1_long) WR 70%.
 
-Probable cause: alt-season bias / beta differential. Whatever the cause, follow the data.
+Probable cause: alt-season bias / beta differential. Whatever the cause, the data should be followed.
 
 ```python
 COIN2_LONG_ENTRY_BONUS = 0.15  # 15% threshold discount for ETH long entries
@@ -133,7 +133,7 @@ COIN2_LONG_ENTRY_BONUS = 0.15  # 15% threshold discount for ETH long entries
 
 ## Exit priority
 
-The order in which my bot evaluates exit conditions (top to bottom):
+The order in which the bot evaluates exit conditions (top to bottom):
 
 1. **Hard stop** (-2.5% PnL): immediate close, no exceptions
 2. **Trailing stop**: once activated, callback hit
@@ -144,11 +144,11 @@ The order in which my bot evaluates exit conditions (top to bottom):
 
 ### R:R math
 
-This is what I learned the most expensive way. **TP/SL ratio determines break-even win rate.**
+This is a lesson learned the expensive way. **TP/SL ratio determines break-even win rate.**
 
-Example: TP 0.4% + SL 3% → break-even WR = 3 / (0.4 + 3) = 88%. You can't sustain that.
+Example: TP 0.4% + SL 3% → break-even WR = 3 / (0.4 + 3) = 88%. Such a rate is not sustainable.
 
-The mistake I made: ran TP 0.4% / SL 3% → 27 consecutive losing days.
+A common mistake: running TP 0.4% / SL 3% → 27 consecutive losing days.
 
 After fix: TP 2% / SL 2.5% → break-even WR 55%. Actual WR 67–84% → profitable.
 
@@ -184,13 +184,13 @@ class TrailingStop:
 
 Adding to a position when entry timing was off, lowering the average. **Dangerous; powerful when used right.**
 
-My rules:
+Rules:
 - Max entries: 3
 - Add condition: when price has worsened by N% from previous entry (spread basis)
 - Each tranche: same size (no martingale)
 - Track WR by DCA depth: if 4+ entry WR drops sharply, lower max_entries
 
-My data:
+Observed data:
 - Entries 1–3: solid WR (70%+)
 - 4+: drops (48%)
 - 9–10: concentrated losses
@@ -199,7 +199,7 @@ My data:
 
 ## Exchange grouping (stagger)
 
-Same problem as in volume farming — entering all exchanges simultaneously creates market impact against you. So:
+Same problem as in volume farming — entering all exchanges simultaneously creates market impact against the position. So:
 
 | Group | Delay | Momentum mult | Effective threshold | Exchanges |
 |-------|-------|---------------|---------------------|-----------|
@@ -233,18 +233,18 @@ Without these floors, the evolver can drive core signals to zero and the bot bec
 Pair trading bots have many variables — entry signal, exit signal, sizing, leverage, exchange, pair, market volatility. Start with small capital, one exchange, one pair. Expand only after stability.
 
 ### 2) Data-driven decisions
-"Let me bump SL by feel" is forbidden. Look at the actual loss distribution in DB. Before any change, I analyze N trades.
+"Bump SL by feel" is forbidden. Look at the actual loss distribution in DB. Before any change, analyze N trades.
 
 ### 3) Change one thing at a time
 SL / TP / size / leverage all changed at once → no way to attribute effects. A/B style: one at a time.
 
 ### 4) Circuit breaker mandatory
-Auto-stop on daily -X% loss. My defaults sit between -$30 and -$150 depending on capital scale.
+Auto-stop on daily -X% loss. Defaults sit between -$30 and -$150 depending on capital scale.
 
 ### 5) Telegram integration
 Every entry / exit / error to Telegram. Bot status is reachable from mobile.
 
-## My current setup (snapshot)
+## Current setup (snapshot)
 
 Active exchanges: 17+
 Main pairs: BTC/ETH, ETH/SOL
@@ -253,7 +253,7 @@ Size: $50 margin per entry
 Max concurrent per exchange: 3
 Daily PnL distribution: ±2–3% of capital
 
-This doesn't translate to a specific number. Some days are red, some green. If the average is positive over time, the system works. I check the truth daily via balance tracker (DB PnL can be inaccurate — covered later).
+This does not translate to a specific number. Some days are red, some green. If the average is positive over time, the system works. The truth is checked daily via balance tracker (DB PnL can be inaccurate — covered later).
 
 ## Next chapter
 

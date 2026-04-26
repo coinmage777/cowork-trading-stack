@@ -1,10 +1,10 @@
 # 08. Minara Backtesting
 
-Going live without a backtest makes me a gambler, not a trader. The backtesting workflow I use, and what I've learned along the way.
+Going live without a backtest is gambling, not trading. This chapter covers a backtesting workflow and the lessons that shaped it.
 
 ## Why backtesting matters
 
-I once skipped backtest, went live, and produced 27 consecutive losing days. Cause: a TP/SL ratio that required 94% break-even win rate, only realized through live data. One hour of backtesting would have caught it on the spot.
+One case: a strategy was deployed live without backtesting and produced 27 consecutive losing days. The cause was a TP/SL ratio that required a 94% break-even win rate, only revealed through live data. One hour of backtesting would have caught it on the spot.
 
 Backtesting answers:
 - What's this strategy's expected win rate?
@@ -24,7 +24,7 @@ Backtesting answers:
 - **Better**: subtract fees every fill, apply slippage scaled with size
 
 ### 3) Look-ahead bias
-- **Common mistake**: signal computed on the close → you didn't have the close yet at decision time
+- **Common mistake**: signal computed on the close → the close was not yet available at decision time
 - **Better**: signals always use bars before the current decision point
 
 ### 4) Overfitting
@@ -36,9 +36,9 @@ Backtesting answers:
 
 ### 5) Survivorship bias
 - **Common mistake**: backtest only currently-listed assets
-- **Better**: include delisted tokens / vanished exchanges in your data set
+- **Better**: include delisted tokens / vanished exchanges in the data set
 
-## My backtest workflow
+## Backtest workflow
 
 ### Step 1: data collection
 
@@ -142,11 +142,11 @@ If OOS PnL is materially worse than IS → overfit. Redesign.
 
 Backtest passes → paper trade (live prices, fake balance) for 1–2 weeks → small live → verify → scale.
 
-If paper diverges from backtest, your data / signal / slippage assumptions are wrong somewhere.
+If paper diverges from backtest, the data / signal / slippage assumptions are wrong somewhere.
 
-## Minara — my backtesting tool
+## Minara — the backtesting tool
 
-I built a backtesting module for the multi-exchange pair trading bot, called Minara internally. Features:
+Minara is a backtesting module built for the multi-exchange pair trading bot. Features:
 
 - **Multi-exchange synchronized data** — same-timestamp prices across N exchanges
 - **Pair signals**: momentum_diff / spread_zscore / volatility_ratio etc.
@@ -216,9 +216,9 @@ Max drawdown:   -18.2%
 Sharpe:         2.1
 ```
 
-This is what I look at before deciding to deploy.
+These outputs are reviewed before any deployment decision.
 
-## My pre-live checklist
+## Pre-live checklist
 
 Before any live deploy:
 
@@ -230,11 +230,11 @@ Before any live deploy:
 - [ ] Works in both high- and low-volatility periods
 - [ ] Break-even WR < actual WR - 5pp (margin of safety)
 
-If it fails any of these, no live.
+If any of these fail, no live.
 
-## What backtest taught me
+## What backtesting reveals
 
-While running, things backtest helped me discover:
+Findings surfaced through backtesting during live operation:
 
 1. **Add regime filter**: block entries when correlation < 0.7 → daily-loss frequency clearly down
 2. **Direction asymmetry**: ETH long beats BTC long → differentiated entry thresholds
@@ -242,7 +242,7 @@ While running, things backtest helped me discover:
 4. **Redesign TP/SL**: by R:R, not margin → break-even WR 94% → 55%
 5. **no_entry_hours**: certain UTC hours had low WR → block entries
 
-All of this was first verified in backtest, then applied live.
+Each item was verified in backtest first, then applied live.
 
 ## Next chapter
 

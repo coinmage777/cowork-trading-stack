@@ -1,6 +1,6 @@
 # 12. Exchange API Setup
 
-API setup, permissions, and gotchas for the exchanges I run. Patterns differ per exchange, so this covers the general principles plus what I use.
+API setup, permissions, and gotchas across common exchanges. Patterns differ per exchange, so this covers the general principles plus a representative configuration.
 
 ## General principles
 
@@ -11,7 +11,7 @@ API setup, permissions, and gotchas for the exchanges I run. Patterns differ per
 - **Account / security management** never
 
 ### IP whitelist
-Always when available. Register your VPS's static IP.
+Always when available. Register the VPS's static IP.
 
 ### Key storage
 `.env` files → `.gitignore`. Never in code or git.
@@ -47,12 +47,12 @@ ex = ccxt.bybit({
 })
 ```
 
-ccxt provides unified abstraction across most exchanges. Great for fast starts.
+ccxt provides a unified abstraction across most exchanges. Useful for fast starts.
 
 ### Gotchas
 - **Permission edits**: some exchanges require a new key on permission change
 - **Expiry**: some keys expire (Bybit etc.)
-- **Sub-accounts**: main vs sub — trading / arb on a sub recommended (isolation)
+- **Sub-accounts**: main vs sub — trading / arb on a sub is recommended (isolation)
 - **Rate limits**: exchange-specific. Hitting them throttles or blocks. Read each exchange's docs.
 
 ## [Hyperliquid](https://miracletrade.com/?ref=coinmage) and HL-based front-ends
@@ -65,7 +65,7 @@ ccxt provides unified abstraction across most exchanges. Great for fast starts.
 
 ```python
 # Main wallet holds funds; agent does the trading
-main_wallet = "0x..."  # your main wallet
+main_wallet = "0x..."  # main wallet
 agent_private_key = os.getenv("HYPERLIQUID_AGENT_KEY")  # delegated key
 ```
 
@@ -117,7 +117,7 @@ Round-robin per order. One wallet farms multiple front-ends' points simultaneous
 ### [EdgeX](https://pro.edgex.exchange/referral/570254647)
 - StarkNet-based
 - Auth: account_id (StarkNet) + StarkNet private key
-- StarkNet signing yourself or via SDK
+- StarkNet signing directly or via SDK
 
 ### [GRVT](https://grvt.io/exchange/sign-up?ref=1O9U2GG)
 - Standalone DEX
@@ -152,7 +152,7 @@ Round-robin per order. One wallet farms multiple front-ends' points simultaneous
 ### 1) Immature SDKs
 - Sparse docs
 - Bugs (e.g., cancel_orders that doesn't actually work)
-- Sometimes you reimplement parts yourself
+- Sometimes parts must be reimplemented
 
 ### 2) Signing variety
 - HMAC, ed25519, ECDSA, StarkNet, EIP-712
@@ -160,7 +160,7 @@ Round-robin per order. One wallet farms multiple front-ends' points simultaneous
 
 ### 3) Symbol formats
 - Differ across exchanges: BTC-USD, BTCUSDT, btc_usd, BTC-USD-PERP, hyna:BTC
-- Need an abstraction (SymbolAdapter)
+- An abstraction is needed (SymbolAdapter)
 
 ### 4) Market list staleness
 - New DEXs add / remove markets often
@@ -179,9 +179,9 @@ Round-robin per order. One wallet farms multiple front-ends' points simultaneous
 - In low-liquidity markets, mark price returns 0 sometimes
 - Validate every time: `if mark_price <= 0: raise ValueError`
 
-## Exchanges I've integrated (reference)
+## Integrated exchanges (reference)
 
-This list is exchanges I've integrated at some point. Stability and usability change over time:
+A reference list of exchanges integrated at some point. Stability and usability change over time:
 
 **Tier 1 (stable)**
 - Hyperliquid + its front-ends
@@ -201,7 +201,7 @@ This list is exchanges I've integrated at some point. Stability and usability ch
 
 ## Integration abstraction — Factory + Adapter
 
-Adding a new exchange must be cheap. My pattern:
+Adding a new exchange must be cheap. A typical pattern:
 
 ```python
 # factory.py
@@ -226,7 +226,7 @@ class HyperliquidExchange(BaseExchange):
     # ...
 ```
 
-Just name the exchange in config.yaml:
+The exchange is then named in config.yaml:
 ```yaml
 exchanges:
   hyperliquid_2:
@@ -241,7 +241,7 @@ exchanges:
 
 ### Isolated mode
 
-When SDK doesn't play nice with async event loops, isolate:
+When an SDK doesn't play nice with async event loops, isolate it:
 ```python
 class LighterBridge:
     def __init__(self, venv_path):
@@ -257,7 +257,7 @@ class LighterBridge:
 
 ## Env-var management
 
-My `.env` structure (placeholders shown):
+A typical `.env` structure (placeholders shown):
 
 ```bash
 # Exchange keys
@@ -306,7 +306,7 @@ Before adding a new exchange:
 - [ ] Testnet / paper mode available
 - [ ] Withdrawal permission separable (must be)
 - [ ] IP whitelist available
-- [ ] Signature algorithm — verified working in your env
+- [ ] Signature algorithm — verified working in the target environment
 - [ ] WebSocket stability — 1-hour connection-keep test
 - [ ] Funding / fees clearly understood
 - [ ] Market / symbol list stable

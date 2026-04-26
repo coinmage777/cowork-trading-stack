@@ -16,7 +16,7 @@ A bot track separate from Perp DEXs. Auto-trading on prediction markets.
 - **No fees** (only USDC swap costs + small gas). 
 - **Liquidity wildly variable** — Trump market deep, niche markets shallow
 
-### My bot tracks
+### Bot tracks
 
 1. **expiry_snipe** — buy tokens whose price drops near expiry
 2. **hedge_arb** — when YES + NO sums to < 0.99 (or via cross-venue), capture the gap
@@ -30,16 +30,16 @@ A bot track separate from Perp DEXs. Auto-trading on prediction markets.
 - **No liquidation, no funding** — hold indefinitely
 - **Arb opportunities** — gaps with other prediction markets (Predict.fun, Kalshi)
 
-## Why it's hard (cases I've burned myself on)
+## Why it's hard (failure cases)
 
-I once watched a Polymarket subaccount drop roughly 60% in eight days. Lessons learned:
+A Polymarket subaccount once dropped roughly 60% in eight days. Lessons learned:
 
 ### 1) Adverse selection
 
-- I place a limit buy at mid-price
-- For my order to fill, someone must sell at that price
+- A limit buy is placed at mid-price
+- For the order to fill, someone must sell at that price
 - Sellers are bots / informationally advantaged participants
-- → My fills happen on losing trades
+- → Fills happen on losing trades
 
 Data: 14% fill rate, 29% WR on fills. The fill itself is a negative signal.
 
@@ -55,12 +55,12 @@ Data: 14% fill rate, 29% WR on fills. The fill itself is a negative signal.
 
 ### 3) verify_order_fill + cancel = ghost position
 
-A mistake I made:
+A common mistake:
 1. Order placed, check fill within N seconds
 2. Decide unfilled → cancel
 3. But it actually filled (CLOB matching delay)
 4. DB has nothing → ghost position
-5. At resolution, someone's tokens are mine but uncatalogued → effectively a loss
+5. At resolution, the tokens exist on-chain but uncatalogued → effectively a loss
 
 **Lesson**: **never cancel an order after placing it.** Instead, post-verify with `get_order()` at resolution time.
 
@@ -74,7 +74,7 @@ A mistake I made:
 
 ### 5) PnL formula bug
 
-The DB `size` is dollar cost, but my formula treated it as shares.
+The DB `size` is dollar cost, but the formula treated it as shares.
 - Before (wrong): `WIN = (1 - ep) * size * 0.9`
 - Fixed: `WIN = size * (1/ep - 1)`
 
@@ -86,7 +86,7 @@ If the Signer EOA runs out of BNB, claims fail. BNB needs to be on the **Signer 
 
 **Fix**: detect gas shortage → immediately halt the claim loop → recheck balance next cycle before resuming.
 
-## My settled patterns
+## Settled patterns
 
 ### Live strategies (two)
 
@@ -147,7 +147,7 @@ Predict.fun is a BSC-based prediction market. Similar pattern, with differences:
 - **Assets**: BTC / ETH / SOL / BNB markets, many.
 - **Short expiries**: 1-minute to 1-hour markets common → fast cycles.
 
-My integration:
+Integration details:
 - Integrated into main.py as `_predict_loop()` (no separate process)
 - DB schema gets `strategy_name="predict_snipe"`
 - Telegram alerts / claims / resolves all unified
@@ -155,7 +155,7 @@ My integration:
 
 ### Predict.fun probability model
 
-Linear models are inaccurate. I use **volatility-based normal CDF**:
+Linear models are inaccurate. The approach used is a **volatility-based normal CDF**:
 
 ```python
 import scipy.stats as stats
@@ -188,7 +188,7 @@ PREDICT_MAX_MINUTES=5  # 2-5 min sweet spot, WR 85%+
 
 ## Reporting
 
-What I check daily:
+Daily checks:
 
 ```bash
 python poly_report.py --days 7  # last 7 days

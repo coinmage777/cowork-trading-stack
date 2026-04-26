@@ -4,7 +4,7 @@ Every term used in this guide, alphabetical. For quick lookup.
 
 ## A
 
-**Adverse Selection** — In a market, your fills tend to come when the counterparty has informational advantage. For bots, the fill itself can be a negative signal.
+**Adverse Selection** — In a market, fills tend to occur when the counterparty has an informational advantage. For bots, the fill itself can be a negative signal.
 
 **Agent Wallet** — A separate key delegated trading rights by a main wallet. On DEXs like [Hyperliquid](https://miracletrade.com/?ref=coinmage), lets bots trade without exposing the main key.
 
@@ -50,7 +50,7 @@ Every term used in this guide, alphabetical. For quick lookup.
 
 ## D
 
-**DCA (Dollar Cost Averaging)** — Adding to a position to lower the average. Two-sided risk — powerful when used right, ruinous when not.
+**DCA (Dollar Cost Averaging)** — Adding to a position to lower the average. Two-sided risk — effective when used appropriately, damaging when not.
 
 **DEX** — Decentralized Exchange. Hyperliquid, dYdX, GMX, Lighter etc.
 
@@ -88,7 +88,7 @@ Every term used in this guide, alphabetical. For quick lookup.
 
 **Hot Reload** — Refresh config without restart. SIGHUP or file trigger.
 
-**Hyperliquid (HL)** — My main DEX. Self-L1, EIP-712 signing, builder code system.
+**Hyperliquid (HL)** — A primary DEX referenced throughout this guide. Self-L1, EIP-712 signing, builder code system.
 
 ## I
 
@@ -108,7 +108,7 @@ Every term used in this guide, alphabetical. For quick lookup.
 
 **Latency** — API call / response time. Critical in arb bots.
 
-**Leverage** — Position size relative to capital. My pair trading defaults to ~10x.
+**Leverage** — Position size relative to capital. Pair trading in this guide defaults to ~10x.
 
 **Limit Order** — Buy / sell at a specific price. Maker = adds liquidity, Taker = removes.
 
@@ -126,7 +126,7 @@ Every term used in this guide, alphabetical. For quick lookup.
 
 **Market Order** — Immediate match-price order. Slippage applies.
 
-**MemKraft** — The AI memory system I use, integrated with Obsidian.
+**MemKraft** — An AI memory system integrated with Obsidian.
 
 **Momentum** — Short-term price change. One of pair trading's entry signals.
 
@@ -228,12 +228,10 @@ Every term used in this guide, alphabetical. For quick lookup.
 
 ## Closing
 
-This guide is a snapshot of the system I run today. Over time exchanges will close, new ones will appear, signals will stop working, and new ones will be discovered. That's the nature of the field.
+This guide is a snapshot of a system as it operates today. Over time exchanges will close, new ones will appear, signals will stop working, and new ones will be discovered. That is the nature of the field.
 
-**Half of this guide will be outdated in six months.** The framework — the automation mindset, data-driven decisions, infra / operational principles, AI integration — those don't expire.
+**A substantial portion of this guide is likely to be outdated within six months.** The framework — the automation mindset, data-driven decisions, infra / operational principles, AI integration — does not expire.
 
-If this guide helped someone start their first piece of automation, that's enough.
+If this guide helps someone start their first piece of automation, that is sufficient.
 
 Returns come from systems. Systems come from time. Time comes from patience.
-
-Wishing you good alpha.
