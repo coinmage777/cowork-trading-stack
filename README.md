@@ -77,7 +77,7 @@ It is written for someone who can code a little, has read a few DeFi posts, and 
 
 The full infrastructure that powers the strategies in this guide is included in this repository as 14 self-contained modules. Each module has its own README, requirements, and entry points — clone the repo, install per-module dependencies, fill in your own keys via `.env`, and you have a working starting point.
 
-이 가이드에서 다루는 전략들이 실제로 굴러가는 풀스택 인프라가 14개 자가완결 모듈로 들어있다. 모듈마다 자체 README/requirements/엔트리포인트가 있으니 레포 클론 → 모듈별 의존성 설치 → 본인 키를 `.env`에 주입하면 바로 시작 가능.
+이 가이드에서 다루는 전략들이 실제로 굴러가는 풀스택 인프라를 14개 자가완결 모듈로 정리했습니다. 모듈마다 자체 README/requirements/엔트리포인트가 있어서, 레포 클론 → 모듈별 의존성 설치 → 본인 키를 `.env`에 주입하시면 시작할 수 있습니다.
 
 ### Modules / 모듈
 
@@ -121,13 +121,13 @@ python -m {module}.{entry_point}
 
 Per-module ENV variables and entry points are documented inside each module's own README.
 
-모듈마다 필요한 환경변수와 실행 명령은 해당 모듈 README에 적혀 있다.
+모듈마다 필요한 환경변수와 실행 명령은 해당 모듈 README에 적혀 있습니다.
 
-### Referrals / 레퍼럴
+### Exchanges / 거래소
 
-Exchange referral codes used in this setup are listed in [REFERRALS.md](./REFERRALS.md). Using them helps support continued maintenance.
+이 인프라에서 사용하는 거래소와 가입 링크는 [EXCHANGES.md](./EXCHANGES.md)에 정리되어 있습니다.
 
-이 셋업에서 쓰이는 거래소 레퍼럴 코드는 [REFERRALS.md](./REFERRALS.md)에 정리. 사용해주시면 유지보수에 도움.
+The exchanges and protocols used in this infrastructure are listed in [EXCHANGES.md](./EXCHANGES.md).
 
 ### Architecture Principles / 아키텍처 원칙
 
@@ -142,15 +142,15 @@ Exchange referral codes used in this setup are listed in [REFERRALS.md](./REFERR
 
 All secrets, private keys, and personal wallet addresses have been stripped from this repository. Placeholders use the form `<...>` or `<DESCRIPTOR>`. You must inject your own credentials via environment variables — never commit them.
 
-이 레포에는 모든 시크릿/프라이빗 키/개인 지갑 주소가 제거되어 있다. 자리표시자는 `<...>` 또는 `<DESCRIPTOR>` 형태. 본인 크리덴셜은 반드시 환경변수로 주입할 것 — 절대 커밋하지 말 것.
+이 레포에서는 모든 시크릿/프라이빗 키/개인 지갑 주소가 제거되어 있습니다. 자리표시자는 `<...>` 또는 `<DESCRIPTOR>` 형태입니다. 본인 크리덴셜은 환경변수로 주입하시고, 절대 커밋하지 마세요.
 
 ---
 
 ## Disclaimer / 면책
 
-**English**: Nothing in this repository is financial, legal, or tax advice. Crypto trading involves substantial risk of loss. Code samples are illustrative; do not run them with real funds without auditing them yourself. The author has no fiduciary duty to readers. Past performance — yours, mine, or anyone else's — does not predict future returns. Use of any exchange or referral link is at your own discretion.
+**English**: Nothing in this repository is financial, legal, or tax advice. Crypto trading involves substantial risk of loss. Code samples are illustrative; do not run them with real funds without auditing them yourself. The author has no fiduciary duty to readers. Past performance — yours, mine, or anyone else's — does not predict future returns. Use of any exchange link is at your own discretion.
 
-**한국어**: 이 저장소의 어떤 내용도 투자/법률/세무 조언이 아니다. 크립토 트레이딩은 큰 손실 가능성을 동반한다. 코드 예시는 어디까지나 설명용이며, 직접 감사하지 않은 코드를 실자금으로 돌리지 마라. 저자는 독자에 대한 어떤 신탁의무도 없다. 과거 성과는 — 것이든 타인 것이든 — 미래를 보장하지 않는다. 거래소 사용과 레퍼럴 클릭은 전적으로 판단이다.
+**한국어**: 이 저장소의 어떤 내용도 투자/법률/세무 조언이 아니다. 크립토 트레이딩은 큰 손실 가능성을 동반한다. 코드 예시는 어디까지나 설명용이며, 직접 감사하지 않은 코드를 실자금으로 돌리지 마라. 저자는 독자에 대한 어떤 신탁의무도 없다. 과거 성과는 — 것이든 타인 것이든 — 미래를 보장하지 않는다. 거래소 사용과 가입 링크 클릭은 전적으로 본인 판단이다.
 
 ## License
 

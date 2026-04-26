@@ -225,7 +225,7 @@ Grow capital + new domains.
 
 ### Candidates
 - Grow capital (only on verified strategies)
-- Content (blog / YouTube → referral revenue)
+- Content (blog / YouTube)
 - New markets (prediction markets / options / DeFi yields)
 - KOL / ambassador (selectively)
 
