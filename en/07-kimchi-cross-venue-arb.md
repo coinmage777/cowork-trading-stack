@@ -112,15 +112,7 @@ To automate:
 
 This pattern has only been paper-tested. Big moves are rare and synchronized two-sided fills are tough.
 
-## Real-world kimchi automation
-
-For genuinely automated kimchi arb, two operators is more efficient:
-- **Global side**: USDT → coin → transfer to Korea
-- **Korean side**: receive coin → sell for KRW → hold KRW for next round
-
-Solo, the KRW → USDT conversion becomes the bottleneck.
-
-### A pragmatic approach
+## A pragmatic approach
 
 A full kimchi bot is generally unnecessary. Instead, an **alert when premium is unusually high** → manual judgment to enter works well. Big premiums are rare enough that the ROI on automation isn't justified.
 
