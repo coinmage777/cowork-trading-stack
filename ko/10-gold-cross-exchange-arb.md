@@ -193,7 +193,7 @@ def estimate_execution_price(order_book, side, qty):
 
 새로 출시된 거래소는 출금 정지 / 해킹 리스크가 있습니다. 등급:
 - **Tier 1** (신뢰): 바이낸스, OKX, Bybit, [Hyperliquid](https://miracletrade.com/?ref=coinmage), Coinbase
-- **Tier 2**: 잘 알려진 DEX들 (Lighter, dYdX, GMX)
+- **Tier 2**: 잘 알려진 DEX들 ([Lighter](https://app.lighter.xyz/?referral=GMYPZWQK69X4), dYdX, GMX)
 - **Tier 3**: 새 DEX, 작은 거래소
 
 Tier 3에는 차익 사이즈를 작게 가져갑니다 (총 자본의 5% 이하).

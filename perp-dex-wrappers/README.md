@@ -5,7 +5,7 @@
 ## 핵심 기능
 
 - **Factory pattern**: `create_exchange("hyperliquid", wallet=..., agent_key=...).init()` → 단일 진입점
-- **격리 venv**: SDK가 sync HTTP 호출하는 거래소 (Lighter/GRVT/Reya/Bulk)는 자동으로 subprocess bridge로 분리
+- **격리 venv**: SDK가 sync HTTP 호출하는 거래소 ([Lighter](https://app.lighter.xyz/?referral=GMYPZWQK69X4)/GRVT/Reya/Bulk)는 자동으로 subprocess bridge로 분리
 - **Builder rotation**: 같은 HL 지갑에서 여러 builder code (Miracle/DreamCash/HyENA/Bullpen 등) 라운드로빈 → 중복 인스턴스 없이 볼륨 분배
 - **EIP-712 typed data signing**: Reya/Paradex/RiseX/GRVT 등 EIP-712 서명 거래소 통일 처리
 - **Symbol adapter**: 거래소별 심볼 포맷 (`BTC` vs `BTC-PERP` vs `BTCUSDT` vs `hyna:BTC`) 자동 변환
@@ -15,7 +15,7 @@
 | 거래소 | 폴더 | 특이사항 |
 |--------|------|----------|
 | [Hyperliquid](https://miracletrade.com/?ref=coinmage) | `hyperliquid/` | HL 메인 + builder code rotation 지원 |
-| Lighter | `lighter/` | 격리 venv (SDK sync init) |
+| [Lighter](https://app.lighter.xyz/?referral=GMYPZWQK69X4) | `lighter/` | 격리 venv (SDK sync init) |
 | [GRVT](https://grvt.io/exchange/sign-up?ref=1O9U2GG) | `grvt/` | 격리 venv, account_id + EIP-712 |
 | Paradex | `paradex/` | StarkNet, JWT + L1/L2 키 분리 |
 | Backpack | `backpack/` | API key + ED25519 signing |

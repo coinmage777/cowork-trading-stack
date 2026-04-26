@@ -108,7 +108,7 @@ Round-robin per order. One wallet farms multiple front-ends' points simultaneous
 
 ## DEXs
 
-### Lighter
+### [Lighter](https://app.lighter.xyz/?referral=GMYPZWQK69X4)
 - Standalone DEX (not HL-based)
 - API key must be Generated on the web (no auto-issue)
 - SDK exists but has gotchas (signature mismatches etc.)
@@ -185,7 +185,7 @@ A reference list of exchanges integrated at some point. Stability and usability 
 
 **Tier 1 (stable)**
 - Hyperliquid + its front-ends
-- Lighter
+- [Lighter](https://app.lighter.xyz/?referral=GMYPZWQK69X4)
 - EdgeX
 - GRVT
 

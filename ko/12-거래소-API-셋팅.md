@@ -108,7 +108,7 @@ builder_rotation:
 
 ## DEX (탈중앙거래소)
 
-### Lighter
+### [Lighter](https://app.lighter.xyz/?referral=GMYPZWQK69X4)
 
 - 독립 DEX입니다 (HL 기반 아님)
 - API key는 웹에서 Generate가 필수입니다 (자동 생성 없음)
@@ -193,7 +193,7 @@ builder_rotation:
 
 **Tier 1 (안정)**
 - Hyperliquid + 그 위 프론트엔드들
-- Lighter
+- [Lighter](https://app.lighter.xyz/?referral=GMYPZWQK69X4)
 - EdgeX
 - GRVT
 

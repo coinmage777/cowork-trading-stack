@@ -63,7 +63,7 @@ perp-dex-setup-guides/docs_ref/
 - **Builder code rotation**: 같은 wallet으로 여러 builder 운영 시 별도 instance 만들면 충돌. `builder_rotation` list로 묶기
 - **HIP-3 asset_id**: `140000 + perpDexIndex` (예: HyENA = 4 → 140004)
 
-### Lighter
+### [Lighter](https://app.lighter.xyz/?referral=GMYPZWQK69X4)
 - **API key 웹에서 직접 발급**: SDK `change_api_key`는 서명 불일치 버그 (사용 X)
 - **격리 venv 필수**: `__init__`이 sync HTTP 호출 → asyncio deadlock
 - **stdout 오염**: `lighter_ws_client.py`의 `print()`이 subprocess stdout으로 흘러 JSON parse 에러 burst. `subprocess_wrapper.py`에 첫 char 가드 적용 필요

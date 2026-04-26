@@ -12,7 +12,7 @@ Running this every N minutes accumulates points by season's end.
 
 ### Where it works
 
-- **Perp DEXs during airdrop seasons** ([Hyperliquid](https://miracletrade.com/?ref=coinmage), Lighter, [EdgeX](https://pro.edgex.exchange/referral/570254647), Nado, [GRVT](https://grvt.io/exchange/sign-up?ref=1O9U2GG), etc.)
+- **Perp DEXs during airdrop seasons** ([Hyperliquid](https://miracletrade.com/?ref=coinmage), [Lighter](https://app.lighter.xyz/?referral=GMYPZWQK69X4), [EdgeX](https://pro.edgex.exchange/referral/570254647), Nado, [GRVT](https://grvt.io/exchange/sign-up?ref=1O9U2GG), etc.)
 - **Volume-based exchange campaigns** (Bybit, OKX run these often)
 - **Maker-rebate exchanges** — if maker fees are negative, the volume itself is profit
 

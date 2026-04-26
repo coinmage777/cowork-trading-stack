@@ -7,7 +7,7 @@
 | 파일 | 용도 |
 |------|------|
 | `notifier.py` | Telegram bot으로 알림. dedup throttling 내장. `TELEGRAM_BOT_TOKEN`/`TELEGRAM_CHAT_ID` 미설정 시 no-op |
-| `subprocess_wrapper.py` | 격리 venv 거래소 (Lighter/GRVT/Reya/Bulk) subprocess 관리. JSON-RPC stdin/stdout. 좀비 자동 kill + 재시작 |
+| `subprocess_wrapper.py` | 격리 venv 거래소 ([Lighter](https://app.lighter.xyz/?referral=GMYPZWQK69X4)/GRVT/Reya/Bulk) subprocess 관리. JSON-RPC stdin/stdout. 좀비 자동 kill + 재시작 |
 | `exchange_bridge.py` | subprocess_wrapper의 자식 측 entry. `python -m strategies.exchange_bridge --exchange lighter` |
 | `health_monitor.py` | 60초 주기 헬스체크. Circuit breaker / 거래소 auto-disable / 잔고 급락 알림 / WS fallback 빈도 |
 | `trigger_watcher.py` | `triggers/` 디렉토리 파일 감시. `restart.trigger` / `reload.trigger` / `close.trigger` / `clear_cb.trigger` / `status.trigger` |

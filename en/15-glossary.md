@@ -52,7 +52,7 @@ Every term used in this guide, alphabetical. For quick lookup.
 
 **DCA (Dollar Cost Averaging)** — Adding to a position to lower the average. Two-sided risk — effective when used appropriately, damaging when not.
 
-**DEX** — Decentralized Exchange. Hyperliquid, dYdX, GMX, Lighter etc.
+**DEX** — Decentralized Exchange. Hyperliquid, dYdX, GMX, [Lighter](https://app.lighter.xyz/?referral=GMYPZWQK69X4) etc.
 
 **Drawdown** — Loss from capital high. Max Drawdown is a core evaluation metric.
 
