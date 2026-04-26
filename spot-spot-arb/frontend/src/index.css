@@ -1,0 +1,206 @@
+@import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap");
+
+@theme {
+  --color-cream: #F3EEE3;
+  --color-oatmeal: #EDE6D6;
+  --color-oatmeal-deep: #E3DBC6;
+  --color-ink: #1A1A1A;
+  --color-ink-soft: #2B2B2B;
+  --color-ink-mute: #5F5A4E;
+  --color-ink-faint: #8A8574;
+  --color-rule: #D7CEB8;
+  --color-accent-yellow: #E8FF3C;
+  --color-accent-magenta: #FF4DA6;
+  --color-accent-cyan: #4DE0FF;
+  --color-accent-purple: #B285FF;
+  --color-accent-orange: #FF9138;
+  --color-loss-red: #FF6B6B;
+  --color-gain-green: #2BC48A;
+
+  --font-mono: "JetBrains Mono", "IBM Plex Mono", ui-monospace, monospace;
+  --font-sans: "JetBrains Mono", "IBM Plex Mono", ui-monospace, monospace;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html,
+body,
+#root {
+  background-color: var(--color-cream);
+  color: var(--color-ink);
+  font-family: var(--font-mono);
+  letter-spacing: 0.01em;
+}
+
+body {
+  font-feature-settings: "ss01", "ss02", "cv11";
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-rule);
+  border-radius: 0;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-ink-faint);
+}
+
+.snatch-dotted {
+  background-image: radial-gradient(var(--color-rule) 1px, transparent 1px);
+  background-size: 4px 4px;
+}
+
+/* Scoped palette recolor for legacy dark panels (HedgePnlPanel, WithdrawPanel) */
+.snatch-panel {
+  background: var(--color-cream) !important;
+  color: var(--color-ink);
+  font-family: var(--font-mono);
+}
+.snatch-panel h1,
+.snatch-panel h2,
+.snatch-panel h3,
+.snatch-panel h4,
+.snatch-panel label,
+.snatch-panel p,
+.snatch-panel span,
+.snatch-panel div,
+.snatch-panel button,
+.snatch-panel input,
+.snatch-panel select,
+.snatch-panel textarea,
+.snatch-panel option {
+  font-family: var(--font-mono);
+}
+.snatch-panel [class*="bg-gray-9"],
+.snatch-panel [class*="bg-gray-8"],
+.snatch-panel [class*="bg-gray-95"],
+.snatch-panel [class*="bg-black"] {
+  background-color: var(--color-oatmeal) !important;
+}
+.snatch-panel [class*="bg-gray-7"] {
+  background-color: var(--color-oatmeal-deep) !important;
+}
+.snatch-panel [class*="border-gray-9"],
+.snatch-panel [class*="border-gray-8"],
+.snatch-panel [class*="border-gray-7"] {
+  border-color: var(--color-rule) !important;
+}
+.snatch-panel [class*="text-white"],
+.snatch-panel [class*="text-gray-1"],
+.snatch-panel [class*="text-gray-2"],
+.snatch-panel [class*="text-gray-3"] {
+  color: var(--color-ink) !important;
+}
+.snatch-panel [class*="text-gray-4"],
+.snatch-panel [class*="text-gray-5"] {
+  color: var(--color-ink-mute) !important;
+}
+.snatch-panel [class*="text-gray-6"],
+.snatch-panel [class*="text-gray-7"] {
+  color: var(--color-ink-faint) !important;
+}
+.snatch-panel [class*="text-emerald-"],
+.snatch-panel [class*="text-green-"] {
+  color: var(--color-gain-green) !important;
+}
+.snatch-panel [class*="text-red-"],
+.snatch-panel [class*="text-rose-"] {
+  color: var(--color-loss-red) !important;
+}
+.snatch-panel [class*="text-amber-"],
+.snatch-panel [class*="text-yellow-"],
+.snatch-panel [class*="text-orange-"] {
+  color: var(--color-accent-orange) !important;
+}
+.snatch-panel [class*="text-cyan-"],
+.snatch-panel [class*="text-sky-"],
+.snatch-panel [class*="text-blue-"] {
+  color: var(--color-ink) !important;
+}
+.snatch-panel [class*="text-purple-"],
+.snatch-panel [class*="text-violet-"],
+.snatch-panel [class*="text-fuchsia-"] {
+  color: var(--color-accent-purple) !important;
+}
+.snatch-panel [class*="bg-emerald-"],
+.snatch-panel [class*="bg-green-"] {
+  background-color: color-mix(in srgb, var(--color-gain-green) 15%, var(--color-cream)) !important;
+}
+.snatch-panel [class*="bg-red-"],
+.snatch-panel [class*="bg-rose-"] {
+  background-color: color-mix(in srgb, var(--color-loss-red) 15%, var(--color-cream)) !important;
+}
+.snatch-panel [class*="bg-amber-"],
+.snatch-panel [class*="bg-yellow-"],
+.snatch-panel [class*="bg-orange-"] {
+  background-color: color-mix(in srgb, var(--color-accent-orange) 18%, var(--color-cream)) !important;
+}
+.snatch-panel [class*="bg-cyan-"],
+.snatch-panel [class*="bg-sky-"],
+.snatch-panel [class*="bg-blue-"] {
+  background-color: color-mix(in srgb, var(--color-accent-cyan) 18%, var(--color-cream)) !important;
+}
+.snatch-panel [class*="bg-purple-"],
+.snatch-panel [class*="bg-violet-"],
+.snatch-panel [class*="bg-fuchsia-"] {
+  background-color: color-mix(in srgb, var(--color-accent-purple) 18%, var(--color-cream)) !important;
+}
+.snatch-panel [class*="border-emerald-"],
+.snatch-panel [class*="border-green-"] {
+  border-color: var(--color-gain-green) !important;
+}
+.snatch-panel [class*="border-red-"],
+.snatch-panel [class*="border-rose-"] {
+  border-color: var(--color-loss-red) !important;
+}
+.snatch-panel [class*="border-amber-"],
+.snatch-panel [class*="border-yellow-"],
+.snatch-panel [class*="border-orange-"] {
+  border-color: var(--color-accent-orange) !important;
+}
+.snatch-panel [class*="border-cyan-"],
+.snatch-panel [class*="border-sky-"],
+.snatch-panel [class*="border-blue-"] {
+  border-color: var(--color-accent-cyan) !important;
+}
+.snatch-panel [class*="border-purple-"],
+.snatch-panel [class*="border-violet-"],
+.snatch-panel [class*="border-fuchsia-"] {
+  border-color: var(--color-accent-purple) !important;
+}
+.snatch-panel input,
+.snatch-panel select,
+.snatch-panel textarea {
+  background-color: var(--color-cream) !important;
+  color: var(--color-ink) !important;
+  border-color: var(--color-rule) !important;
+}
+.snatch-panel button[class*="bg-blue-"],
+.snatch-panel button[class*="bg-indigo-"] {
+  background-color: var(--color-ink) !important;
+  color: var(--color-cream) !important;
+  border-color: var(--color-ink) !important;
+}
+.snatch-panel button[class*="bg-blue-"]:hover,
+.snatch-panel button[class*="bg-indigo-"]:hover {
+  background-color: var(--color-accent-yellow) !important;
+  color: var(--color-ink) !important;
+}
+.snatch-panel .rounded,
+.snatch-panel .rounded-md,
+.snatch-panel .rounded-lg,
+.snatch-panel .rounded-xl,
+.snatch-panel .rounded-2xl,
+.snatch-panel .rounded-full {
+  border-radius: 0 !important;
+}

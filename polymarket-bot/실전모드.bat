@@ -1,0 +1,28 @@
+@echo off
+chcp 65001 >nul
+title Polymarket Bot - LIVE Mode
+cd /d "%~dp0"
+set "PY_CMD="
+where py >nul 2>nul && set "PY_CMD=py"
+if not defined PY_CMD (
+    where python >nul 2>nul && set "PY_CMD=python"
+)
+if not defined PY_CMD (
+    for %%P in ("%LocalAppData%\Programs\Python\Python310\python.exe" "%LocalAppData%\Python\bin\python.exe" "%LocalAppData%\Python\pythoncore-3.14-64\python.exe") do (
+        if exist %%~P set "PY_CMD=%%~P"
+    )
+)
+if not defined PY_CMD (
+    echo Python was not found.
+    echo Install Python for Windows and enable the Python Launcher or add Python to PATH.
+    pause
+    exit /b 1
+)
+echo ============================================
+echo   WARNING: LIVE MODE - Real money trading!
+echo ============================================
+echo.
+set /p confirm="Continue? (y/n): "
+if /i not "%confirm%"=="y" exit
+"%PY_CMD%" main.py --mode live
+pause

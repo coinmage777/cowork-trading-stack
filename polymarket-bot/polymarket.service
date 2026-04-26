@@ -1,0 +1,23 @@
+[Unit]
+Description=Polymarket Bot
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/opt/polymarket-bot
+EnvironmentFile=/opt/polymarket-bot/.env
+Environment=PYTHONUNBUFFERED=1
+Environment=PYTHONIOENCODING=utf-8
+Environment=HTTPS_PROXY=http://<PROXY_USER>:<PROXY_PASS>@<PROXY_HOST>:<PROXY_PORT>
+Environment=HTTP_PROXY=http://<PROXY_USER>:<PROXY_PASS>@<PROXY_HOST>:<PROXY_PORT>
+Environment=NO_PROXY=api.hyperliquid.xyz,mainnet.zklighter.elliot.ai,api.reya.xyz,api.predict.fun,bsc-dataseed.binance.org,localhost,127.0.0.1,gamma-api.polymarket.com,polygon-rpc.com,api.binance.com,stream.binance.com,data-api.polymarket.com,fapi.binance.com
+ExecStart=<INSTALL_DIR>/multi-perp-dex/main_venv/bin/python main.py --mode live
+Restart=on-failure
+RestartSec=30
+StandardOutput=append:/var/log/polymarket.log
+StandardError=append:/var/log/polymarket.err
+
+[Install]
+WantedBy=multi-user.target

@@ -73,6 +73,79 @@ It is written for someone who can code a little, has read a few DeFi posts, and 
 
 ---
 
+## Infrastructure / 인프라 코드
+
+The full infrastructure that powers the strategies in this guide is included in this repository as 14 self-contained modules. Each module has its own README, requirements, and entry points — clone the repo, install per-module dependencies, fill in your own keys via `.env`, and you have a working starting point.
+
+이 가이드에서 다루는 전략들이 실제로 굴러가는 풀스택 인프라가 14개 자가완결 모듈로 들어있다. 모듈마다 자체 README/requirements/엔트리포인트가 있으니 레포 클론 → 모듈별 의존성 설치 → 본인 키를 `.env`에 주입하면 바로 시작 가능.
+
+### Modules / 모듈
+
+| Module | Description |
+|--------|-------------|
+| [`perp-dex-wrappers/`](./perp-dex-wrappers/) | 22 Perp DEX integrations behind a unified factory. HL / Lighter / GRVT / Paradex / Backpack / Aster / Pacifica / EdgeX / Reya and more. <br>22개 Perp DEX 통합 래퍼 (factory + 공통 인터페이스) |
+| [`perp-dex-setup-guides/`](./perp-dex-setup-guides/) | API key issuance + WebSocket reference per exchange. <br>거래소별 API key 발급 + WebSocket 연동 레퍼런스 |
+| [`volume-farmer-templates/`](./volume-farmer-templates/) | Cross-venue delta-neutral volume farmers (Rise / Lighter / Var-Aster / Ethereal-Aster) + funding-arb. <br>크로스-베뉴 델타뉴트럴 볼륨 파머 + 펀딩 아비 템플릿 |
+| [`cross-venue-arb-scanner/`](./cross-venue-arb-scanner/) | Multi-exchange concurrent ticker fetch → spread divergence detection (new listings like HYPER). <br>다중 거래소 동시 ticker fetch → spread 발산 탐지 |
+| [`spot-spot-arb/`](./spot-spot-arb/) | KR (Bithumb / Upbit) ↔ global CEX/DEX spot arbitrage (FastAPI backend + React frontend + Rust services). <br>김프(빗썸/업비트) ↔ 글로벌 CEX/DEX 차익거래 풀스택 |
+| [`aster-spot-buyer/`](./aster-spot-buyer/) | Aster (BSC) spot auto-buyer + farmer hedge leg. <br>Aster 현물 자동 매수 + farmer 헷지 레그 |
+| [`pancake-deposit-helper/`](./pancake-deposit-helper/) | PancakeSwap V2 swap + Stargate / Across V3 cross-chain bridge helper. <br>팬케이크 V2 스왑 + 크로스체인 브릿지 헬퍼 |
+| [`polymarket-bot/`](./polymarket-bot/) | Polymarket Up/Down sniper + auto_claimer + Stoikov MM + Bayesian prior + reversal/merge_split. <br>폴리마켓 스나이퍼 + 자동 클레임 + Stoikov MM |
+| [`predict-fun-sniper/`](./predict-fun-sniper/) | Predict.fun (BSC) 1-hour market mid-time sniper + JWT auth + BNB gas monitor. <br>Predict.fun 1시간 마켓 mid-time 스나이퍼 |
+| [`rust-services/`](./rust-services/) | hl-sign (HL signature, 3.5x speedup) + gap-recorder (SQLite WAL batched, 169K rows/sec). PyO3 + maturin. <br>HL 서명 가속 + gap-recorder 고속 기록 (PyO3 + maturin) |
+| [`shared-utils/`](./shared-utils/) | Telegram notifier, subprocess_wrapper (isolated venv), health_monitor, file-based trigger_watcher, state/equity tracker. <br>공용 유틸: Telegram, 격리 venv subprocess, 헬스체크, 파일 트리거, 상태/잔고 트래커 |
+| [`strategy-templates/`](./strategy-templates/) | pair_trader, nado_pair_scalper (regime filter + DCA), strategy_evolver (GA), momentum / donchian / grid signals. <br>전략 템플릿: 페어 / 스캘퍼 / 자가진화 / 모멘텀 / 돈치안 / 그리드 |
+| [`backtest-templates/`](./backtest-templates/) | ccxt OHLCV backtester + RSI70 / SuperTrend / Mean-Rev / BB-Upper Pine→Python ports. <br>ccxt 기반 백테스터 + Pine→Python 포팅 전략 |
+| [`telegram-control/`](./telegram-control/) | Remote bot control via Telegram: `/status` `/pnl` `/balance` `/positions` `/restart` `/reload` `/close` `/kill` `/revive` `/bnb`. <br>텔레그램으로 봇 원격 제어 |
+
+### Quick Start / 빠른 시작
+
+```bash
+# 1. Python env
+python -m venv venv
+source venv/bin/activate    # macOS/Linux
+# or
+venv\Scripts\activate       # Windows
+
+# 2. Module-specific deps (each module has its own requirements.txt)
+pip install -r perp-dex-wrappers/requirements.txt
+# ... repeat per module you actually use
+
+# 3. Fill in your own keys
+cp .env.example .env        # if a module ships one — otherwise see module README
+# edit .env with your keys (PRIVATE_KEY, exchange API keys, RPC URLs, Telegram, ...)
+
+# 4. Run a module
+python -m {module}.{entry_point}
+```
+
+Per-module ENV variables and entry points are documented inside each module's own README.
+
+모듈마다 필요한 환경변수와 실행 명령은 해당 모듈 README에 적혀 있다.
+
+### Referrals / 레퍼럴
+
+Exchange referral codes used in this setup are listed in [REFERRALS.md](./REFERRALS.md). Using them helps support continued maintenance.
+
+이 셋업에서 쓰이는 거래소 레퍼럴 코드는 [REFERRALS.md](./REFERRALS.md)에 정리. 사용해주시면 유지보수에 도움.
+
+### Architecture Principles / 아키텍처 원칙
+
+- **Async-first** — every exchange wrapper is `asyncio`-based; concurrent fetch/order is natural / 모든 래퍼 asyncio 기반
+- **Factory pattern** — `create_exchange("hyperliquid", **keys)` unified entry point / 통일된 팩토리 진입점
+- **Isolated processes** — SDKs that do sync HTTP in `__init__` (Lighter, GRVT, Reya, Bulk) are spawned as subprocess bridges to avoid main event loop deadlocks / sync HTTP SDK는 subprocess 격리
+- **Triple-lock for live** — `ENABLED=true` + `DRY_RUN=false` + `LIVE_CONFIRM=true` all required to send real orders / 라이브 전환은 3단계 락
+- **Kill switches** — every automation has (a) kill file, (b) daily PnL stop, (c) consecutive-failure cap, (d) min collateral floor / 모든 자동화에 4종 킬스위치
+- **State persistence** — `trader_state.json` style file-based managers so bots restore positions on restart / 파일 기반 상태 매니저로 재시작 복원
+
+### Sanitization Notice / 보안 안내
+
+All secrets, private keys, and personal wallet addresses have been stripped from this repository. Placeholders use the form `<...>` or `<DESCRIPTOR>`. You must inject your own credentials via environment variables — never commit them.
+
+이 레포에는 모든 시크릿/프라이빗 키/개인 지갑 주소가 제거되어 있다. 자리표시자는 `<...>` 또는 `<DESCRIPTOR>` 형태. 본인 크리덴셜은 반드시 환경변수로 주입할 것 — 절대 커밋하지 말 것.
+
+---
+
 ## Disclaimer / 면책
 
 **English**: Nothing in this repository is financial, legal, or tax advice. Crypto trading involves substantial risk of loss. Code samples are illustrative; do not run them with real funds without auditing them yourself. The author has no fiduciary duty to readers. Past performance — yours, mine, or anyone else's — does not predict future returns. Use of any exchange or referral link is at your own discretion.

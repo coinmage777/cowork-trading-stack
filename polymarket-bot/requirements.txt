@@ -1,0 +1,7 @@
+numpy
+pandas
+websockets
+httpx
+python-dotenv
+py-clob-client
+scikit-learn
