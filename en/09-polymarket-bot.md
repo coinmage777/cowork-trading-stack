@@ -21,14 +21,14 @@ A bot track separate from Perp DEXs. Auto-trading on prediction markets.
 1. **expiry_snipe** — buy tokens whose price drops near expiry
 2. **hedge_arb** — when YES + NO sums to < 0.99 (or via cross-venue), capture the gap
 3. **weather** — weather markets only (currently disabled)
-4. **predict_snipe** — [Predict.fun](https://predict.fun/?ref=coinmage) (similar BSC-based prediction market)
+4. **predict_snipe** — [Predict.fun](https://predict.fun?ref=5302B) (similar BSC-based prediction market)
 
 ## Why prediction markets are attractive
 
 - **Inefficient market** — Polymarket has crypto traders + political bettors mixed; interesting dynamics
 - **Clear outcomes** — price resolves to 0 or 1 (at expiry)
 - **No liquidation, no funding** — hold indefinitely
-- **Arb opportunities** — gaps with other prediction markets (Predict.fun, Kalshi)
+- **Arb opportunities** — gaps with other prediction markets ([Predict.fun](https://predict.fun?ref=5302B), Kalshi)
 
 ## Why it's hard (failure cases)
 
@@ -80,7 +80,7 @@ The DB `size` is dollar cost, but the formula treated it as shares.
 
 This bug made DB PnL diverge from actual balance change. **Don't trust DB PnL. The on-chain balance is the source of truth.**
 
-### 6) Predict.fun gas shortage
+### 6) [Predict.fun](https://predict.fun?ref=5302B) gas shortage
 
 If the Signer EOA runs out of BNB, claims fail. BNB needs to be on the **Signer address**, not the Predict Account.
 
@@ -91,7 +91,7 @@ If the Signer EOA runs out of BNB, claims fail. BNB needs to be on the **Signer 
 ### Live strategies (two)
 
 1. **hedge_arb**: same-market YES + NO sum < 0.93. Risk-free arb. Low frequency.
-2. **predict_snipe** (Predict.fun): near-expiry + volatility-based pricing model when price is mispriced.
+2. **predict_snipe** ([Predict.fun](https://predict.fun?ref=5302B)): near-expiry + volatility-based pricing model when price is mispriced.
 
 ### Shadow
 
@@ -138,9 +138,9 @@ def open_weather_position(opp):
     log_trade(expiry_time=str(opp["expiry_ts"]), ...)
 ```
 
-## Predict.fun integration
+## [Predict.fun](https://predict.fun?ref=5302B) integration
 
-Predict.fun is a BSC-based prediction market. Similar pattern, with differences:
+[Predict.fun](https://predict.fun?ref=5302B) is a BSC-based prediction market. Similar pattern, with differences:
 
 - **Wallet structure**: Signer EOA + Predict Account (smart contract). Gas on Signer EOA in BNB.
 - **API**: REST + WebSocket. Has its own SDK.
@@ -153,7 +153,7 @@ Integration details:
 - Telegram alerts / claims / resolves all unified
 - `.env` for dynamic params (no restart for tuning)
 
-### Predict.fun probability model
+### [Predict.fun](https://predict.fun?ref=5302B) probability model
 
 Linear models are inaccurate. The approach used is a **volatility-based normal CDF**:
 

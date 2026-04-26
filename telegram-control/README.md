@@ -26,7 +26,7 @@ Telegram bot으로 트레이딩 봇 원격 제어. 명령어 기반 (`/status` `
 | `/kill <exchange>` | 특정 거래소 자동 비활성 | 중 |
 | `/revive <exchange>` | 자동 비활성된 거래소 재활성 | 중 |
 | `/clear_cb` | circuit breaker 해제 | 저 |
-| `/bnb` | Predict.fun signer EOA BNB 잔고 | - |
+| `/bnb` | [Predict.fun](https://predict.fun?ref=5302B) signer EOA BNB 잔고 | - |
 | `/log <n>` | 최근 N줄 로그 | - |
 | `/help` | 명령어 도움말 | - |
 

@@ -1,6 +1,6 @@
 # polymarket-bot
 
-[Polymarket](https://polymarket.com/?ref=coinmage) Up/Down 단기 마켓 + [Predict.fun](https://predict.fun/?ref=coinmage) 1시간 마켓 자동 베팅 봇. 5+ 전략 (expiry_snipe / reversal / Stoikov MM / Bayesian directional / merge_split arb / cold_split) + 자동 리딤 + 잔고 추적 + Telegram 통제.
+[Polymarket](https://polymarket.com/?ref=coinmage) Up/Down 단기 마켓 + [Predict.fun](https://predict.fun?ref=5302B) 1시간 마켓 자동 베팅 봇. 5+ 전략 (expiry_snipe / reversal / Stoikov MM / Bayesian directional / merge_split arb / cold_split) + 자동 리딤 + 잔고 추적 + Telegram 통제.
 
 ## 핵심 기능
 
@@ -20,7 +20,7 @@
 | `mm` | Stoikov-Avellaneda MM + Bayesian directional prior | DRY_RUN (γ=0.4, K=4.0) |
 | `merge_split_arb` | YES+NO=$1 무위험 관계 활용 | DRY_RUN |
 | `cold_split` | Multi-outcome cold market arb | DRY_RUN |
-| `hedge_arb` | Polymarket vs Predict.fun 같은 자산 페어 헷지 | DRY_RUN |
+| `hedge_arb` | Polymarket vs [Predict.fun](https://predict.fun?ref=5302B) 같은 자산 페어 헷지 | DRY_RUN |
 
 ## 파일 구조
 
@@ -112,7 +112,7 @@ DB_PATH=trades_v2.db
 ## 의존성
 
 - `py-clob-client` (Polymarket CLOB)
-- `predict-sdk` (Predict.fun)
+- `predict-sdk` ([Predict.fun](https://predict.fun?ref=5302B))
 - `web3`, `eth-account`
 - `sqlite3` (WAL 모드)
 - `aiohttp`, `httpx`
