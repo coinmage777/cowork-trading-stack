@@ -29,7 +29,7 @@ no_entry_hours: [1, 7, 9]     # UTC (KST 10/16/18시 차단)
 ```
 
 **진입 경로**:
-1. Spread z-score (주력): `|z| >= 1.5` 진입 → `|z| < 0.3` 수렴 청산. WR 74~84%
+1. Spread z-score (주력): `|z| >= 1.5` 진입 → `|z| < 0.3` 수렴 청산. WR 74–84%
 2. Momentum (보조): 14분 가격변화율 >= threshold → trailing stop. WR 88%
 
 **청산 우선순위**: hard_stop → trailing → 고정TP → loss_cap → 모멘텀이탈/스프레드수렴 → DCA
