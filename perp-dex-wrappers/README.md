@@ -35,7 +35,7 @@
 | Bulk | `bulk/` | 테스트넷 (격리 venv, Ed25519) |
 | [Extended](https://app.extended.exchange/join/COINMAGE) | `extended/` | StarkNet DEX |
 | Hotstuff | `hotstuff/` | HL 기반 |
-| Nado | `nado/` | HL 기반 |
+| [Nado](https://app.nado.xyz?join=NX9LLaL) | `nado/` | HL 기반 |
 | [Miracle](https://miracletrade.com/?ref=coinmage) / DreamCash / [Bullpen](https://miracletrade.com/?ref=coinmage) | (HL aliases) | builder code only, base wrapper 공유 |
 
 ## 파일 구조
