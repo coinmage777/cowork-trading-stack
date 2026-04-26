@@ -1,0 +1,116 @@
+# Secrets & creds
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+credentials*.json
+service-account*.json
+secrets/
+keys/pk_*.py
+!keys/copy.pk_*.py
+!keys/__init__.py
+
+# State / runtime data
+*.db
+*.db-wal
+*.db-shm
+*.sqlite
+*.sqlite-*
+trades*.db*
+trades*.json
+predict_trades*.json
+balance_snapshots*
+notifications_log*
+auto_disabled*.json
+auto_optimizer_state*
+evolution_journal.json
+event_alerts_state.json
+config_rollback_state.json
+paper_optimizer_state*
+airdrop_scout_seen.json
+airdrop_valuation_history.json
+equity_tracker.json
+nado_scalper_state*
+trader_state*
+daily_pnl*
+basis_arb*
+pac_*hist*.json
+pac_funding.json
+lighter_api_config.json
+redeem_conditions.json
+signal_bridge.json
+points_snapshots.json
+wallet_status_snapshots.json
+optimizer_history.json
+.hotstuff_agent.json
+var_monitor_state.json
+tge_claim_state.json
+tge_sent_state.json
+tge_tracker_state.json
+
+# Logs
+*.log
+*.log.*
+*.stderr
+*.stdout
+logs/
+
+# Sessions
+*.session
+*.session-*
+tg_session*
+
+# Backups
+*.bak
+*.bak.*
+*.bak_*
+*.backup_*
+*~
+backups/
+config_backups/
+
+# Lockfiles / runtime artifacts
+bot.lock
+*.pid
+
+# Personal trade data / journals
+journal/
+results/
+runtime/
+weekly_draft.md
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.so
+*.dll
+*.whl
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+
+# venvs
+venv/
+*venv/
+*_venv/
+env/
+
+# Node
+node_modules/
+
+# Rust
+target/
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+
+# Build
+dist/
+build/

@@ -1,0 +1,3004 @@
+[
+  {
+    "private_key": "<PRIVATE_KEY>",
+    "action": {
+      "type": "order",
+      "orders": [
+        {
+          "a": 163,
+          "b": true,
+          "p": "2098.3593",
+          "s": "2.750366",
+          "r": true,
+          "t": {
+            "limit": {
+              "tif": "Gtc"
+            }
+          }
+        }
+      ],
+      "grouping": "na"
+    },
+    "vault_address": null,
+    "nonce": 1000000001679,
+    "expires_after": null,
+    "is_mainnet": false,
+    "expected_action_hash": "<PRIVATE_KEY>",
+    "expected_r": "<PRIVATE_KEY>",
+    "expected_s": "<PRIVATE_KEY>",
+    "expected_v": 27
+  },
+  {
+    "private_key": "<PRIVATE_KEY>",
+    "action": {
+      "type": "order",
+      "orders": [
+        {
+          "a": 37,
+          "b": false,
+          "p": "168.596",
+          "s": "0.4775",
+          "r": false,
+          "t": {
+            "limit": {
+              "tif": "Gtc"
+            }
+          }
+        },
+        {
+          "a": 14,
+          "b": true,
+          "p": "2810.613",
+          "s": "3.5829",
+          "r": false,
+          "t": {
+            "limit": {
+              "tif": "Gtc"
+            }
+          }
+        }
+      ],
+      "grouping": "na"
+    },
+    "vault_address": null,
+    "nonce": 1000000009065,
+    "expires_after": null,
+    "is_mainnet": true,
+    "expected_action_hash": "<PRIVATE_KEY>",
+    "expected_r": "<PRIVATE_KEY>",
+    "expected_s": "<PRIVATE_KEY>",
+    "expected_v": 28
+  },
+  {
+    "private_key": "<PRIVATE_KEY>",
+    "action": {
+      "type": "cancel",
+      "cancels": [
+        {
+          "a": 53,
+          "o": 5241752545
+        }
+      ]
+    },
+    "vault_address": null,
+    "nonce": 1000000009928,
+    "expires_after": null,
+    "is_mainnet": true,
+    "expected_action_hash": "<PRIVATE_KEY>",
+    "expected_r": "<PRIVATE_KEY>",
+    "expected_s": "<PRIVATE_KEY>",
+    "expected_v": 27
+  },
+  {
+    "private_key": "<PRIVATE_KEY>",
+    "action": {
+      "type": "cancelByCloid",
+      "cancels": [
+        {
+          "asset": 35,
+          "cloid": "0xc241330b01a9e71fde8a774bcf36d58b"
+        }
+      ]
+    },
+    "vault_address": "<EVM_ADDRESS>",
+    "nonce": 1000000003026,
+    "expires_after": null,
+    "is_mainnet": true,
+    "expected_action_hash": "<PRIVATE_KEY>",
+    "expected_r": "<PRIVATE_KEY>",
+    "expected_s": "<PRIVATE_KEY>",
+    "expected_v": 28
+  },
+  {
+    "private_key": "<PRIVATE_KEY>",
+    "action": {
+      "type": "cancel",
+      "cancels": [
+        {
+          "a": 27,
+          "o": 5756332151
+        },
+        {
+          "a": 9,
+          "o": 7574149615
+        },
+        {
+          "a": 6,
+          "o": 4693307666
+        },
+        {
+          "a": 6,
+          "o": 8776552804
+        }
+      ]
+    },
+    "vault_address": null,
+    "nonce": 1000000008075,
+    "expires_after": null,
+    "is_mainnet": true,
+    "expected_action_hash": "<PRIVATE_KEY>",
+    "expected_r": "<PRIVATE_KEY>",
+    "expected_s": "<PRIVATE_KEY>",
+    "expected_v": 27
+  },
+  {
+    "private_key": "<PRIVATE_KEY>",
+    "action": {
+      "type": "order",
+      "orders": [
+        {
+          "a": 68,
+          "b": true,
+          "p": "7577.09",
+          "s": "0.92237",
+          "r": false,
+          "t": {
+            "limit": {
+              "tif": "Gtc"
+            }
+          },
+          "c": "0xd453dd324b0dbb418d5288f1142c3fe8"
+        }
+      ],
+      "grouping": "na",
+      "builder": {
+        "b": "<EVM_ADDRESS>",
+        "f": 1
+      }
+    },
+    "vault_address": null,
+    "nonce": 1000000006610,
+    "expires_after": 1000000306610,
+    "is_mainnet": false,
+    "expected_action_hash": "<PRIVATE_KEY>",
+    "expected_r": "<PRIVATE_KEY>",
+    "expected_s": "<PRIVATE_KEY>",
+    "expected_v": 28
+  },
+  {
+    "private_key": "<PRIVATE_KEY>",
+    "action": {
+      "type": "order",
+      "orders": [
+        {
+          "a": 36,
+          "b": false,
+          "p": "1042.21",
+          "s": "0.2180",
+          "r": true,
+          "t": {
+            "trigger": {
+              "isMarket": true,
+              "triggerPx": "3888.03",
+              "tpsl": "tp"
+            }
+          }
+        }
+      ],
+      "grouping": "na"
+    },
+    "vault_address": null,
+    "nonce": 1000000004636,
+    "expires_after": null,
+    "is_mainnet": true,
+    "expected_action_hash": "<PRIVATE_KEY>",
+    "expected_r": "0x9e21916542b695ca101cb1c3b433aa2856e65074b2e9eff736fb211539f4842",
+    "expected_s": "<PRIVATE_KEY>",
+    "expected_v": 28
+  },
+  {
+    "private_key": "<PRIVATE_KEY>",
+    "action": {
+      "type": "scheduleCancel",
+      "time": 4555659472818
+    },
+    "vault_address": null,
+    "nonce": 1000000007186,
+    "expires_after": null,
+    "is_mainnet": true,
+    "expected_action_hash": "<PRIVATE_KEY>",
+    "expected_r": "0x71df8c13ab187646e10c350f3adb17aa6c6bdbc2d15e067c00dd4e3bcbfb28f",
+    "expected_s": "<PRIVATE_KEY>",
+    "expected_v": 28
+  },
+  {
+    "private_key": "<PRIVATE_KEY>",
+    "action": {
+      "type": "order",
+      "orders": [
+        {
+          "a": 71,
+          "b": false,
+          "p": "50891.1871",
+          "s": "3.648385",
+          "r": false,
+          "t": {
+            "limit": {
+              "tif": "Ioc"
+            }
+          }
+        }
+      ],
+      "grouping": "na"
+    },
+    "vault_address": null,
+    "nonce": 1000000004528,
+    "expires_after": null,
+    "is_mainnet": true,
+    "expected_action_hash": "<PRIVATE_KEY>",
+    "expected_r": "<PRIVATE_KEY>",
+    "expected_s": "<PRIVATE_KEY>",
+    "expected_v": 28
+  },
+  {
+    "private_key": "<PRIVATE_KEY>",
+    "action": {
+      "type": "order",
+      "orders": [
+        {
+          "a": 44,
+          "b": true,
+          "p": "3049.564",
+          "s": "0.8640",
+          "r": false,
+          "t": {
+            "limit": {
+              "tif": "Gtc"
+            }
+          }
+        },
+        {
+          "a": 46,
+          "b": true,
+          "p": "825.378",
+          "s": "1.9035",
+          "r": false,
+          "t": {
+            "limit": {
+              "tif": "Gtc"
+            }
+          }
+        },
+        {
+          "a": 40,
+          "b": true,
+          "p": "3426.225",
+          "s": "4.2158",
+          "r": false,
+          "t": {
+            "limit": {
+              "tif": "Gtc"
+            }
+          }
+        },
+        {
+          "a": 49,
+          "b": true,
+          "p": "1152.950",
+          "s": "0.1702",
+          "r": false,
+          "t": {
+            "limit": {
+              "tif": "Gtc"
+            }
+          }
+        }
+      ],
+      "grouping": "na"
+    },
+    "vault_address": null,
+    "nonce": 1000000006401,
+    "expires_after": null,
+    "is_mainnet": true,
+    "expected_action_hash": "<PRIVATE_KEY>",
+    "expected_r": "<PRIVATE_KEY>",
+    "expected_s": "<PRIVATE_KEY>",
+    "expected_v": 27
+  },
+  {
+    "private_key": "<PRIVATE_KEY>",
+    "action": {
+      "type": "cancel",
+      "cancels": [
+        {
+          "a": 51,
+          "o": 1149938335
+        }
+      ]
+    },
+    "vault_address": "<EVM_ADDRESS>",
+    "nonce": 1000000004826,
+    "expires_after": null,
+    "is_mainnet": false,
+    "expected_action_hash": "<PRIVATE_KEY>",
+    "expected_r": "<PRIVATE_KEY>",
+    "expected_s": "<PRIVATE_KEY>",
+    "expected_v": 28
+  },
+  {
+    "private_key": "<PRIVATE_KEY>",
+    "action": {
+      "type": "cancelByCloid",
+      "cancels": [
+        {
+          "asset": 72,
+          "cloid": "0x366eb16f508ebad7b7c93acfe059a0ee"
+        }
+      ]
+    },
+    "vault_address": null,
+    "nonce": 1000000009686,
+    "expires_after": null,
+    "is_mainnet": true,
+    "expected_action_hash": "<PRIVATE_KEY>",
+    "expected_r": "<PRIVATE_KEY>",
+    "expected_s": "<PRIVATE_KEY>",
+    "expected_v": 28
+  },
+  {
+    "private_key": "<PRIVATE_KEY>",
+    "action": {
+      "type": "cancel",
+      "cancels": [
+        {
+          "a": 41,
+          "o": 1970753706
+        },
+        {
+          "a": 16,
+          "o": 599707678
+        },
+        {
+          "a": 47,
+          "o": 9718401213
+        }
+      ]
+    },
+    "vault_address": null,
+    "nonce": 1000000011221,
+    "expires_after": null,
+    "is_mainnet": true,
+    "expected_action_hash": "<PRIVATE_KEY>",
+    "expected_r": "<PRIVATE_KEY>",
+    "expected_s": "<PRIVATE_KEY>",
+    "expected_v": 27
+  },
+  {
+    "private_key": "<PRIVATE_KEY>",
+    "action": {
+      "type": "order",
+      "orders": [
+        {
+          "a": 54,
+          "b": true,
+          "p": "53879.59",
+          "s": "0.40000",
+          "r": false,
+          "t": {
+            "limit": {
+              "tif": "Gtc"
+            }
+          },
+          "c": "0x2369b584ff5e9ff0ff50bde4382567b8"
+        }
+      ],
+      "grouping": "na",
+      "builder": {
+        "b": "<EVM_ADDRESS>",
+        "f": 1
+      }
+    },
+    "vault_address": null,
+    "nonce": 1000000010129,
+    "expires_after": null,
+    "is_mainnet": true,
+    "expected_action_hash": "<PRIVATE_KEY>",
+    "expected_r": "<PRIVATE_KEY>",
+    "expected_s": "<PRIVATE_KEY>",
+    "expected_v": 28
+  },
+  {
+    "private_key": "<PRIVATE_KEY>",
+    "action": {
+      "type": "order",
+      "orders": [
+        {
+          "a": 31,
+          "b": false,
+          "p": "545.46",
+          "s": "0.1509",
+          "r": true,
+          "t": {
+            "trigger": {
+              "isMarket": true,
+              "triggerPx": "848.92",
+              "tpsl": "tp"
+            }
+          }
+        }
+      ],
+      "grouping": "na"
+    },
+    "vault_address": null,
+    "nonce": 1000000008834,
+    "expires_after": null,
+    "is_mainnet": true,
+    "expected_action_hash": "<PRIVATE_KEY>",
+    "expected_r": "<PRIVATE_KEY>",
+    "expected_s": "<PRIVATE_KEY>",
+    "expected_v": 27
+  },
+  {
+    "private_key": "<PRIVATE_KEY>",
+    "action": {
+      "type": "scheduleCancel",
+      "time": 3235944551220
+    },
+    "vault_address": null,
+    "nonce": 1000000008359,
+    "expires_after": null,
+    "is_mainnet": false,
+    "expected_action_hash": "<PRIVATE_KEY>",
+    "expected_r": "<PRIVATE_KEY>",
+    "expected_s": "<PRIVATE_KEY>",
+    "expected_v": 27
+  },
+  {
+    "private_key": "<PRIVATE_KEY>",
+    "action": {
+      "type": "order",
+      "orders": [
+        {
+          "a": 97,
+          "b": false,
+          "p": "42376.2362",
+          "s": "9.710787",
+          "r": true,
+          "t": {
+            "limit": {
+              "tif": "Alo"
+            }
+          }
+        }
+      ],
+      "grouping": "na"
+    },
+    "vault_address": null,
+    "nonce": 1000000004068,
+    "expires_after": 1000000304068,
+    "is_mainnet": true,
+    "expected_action_hash": "<PRIVATE_KEY>",
+    "expected_r": "<PRIVATE_KEY>",
+    "expected_s": "<PRIVATE_KEY>",
+    "expected_v": 27
+  },
+  {
+    "private_key": "<PRIVATE_KEY>",
+    "action": {
+      "type": "order",
+      "orders": [
+        {
+          "a": 49,
+          "b": false,
+          "p": "566.645",
+          "s": "2.1795",
+          "r": false,
+          "t": {
+            "limit": {
+              "tif": "Gtc"
+            }
+          }
+        },
+        {
+          "a": 29,
+          "b": true,
+          "p": "4769.541",
+          "s": "4.3805",
+          "r": false,
+          "t": {
+            "limit": {
+              "tif": "Gtc"
+            }
+          }
+        },
+        {
+          "a": 16,
+          "b": true,
+          "p": "2543.332",
+          "s": "0.5410",
+          "r": false,
+          "t": {
+            "limit": {
+              "tif": "Gtc"
+            }
+          }
+        },
+        {
+          "a": 40,
+          "b": false,
+          "p": "4209.930",
+          "s": "2.5432",
+          "r": false,
+          "t": {
+            "limit": {
+              "tif": "Gtc"
+            }
+          }
+        }
+      ],
+      "grouping": "na"
+    },
+    "vault_address": "<EVM_ADDRESS>",
+    "nonce": 1000000005587,
+    "expires_after": null,
+    "is_mainnet": true,
+    "expected_action_hash": "<PRIVATE_KEY>",
+    "expected_r": "<PRIVATE_KEY>",
+    "expected_s": "<PRIVATE_KEY>",
+    "expected_v": 27
+  },
+  {
+    "private_key": "<PRIVATE_KEY>",
+    "action": {
+      "type": "cancel",
+      "cancels": [
+        {
+          "a": 19,
+          "o": 9283782422
+        }
+      ]
+    },
+    "vault_address": null,
+    "nonce": 1000000011155,
+    "expires_after": null,
+    "is_mainnet": true,
+    "expected_action_hash": "<PRIVATE_KEY>",
+    "expected_r": "<PRIVATE_KEY>",
+    "expected_s": "<PRIVATE_KEY>",
+    "expected_v": 27
+  },
+  {
+    "private_key": "<PRIVATE_KEY>",
+    "action": {
+      "type": "cancelByCloid",
+      "cancels": [
+        {
+          "asset": 0,
+          "cloid": "0x04fc6d827d15438552fbe43b99546eb4"
+        }
+      ]
+    },
+    "vault_address": null,
+    "nonce": 1000000004435,
+    "expires_after": null,
+    "is_mainnet": true,
+    "expected_action_hash": "<PRIVATE_KEY>",
+    "expected_r": "0x1cea867834e8240fd87408621c28abfc6ea994c46cb02f41e635fc85031bb5",
+    "expected_s": "<PRIVATE_KEY>",
+    "expected_v": 27
+  },
+  {
+    "private_key": "<PRIVATE_KEY>",
+    "action": {
+      "type": "cancel",
+      "cancels": [
+        {
+          "a": 19,
+          "o": 1028439864
+        },
+        {
+          "a": 15,
+          "o": 4067116919
+        },
+        {
+          "a": 5,
+          "o": 7438486480
+        }
+      ]
+    },
+    "vault_address": null,
+    "nonce": 1000000003873,
+    "expires_after": null,
+    "is_mainnet": false,
+    "expected_action_hash": "<PRIVATE_KEY>",
+    "expected_r": "<PRIVATE_KEY>",
+    "expected_s": "<PRIVATE_KEY>",
+    "expected_v": 27
+  },
+  {
+    "private_key": "<PRIVATE_KEY>",
+    "action": {
+      "type": "order",
+      "orders": [
+        {
+          "a": 97,
+          "b": true,
+          "p": "32009.10",
+          "s": "0.12663",
+          "r": false,
+          "t": {
+            "limit": {
+              "tif": "Gtc"
+            }
+          },
+          "c": "0x8cbfedb0f264accc79ac1b1ea8e56e0c"
+        }
+      ],
+      "grouping": "na",
+      "builder": {
+        "b": "<EVM_ADDRESS>",
+        "f": 1
+      }
+    },
+    "vault_address": null,
+    "nonce": 1000000005582,
+    "expires_after": null,
+    "is_mainnet": true,
+    "expected_action_hash": "<PRIVATE_KEY>",
+    "expected_r": "<PRIVATE_KEY>",
+    "expected_s": "<PRIVATE_KEY>",
+    "expected_v": 27
+  },
+  {
+    "private_key": "<PRIVATE_KEY>",
+    "action": {
+      "type": "order",
+      "orders": [
+        {
+          "a": 16,
+          "b": false,
+          "p": "2685.60",
+          "s": "1.8237",
+          "r": true,
+          "t": {
+            "trigger": {
+              "isMarket": true,
+              "triggerPx": "4651.68",
+              "tpsl": "tp"
+            }
+          }
+        }
+      ],
+      "grouping": "na"
+    },
+    "vault_address": null,
+    "nonce": 1000000008121,
+    "expires_after": null,
+    "is_mainnet": true,
+    "expected_action_hash": "<PRIVATE_KEY>",
+    "expected_r": "<PRIVATE_KEY>",
+    "expected_s": "<PRIVATE_KEY>",
+    "expected_v": 28
+  },
+  {
+    "private_key": "<PRIVATE_KEY>",
+    "action": {
+      "type": "scheduleCancel",
+      "time": 16411946486897
+    },
+    "vault_address": null,
+    "nonce": 1000000011630,
+    "expires_after": null,
+    "is_mainnet": true,
+    "expected_action_hash": "<PRIVATE_KEY>",
+    "expected_r": "<PRIVATE_KEY>",
+    "expected_s": "0x5600b85aa9c84b09896fdd27fc5c6a344084e79e51284a06b8ddffccd8fc189",
+    "expected_v": 27
+  },
+  {
+    "private_key": "<PRIVATE_KEY>",
+    "action": {
+      "type": "order",
+      "orders": [
+        {
+          "a": 115,
+          "b": true,
+          "p": "19907.6585",
+          "s": "0.640353",
+          "r": true,
+          "t": {
+            "limit": {
+              "tif": "Alo"
+            }
+          }
+        }
+      ],
+      "grouping": "na"
+    },
+    "vault_address": "<EVM_ADDRESS>",
+    "nonce": 1000000012363,
+    "expires_after": null,
+    "is_mainnet": true,
+    "expected_action_hash": "<PRIVATE_KEY>",
+    "expected_r": "<PRIVATE_KEY>",
+    "expected_s": "<PRIVATE_KEY>",
+    "expected_v": 28
+  },
+  {
+    "private_key": "<PRIVATE_KEY>",
+    "action": {
+      "type": "order",
+      "orders": [
+        {
+          "a": 37,
+          "b": true,
+          "p": "45.882",
+          "s": "3.5421",
+          "r": false,
+          "t": {
+            "limit": {
+              "tif": "Gtc"
+            }
+          }
+        },
+        {
+          "a": 3,
+          "b": true,
+          "p": "346.328",
+          "s": "0.1668",
+          "r": false,
+          "t": {
+            "limit": {
+              "tif": "Gtc"
+            }
+          }
+        },
+        {
+          "a": 21,
+          "b": true,
+          "p": "2575.639",
+          "s": "1.3996",
+          "r": false,
+          "t": {
+            "limit": {
+              "tif": "Gtc"
+            }
+          }
+        }
+      ],
+      "grouping": "na"
+    },
+    "vault_address": null,
+    "nonce": 1000000011378,
+    "expires_after": null,
+    "is_mainnet": false,
+    "expected_action_hash": "<PRIVATE_KEY>",
+    "expected_r": "<PRIVATE_KEY>",
+    "expected_s": "<PRIVATE_KEY>",
+    "expected_v": 27
+  },
+  {
+    "private_key": "<PRIVATE_KEY>",
+    "action": {
+      "type": "cancel",
+      "cancels": [
+        {
+          "a": 27,
+          "o": 2315992116
+        }
+      ]
+    },
+    "vault_address": null,
+    "nonce": 1000000012917,
+    "expires_after": null,
+    "is_mainnet": true,
+    "expected_action_hash": "<PRIVATE_KEY>",
+    "expected_r": "<PRIVATE_KEY>",
+    "expected_s": "<PRIVATE_KEY>",
+    "expected_v": 28
+  },
+  {
+    "private_key": "<PRIVATE_KEY>",
+    "action": {
+      "type": "cancelByCloid",
+      "cancels": [
+        {
+          "asset": 73,
+          "cloid": "0x7914c120c8dcd19f3e3511287900f7f9"
+        }
+      ]
+    },
+    "vault_address": null,
+    "nonce": 1000000010368,
+    "expires_after": 1000000310368,
+    "is_mainnet": true,
+    "expected_action_hash": "<PRIVATE_KEY>",
+    "expected_r": "<PRIVATE_KEY>",
+    "expected_s": "0x870b3069b3a6ef23de77ae205c70999ca16080d7fb393c1dbdf3dd0fa3097fa",
+    "expected_v": 28
+  },
+  {
+    "private_key": "<PRIVATE_KEY>",
+    "action": {
+      "type": "cancel",
+      "cancels": [
+        {
+          "a": 6,
+          "o": 9006249260
+        },
+        {
+          "a": 27,
+          "o": 5816663776
+        }
+      ]
+    },
+    "vault_address": null,
+    "nonce": 1000000010571,
+    "expires_after": null,
+    "is_mainnet": true,
+    "expected_action_hash": "<PRIVATE_KEY>",
+    "expected_r": "<PRIVATE_KEY>",
+    "expected_s": "<PRIVATE_KEY>",
+    "expected_v": 27
+  },
+  {
+    "private_key": "<PRIVATE_KEY>",
+    "action": {
+      "type": "order",
+      "orders": [
+        {
+          "a": 59,
+          "b": true,
+          "p": "51843.82",
+          "s": "0.05512",
+          "r": false,
+          "t": {
+            "limit": {
+              "tif": "Gtc"
+            }
+          },
+          "c": "0x1931e9eea56c0941fbf24050a748dbcf"
+        }
+      ],
+      "grouping": "na",
+      "builder": {
+        "b": "<EVM_ADDRESS>",
+        "f": 1
+      }
+    },
+    "vault_address": null,
+    "nonce": 1000000004966,
+    "expires_after": null,
+    "is_mainnet": true,
+    "expected_action_hash": "<PRIVATE_KEY>",
+    "expected_r": "<PRIVATE_KEY>",
+    "expected_s": "<PRIVATE_KEY>",
+    "expected_v": 27
+  },
+  {
+    "private_key": "<PRIVATE_KEY>",
+    "action": {
+      "type": "order",
+      "orders": [
+        {
+          "a": 25,
+          "b": false,
+          "p": "3668.25",
+          "s": "2.4038",
+          "r": true,
+          "t": {
+            "trigger": {
+              "isMarket": true,
+              "triggerPx": "1318.42",
+              "tpsl": "tp"
+            }
+          }
+        }
+      ],
+      "grouping": "na"
+    },
+    "vault_address": null,
+    "nonce": 1000000012896,
+    "expires_after": null,
+    "is_mainnet": false,
+    "expected_action_hash": "<PRIVATE_KEY>",
+    "expected_r": "<PRIVATE_KEY>",
+    "expected_s": "<PRIVATE_KEY>",
+    "expected_v": 28
+  },
+  {
+    "private_key": "<PRIVATE_KEY>",
+    "action": {
+      "type": "scheduleCancel",
+      "time": 5932549236349
+    },
+    "vault_address": "<EVM_ADDRESS>",
+    "nonce": 1000000011159,
+    "expires_after": null,
+    "is_mainnet": true,
+    "expected_action_hash": "<PRIVATE_KEY>",
+    "expected_r": "<PRIVATE_KEY>",
+    "expected_s": "<PRIVATE_KEY>",
+    "expected_v": 27
+  },
+  {
+    "private_key": "<PRIVATE_KEY>",
+    "action": {
+      "type": "order",
+      "orders": [
+        {
+          "a": 46,
+          "b": false,
+          "p": "37063.9827",
+          "s": "8.744872",
+          "r": true,
+          "t": {
+            "limit": {
+              "tif": "Ioc"
+            }
+          }
+        }
+      ],
+      "grouping": "na"
+    },
+    "vault_address": null,
+    "nonce": 1000000013400,
+    "expires_after": null,
+    "is_mainnet": true,
+    "expected_action_hash": "<PRIVATE_KEY>",
+    "expected_r": "<PRIVATE_KEY>",
+    "expected_s": "<PRIVATE_KEY>",
+    "expected_v": 27
+  },
+  {
+    "private_key": "<PRIVATE_KEY>",
+    "action": {
+      "type": "order",
+      "orders": [
+        {
+          "a": 3,
+          "b": true,
+          "p": "4845.291",
+          "s": "4.6326",
+          "r": false,
+          "t": {
+            "limit": {
+              "tif": "Gtc"
+            }
+          }
+        },
+        {
+          "a": 15,
+          "b": true,
+          "p": "2038.006",
+          "s": "2.4120",
+          "r": false,
+          "t": {
+            "limit": {
+              "tif": "Gtc"
+            }
+          }
+        }
+      ],
+      "grouping": "na"
+    },
+    "vault_address": null,
+    "nonce": 1000000011091,
+    "expires_after": null,
+    "is_mainnet": true,
+    "expected_action_hash": "<PRIVATE_KEY>",
+    "expected_r": "0x1c3131b88fd9ae3c259b2e7ba299e2e7f22c987d1df44278bd8a65c13483199",
+    "expected_s": "<PRIVATE_KEY>",
+    "expected_v": 28
+  },
+  {
+    "private_key": "<PRIVATE_KEY>",
+    "action": {
+      "type": "cancel",
+      "cancels": [
+        {
+          "a": 7,
+          "o": 5002078345
+        }
+      ]
+    },
+    "vault_address": null,
+    "nonce": 1000000004693,
+    "expires_after": null,
+    "is_mainnet": true,
+    "expected_action_hash": "<PRIVATE_KEY>",
+    "expected_r": "0x2fcc0e72a847c5ed6d77fd7d22c1fa4262924f910857ba587e7ca125f759866",
+    "expected_s": "<PRIVATE_KEY>",
+    "expected_v": 27
+  },
+  {
+    "private_key": "<PRIVATE_KEY>",
+    "action": {
+      "type": "cancelByCloid",
+      "cancels": [
+        {
+          "asset": 49,
+          "cloid": "0xc8fe3ccdc8b8d9c6ed3049cf43e458fc"
+        }
+      ]
+    },
+    "vault_address": null,
+    "nonce": 1000000012249,
+    "expires_after": null,
+    "is_mainnet": false,
+    "expected_action_hash": "<PRIVATE_KEY>",
+    "expected_r": "<PRIVATE_KEY>",
+    "expected_s": "0x33c94d8b85f871b82894bdef84020538460f00d958a560ccc0ad2bb7181c512",
+    "expected_v": 27
+  },
+  {
+    "private_key": "<PRIVATE_KEY>",
+    "action": {
+      "type": "cancel",
+      "cancels": [
+        {
+          "a": 27,
+          "o": 2090237818
+        },
+        {
+          "a": 12,
+          "o": 1274350419
+        },
+        {
+          "a": 3,
+          "o": 2328710673
+        }
+      ]
+    },
+    "vault_address": null,
+    "nonce": 1000000010070,
+    "expires_after": null,
+    "is_mainnet": true,
+    "expected_action_hash": "<PRIVATE_KEY>",
+    "expected_r": "<PRIVATE_KEY>",
+    "expected_s": "<PRIVATE_KEY>",
+    "expected_v": 28
+  },
+  {
+    "private_key": "<PRIVATE_KEY>",
+    "action": {
+      "type": "order",
+      "orders": [
+        {
+          "a": 7,
+          "b": true,
+          "p": "3103.53",
+          "s": "0.47731",
+          "r": false,
+          "t": {
+            "limit": {
+              "tif": "Gtc"
+            }
+          },
+          "c": "0x284d82e587f7e1fbda4bd9caeb5cf467"
+        }
+      ],
+      "grouping": "na",
+      "builder": {
+        "b": "<EVM_ADDRESS>",
+        "f": 1
+      }
+    },
+    "vault_address": null,
+    "nonce": 1000000006000,
+    "expires_after": null,
+    "is_mainnet": true,
+    "expected_action_hash": "<PRIVATE_KEY>",
+    "expected_r": "<PRIVATE_KEY>",
+    "expected_s": "<PRIVATE_KEY>",
+    "expected_v": 28
+  },
+  {
+    "private_key": "<PRIVATE_KEY>",
+    "action": {
+      "type": "order",
+      "orders": [
+        {
+          "a": 32,
+          "b": false,
+          "p": "492.55",
+          "s": "0.5656",
+          "r": true,
+          "t": {
+            "trigger": {
+              "isMarket": true,
+              "triggerPx": "3408.54",
+              "tpsl": "tp"
+            }
+          }
+        }
+      ],
+      "grouping": "na"
+    },
+    "vault_address": "<EVM_ADDRESS>",
+    "nonce": 1000000011821,
+    "expires_after": 1000000311821,
+    "is_mainnet": true,
+    "expected_action_hash": "<PRIVATE_KEY>",
+    "expected_r": "<PRIVATE_KEY>",
+    "expected_s": "<PRIVATE_KEY>",
+    "expected_v": 28
+  },
+  {
+    "private_key": "<PRIVATE_KEY>",
+    "action": {
+      "type": "scheduleCancel",
+      "time": 2398417811542
+    },
+    "vault_address": null,
+    "nonce": 1000000006686,
+    "expires_after": null,
+    "is_mainnet": true,
+    "expected_action_hash": "<PRIVATE_KEY>",
+    "expected_r": "<PRIVATE_KEY>",
+    "expected_s": "0xba006cee0a7a4fdcf206b7ea26061b033f34b62cec2b28fba5e3695398bd5da",
+    "expected_v": 27
+  },
+  {
+    "private_key": "<PRIVATE_KEY>",
+    "action": {
+      "type": "order",
+      "orders": [
+        {
+          "a": 107,
+          "b": false,
+          "p": "74783.0300",
+          "s": "2.042672",
+          "r": false,
+          "t": {
+            "limit": {
+              "tif": "Gtc"
+            }
+          }
+        }
+      ],
+      "grouping": "na"
+    },
+    "vault_address": null,
+    "nonce": 1000000009831,
+    "expires_after": null,
+    "is_mainnet": false,
+    "expected_action_hash": "<PRIVATE_KEY>",
+    "expected_r": "<PRIVATE_KEY>",
+    "expected_s": "<PRIVATE_KEY>",
+    "expected_v": 27
+  },
+  {
+    "private_key": "<PRIVATE_KEY>",
+    "action": {
+      "type": "order",
+      "orders": [
+        {
+          "a": 8,
+          "b": false,
+          "p": "2291.551",
+          "s": "4.6458",
+          "r": false,
+          "t": {
+            "limit": {
+              "tif": "Gtc"
+            }
+          }
+        },
+        {
+          "a": 4,
+          "b": true,
+          "p": "2296.845",
+          "s": "4.9923",
+          "r": false,
+          "t": {
+            "limit": {
+              "tif": "Gtc"
+            }
+          }
+        },
+        {
+          "a": 6,
+          "b": true,
+          "p": "2692.796",
+          "s": "2.5344",
+          "r": false,
+          "t": {
+            "limit": {
+              "tif": "Gtc"
+            }
+          }
+        },
+        {
+          "a": 8,
+          "b": false,
+          "p": "4405.512",
+          "s": "4.3976",
+          "r": false,
+          "t": {
+            "limit": {
+              "tif": "Gtc"
+            }
+          }
+        },
+        {
+          "a": 23,
+          "b": false,
+          "p": "797.157",
+          "s": "4.1704",
+          "r": false,
+          "t": {
+            "limit": {
+              "tif": "Gtc"
+            }
+          }
+        }
+      ],
+      "grouping": "na"
+    },
+    "vault_address": null,
+    "nonce": 1000000010573,
+    "expires_after": null,
+    "is_mainnet": true,
+    "expected_action_hash": "<PRIVATE_KEY>",
+    "expected_r": "<PRIVATE_KEY>",
+    "expected_s": "0x505781841124b28eb5bf48db8de62790822f849553ae1e3935fcc2b82909faf",
+    "expected_v": 28
+  },
+  {
+    "private_key": "<PRIVATE_KEY>",
+    "action": {
+      "type": "cancel",
+      "cancels": [
+        {
+          "a": 78,
+          "o": 2271782992
+        }
+      ]
+    },
+    "vault_address": null,
+    "nonce": 1000000014840,
+    "expires_after": null,
+    "is_mainnet": true,
+    "expected_action_hash": "<PRIVATE_KEY>",
+    "expected_r": "<PRIVATE_KEY>",
+    "expected_s": "<PRIVATE_KEY>",
+    "expected_v": 27
+  },
+  {
+    "private_key": "<PRIVATE_KEY>",
+    "action": {
+      "type": "cancelByCloid",
+      "cancels": [
+        {
+          "asset": 38,
+          "cloid": "0xf05db76e1a84a51aa9d3d7c7ee87905e"
+        }
+      ]
+    },
+    "vault_address": null,
+    "nonce": 1000000008091,
+    "expires_after": null,
+    "is_mainnet": true,
+    "expected_action_hash": "<PRIVATE_KEY>",
+    "expected_r": "<PRIVATE_KEY>",
+    "expected_s": "<PRIVATE_KEY>",
+    "expected_v": 27
+  },
+  {
+    "private_key": "<PRIVATE_KEY>",
+    "action": {
+      "type": "cancel",
+      "cancels": [
+        {
+          "a": 7,
+          "o": 3821287000
+        },
+        {
+          "a": 47,
+          "o": 2376077464
+        },
+        {
+          "a": 17,
+          "o": 9800068572
+        }
+      ]
+    },
+    "vault_address": null,
+    "nonce": 1000000009478,
+    "expires_after": null,
+    "is_mainnet": true,
+    "expected_action_hash": "<PRIVATE_KEY>",
+    "expected_r": "<PRIVATE_KEY>",
+    "expected_s": "<PRIVATE_KEY>",
+    "expected_v": 28
+  },
+  {
+    "private_key": "<PRIVATE_KEY>",
+    "action": {
+      "type": "order",
+      "orders": [
+        {
+          "a": 91,
+          "b": true,
+          "p": "20638.53",
+          "s": "0.68781",
+          "r": false,
+          "t": {
+            "limit": {
+              "tif": "Gtc"
+            }
+          },
+          "c": "0x7d106c6081627cf1439472e6da587e8a"
+        }
+      ],
+      "grouping": "na",
+      "builder": {
+        "b": "<EVM_ADDRESS>",
+        "f": 1
+      }
+    },
+    "vault_address": "<EVM_ADDRESS>",
+    "nonce": 1000000010279,
+    "expires_after": null,
+    "is_mainnet": false,
+    "expected_action_hash": "<PRIVATE_KEY>",
+    "expected_r": "<PRIVATE_KEY>",
+    "expected_s": "<PRIVATE_KEY>",
+    "expected_v": 28
+  },
+  {
+    "private_key": "<PRIVATE_KEY>",
+    "action": {
+      "type": "order",
+      "orders": [
+        {
+          "a": 3,
+          "b": false,
+          "p": "552.26",
+          "s": "1.2765",
+          "r": true,
+          "t": {
+            "trigger": {
+              "isMarket": false,
+              "triggerPx": "316.03",
+              "tpsl": "sl"
+            }
+          }
+        }
+      ],
+      "grouping": "na"
+    },
+    "vault_address": null,
+    "nonce": 1000000008445,
+    "expires_after": null,
+    "is_mainnet": true,
+    "expected_action_hash": "<PRIVATE_KEY>",
+    "expected_r": "<PRIVATE_KEY>",
+    "expected_s": "<PRIVATE_KEY>",
+    "expected_v": 27
+  },
+  {
+    "private_key": "<PRIVATE_KEY>",
+    "action": {
+      "type": "scheduleCancel",
+      "time": 6683366821917
+    },
+    "vault_address": null,
+    "nonce": 1000000013678,
+    "expires_after": null,
+    "is_mainnet": true,
+    "expected_action_hash": "<PRIVATE_KEY>",
+    "expected_r": "<PRIVATE_KEY>",
+    "expected_s": "0x3eb33f6ae06032789f96d4ab07f1d969fe52e9222ac9aaf36e66b430a7d6ece",
+    "expected_v": 28
+  },
+  {
+    "private_key": "<PRIVATE_KEY>",
+    "action": {
+      "type": "order",
+      "orders": [
+        {
+          "a": 141,
+          "b": false,
+          "p": "44916.4585",
+          "s": "1.118828",
+          "r": true,
+          "t": {
+            "limit": {
+              "tif": "Alo"
+            }
+          }
+        }
+      ],
+      "grouping": "na"
+    },
+    "vault_address": null,
+    "nonce": 1000000007166,
+    "expires_after": null,
+    "is_mainnet": true,
+    "expected_action_hash": "<PRIVATE_KEY>",
+    "expected_r": "<PRIVATE_KEY>",
+    "expected_s": "<PRIVATE_KEY>",
+    "expected_v": 28
+  },
+  {
+    "private_key": "<PRIVATE_KEY>",
+    "action": {
+      "type": "order",
+      "orders": [
+        {
+          "a": 37,
+          "b": true,
+          "p": "2154.636",
+          "s": "0.2187",
+          "r": false,
+          "t": {
+            "limit": {
+              "tif": "Gtc"
+            }
+          }
+        },
+        {
+          "a": 23,
+          "b": true,
+          "p": "4495.634",
+          "s": "1.0583",
+          "r": false,
+          "t": {
+            "limit": {
+              "tif": "Gtc"
+            }
+          }
+        },
+        {
+          "a": 15,
+          "b": true,
+          "p": "1774.856",
+          "s": "2.8038",
+          "r": false,
+          "t": {
+            "limit": {
+              "tif": "Gtc"
+            }
+          }
+        },
+        {
+          "a": 26,
+          "b": true,
+          "p": "4629.561",
+          "s": "1.1913",
+          "r": false,
+          "t": {
+            "limit": {
+              "tif": "Gtc"
+            }
+          }
+        }
+      ],
+      "grouping": "na"
+    },
+    "vault_address": null,
+    "nonce": 1000000009375,
+    "expires_after": 1000000309375,
+    "is_mainnet": true,
+    "expected_action_hash": "<PRIVATE_KEY>",
+    "expected_r": "<PRIVATE_KEY>",
+    "expected_s": "<PRIVATE_KEY>",
+    "expected_v": 28
+  },
+  {
+    "private_key": "<PRIVATE_KEY>",
+    "action": {
+      "type": "cancel",
+      "cancels": [
+        {
+          "a": 22,
+          "o": 8080621073
+        }
+      ]
+    },
+    "vault_address": null,
+    "nonce": 1000000007256,
+    "expires_after": null,
+    "is_mainnet": false,
+    "expected_action_hash": "<PRIVATE_KEY>",
+    "expected_r": "<PRIVATE_KEY>",
+    "expected_s": "0x7bee6f7f0481ff4c360d9434e77b4bfeeab06e4db58b378bb5b0af02ae85246",
+    "expected_v": 27
+  },
+  {
+    "private_key": "<PRIVATE_KEY>",
+    "action": {
+      "type": "cancelByCloid",
+      "cancels": [
+        {
+          "asset": 22,
+          "cloid": "0xc84a7b28550a1b46ecab3301bc8f7d29"
+        }
+      ]
+    },
+    "vault_address": null,
+    "nonce": 1000000013732,
+    "expires_after": null,
+    "is_mainnet": true,
+    "expected_action_hash": "<PRIVATE_KEY>",
+    "expected_r": "<PRIVATE_KEY>",
+    "expected_s": "0x3a179139459ffaaf837f7e1d32c2e2fd3edc7c3ab1961ab39f1a1661cb23210",
+    "expected_v": 28
+  },
+  {
+    "private_key": "<PRIVATE_KEY>",
+    "action": {
+      "type": "cancel",
+      "cancels": [
+        {
+          "a": 47,
+          "o": 3482141803
+        },
+        {
+          "a": 17,
+          "o": 3011966885
+        },
+        {
+          "a": 24,
+          "o": 3745927825
+        },
+        {
+          "a": 30,
+          "o": 955345538
+        }
+      ]
+    },
+    "vault_address": "<EVM_ADDRESS>",
+    "nonce": 1000000014665,
+    "expires_after": null,
+    "is_mainnet": true,
+    "expected_action_hash": "<PRIVATE_KEY>",
+    "expected_r": "<PRIVATE_KEY>",
+    "expected_s": "0x6cb9212b1be8ee5ff069eb82933c283828a57cc1cf561acf9b400e2333e9414",
+    "expected_v": 28
+  },
+  {
+    "private_key": "<PRIVATE_KEY>",
+    "action": {
+      "type": "order",
+      "orders": [
+        {
+          "a": 44,
+          "b": true,
+          "p": "18380.93",
+          "s": "0.79555",
+          "r": false,
+          "t": {
+            "limit": {
+              "tif": "Gtc"
+            }
+          },
+          "c": "0xa8f7ef5a060edf5b391184973a43b2ba"
+        }
+      ],
+      "grouping": "na",
+      "builder": {
+        "b": "<EVM_ADDRESS>",
+        "f": 1
+      }
+    },
+    "vault_address": null,
+    "nonce": 1000000010425,
+    "expires_after": null,
+    "is_mainnet": true,
+    "expected_action_hash": "<PRIVATE_KEY>",
+    "expected_r": "<PRIVATE_KEY>",
+    "expected_s": "<PRIVATE_KEY>",
+    "expected_v": 27
+  },
+  {
+    "private_key": "<PRIVATE_KEY>",
+    "action": {
+      "type": "order",
+      "orders": [
+        {
+          "a": 25,
+          "b": false,
+          "p": "1708.48",
+          "s": "2.5944",
+          "r": true,
+          "t": {
+            "trigger": {
+              "isMarket": false,
+              "triggerPx": "1820.62",
+              "tpsl": "sl"
+            }
+          }
+        }
+      ],
+      "grouping": "na"
+    },
+    "vault_address": null,
+    "nonce": 1000000016183,
+    "expires_after": null,
+    "is_mainnet": true,
+    "expected_action_hash": "<PRIVATE_KEY>",
+    "expected_r": "<PRIVATE_KEY>",
+    "expected_s": "<PRIVATE_KEY>",
+    "expected_v": 27
+  },
+  {
+    "private_key": "<PRIVATE_KEY>",
+    "action": {
+      "type": "scheduleCancel",
+      "time": 5054567670832
+    },
+    "vault_address": null,
+    "nonce": 1000000011814,
+    "expires_after": null,
+    "is_mainnet": false,
+    "expected_action_hash": "<PRIVATE_KEY>",
+    "expected_r": "<PRIVATE_KEY>",
+    "expected_s": "<PRIVATE_KEY>",
+    "expected_v": 27
+  },
+  {
+    "private_key": "<PRIVATE_KEY>",
+    "action": {
+      "type": "order",
+      "orders": [
+        {
+          "a": 45,
+          "b": false,
+          "p": "3156.7501",
+          "s": "5.965753",
+          "r": false,
+          "t": {
+            "limit": {
+              "tif": "Alo"
+            }
+          }
+        }
+      ],
+      "grouping": "na"
+    },
+    "vault_address": null,
+    "nonce": 1000000012811,
+    "expires_after": null,
+    "is_mainnet": true,
+    "expected_action_hash": "<PRIVATE_KEY>",
+    "expected_r": "<PRIVATE_KEY>",
+    "expected_s": "<PRIVATE_KEY>",
+    "expected_v": 27
+  },
+  {
+    "private_key": "<PRIVATE_KEY>",
+    "action": {
+      "type": "order",
+      "orders": [
+        {
+          "a": 38,
+          "b": true,
+          "p": "1932.125",
+          "s": "2.8872",
+          "r": false,
+          "t": {
+            "limit": {
+              "tif": "Gtc"
+            }
+          }
+        },
+        {
+          "a": 16,
+          "b": true,
+          "p": "3546.839",
+          "s": "0.0184",
+          "r": false,
+          "t": {
+            "limit": {
+              "tif": "Gtc"
+            }
+          }
+        },
+        {
+          "a": 34,
+          "b": true,
+          "p": "1827.465",
+          "s": "0.3592",
+          "r": false,
+          "t": {
+            "limit": {
+              "tif": "Gtc"
+            }
+          }
+        },
+        {
+          "a": 42,
+          "b": false,
+          "p": "3119.545",
+          "s": "3.3203",
+          "r": false,
+          "t": {
+            "limit": {
+              "tif": "Gtc"
+            }
+          }
+        },
+        {
+          "a": 7,
+          "b": false,
+          "p": "2540.541",
+          "s": "3.3378",
+          "r": false,
+          "t": {
+            "limit": {
+              "tif": "Gtc"
+            }
+          }
+        }
+      ],
+      "grouping": "na"
+    },
+    "vault_address": null,
+    "nonce": 1000000013153,
+    "expires_after": null,
+    "is_mainnet": true,
+    "expected_action_hash": "<PRIVATE_KEY>",
+    "expected_r": "<PRIVATE_KEY>",
+    "expected_s": "<PRIVATE_KEY>",
+    "expected_v": 28
+  },
+  {
+    "private_key": "<PRIVATE_KEY>",
+    "action": {
+      "type": "cancel",
+      "cancels": [
+        {
+          "a": 51,
+          "o": 7289454631
+        }
+      ]
+    },
+    "vault_address": null,
+    "nonce": 1000000017029,
+    "expires_after": null,
+    "is_mainnet": true,
+    "expected_action_hash": "<PRIVATE_KEY>",
+    "expected_r": "<PRIVATE_KEY>",
+    "expected_s": "<PRIVATE_KEY>",
+    "expected_v": 27
+  },
+  {
+    "private_key": "<PRIVATE_KEY>",
+    "action": {
+      "type": "cancelByCloid",
+      "cancels": [
+        {
+          "asset": 16,
+          "cloid": "0xf0bbac67aa38d0a16ba25efe311c6eb6"
+        }
+      ]
+    },
+    "vault_address": "<EVM_ADDRESS>",
+    "nonce": 1000000014294,
+    "expires_after": null,
+    "is_mainnet": true,
+    "expected_action_hash": "<PRIVATE_KEY>",
+    "expected_r": "0x657b71541fbbf20161b896da5d1005fbaf61fc481dce7743c8c6dd92fa70fc0",
+    "expected_s": "<PRIVATE_KEY>",
+    "expected_v": 27
+  },
+  {
+    "private_key": "<PRIVATE_KEY>",
+    "action": {
+      "type": "cancel",
+      "cancels": [
+        {
+          "a": 47,
+          "o": 3877520295
+        },
+        {
+          "a": 39,
+          "o": 6739255770
+        },
+        {
+          "a": 25,
+          "o": 4296710796
+        },
+        {
+          "a": 18,
+          "o": 5197695042
+        }
+      ]
+    },
+    "vault_address": null,
+    "nonce": 1000000017722,
+    "expires_after": 1000000317722,
+    "is_mainnet": false,
+    "expected_action_hash": "<PRIVATE_KEY>",
+    "expected_r": "<PRIVATE_KEY>",
+    "expected_s": "<PRIVATE_KEY>",
+    "expected_v": 28
+  },
+  {
+    "private_key": "<PRIVATE_KEY>",
+    "action": {
+      "type": "order",
+      "orders": [
+        {
+          "a": 77,
+          "b": true,
+          "p": "39316.87",
+          "s": "0.46552",
+          "r": false,
+          "t": {
+            "limit": {
+              "tif": "Gtc"
+            }
+          },
+          "c": "0x82dc4c8e36b5229aacf5e81e71316269"
+        }
+      ],
+      "grouping": "na",
+      "builder": {
+        "b": "<EVM_ADDRESS>",
+        "f": 1
+      }
+    },
+    "vault_address": null,
+    "nonce": 1000000016109,
+    "expires_after": null,
+    "is_mainnet": true,
+    "expected_action_hash": "<PRIVATE_KEY>",
+    "expected_r": "<PRIVATE_KEY>",
+    "expected_s": "<PRIVATE_KEY>",
+    "expected_v": 27
+  },
+  {
+    "private_key": "<PRIVATE_KEY>",
+    "action": {
+      "type": "order",
+      "orders": [
+        {
+          "a": 50,
+          "b": false,
+          "p": "4515.79",
+          "s": "2.3901",
+          "r": true,
+          "t": {
+            "trigger": {
+              "isMarket": true,
+              "triggerPx": "3328.37",
+              "tpsl": "sl"
+            }
+          }
+        }
+      ],
+      "grouping": "na"
+    },
+    "vault_address": null,
+    "nonce": 1000000016939,
+    "expires_after": null,
+    "is_mainnet": true,
+    "expected_action_hash": "<PRIVATE_KEY>",
+    "expected_r": "<PRIVATE_KEY>",
+    "expected_s": "<PRIVATE_KEY>",
+    "expected_v": 27
+  },
+  {
+    "private_key": "<PRIVATE_KEY>",
+    "action": {
+      "type": "scheduleCancel",
+      "time": 12792344932428
+    },
+    "vault_address": null,
+    "nonce": 1000000010161,
+    "expires_after": null,
+    "is_mainnet": true,
+    "expected_action_hash": "<PRIVATE_KEY>",
+    "expected_r": "<PRIVATE_KEY>",
+    "expected_s": "<PRIVATE_KEY>",
+    "expected_v": 27
+  },
+  {
+    "private_key": "<PRIVATE_KEY>",
+    "action": {
+      "type": "order",
+      "orders": [
+        {
+          "a": 192,
+          "b": true,
+          "p": "53856.3741",
+          "s": "2.246484",
+          "r": true,
+          "t": {
+            "limit": {
+              "tif": "Gtc"
+            }
+          }
+        }
+      ],
+      "grouping": "na"
+    },
+    "vault_address": null,
+    "nonce": 1000000009168,
+    "expires_after": null,
+    "is_mainnet": true,
+    "expected_action_hash": "<PRIVATE_KEY>",
+    "expected_r": "<PRIVATE_KEY>",
+    "expected_s": "<PRIVATE_KEY>",
+    "expected_v": 27
+  },
+  {
+    "private_key": "<PRIVATE_KEY>",
+    "action": {
+      "type": "order",
+      "orders": [
+        {
+          "a": 15,
+          "b": false,
+          "p": "3060.257",
+          "s": "3.8448",
+          "r": false,
+          "t": {
+            "limit": {
+              "tif": "Gtc"
+            }
+          }
+        },
+        {
+          "a": 29,
+          "b": false,
+          "p": "4431.823",
+          "s": "2.8826",
+          "r": false,
+          "t": {
+            "limit": {
+              "tif": "Gtc"
+            }
+          }
+        }
+      ],
+      "grouping": "na"
+    },
+    "vault_address": null,
+    "nonce": 1000000015196,
+    "expires_after": null,
+    "is_mainnet": false,
+    "expected_action_hash": "<PRIVATE_KEY>",
+    "expected_r": "<PRIVATE_KEY>",
+    "expected_s": "<PRIVATE_KEY>",
+    "expected_v": 27
+  },
+  {
+    "private_key": "<PRIVATE_KEY>",
+    "action": {
+      "type": "cancel",
+      "cancels": [
+        {
+          "a": 63,
+          "o": 1716495972
+        }
+      ]
+    },
+    "vault_address": "<EVM_ADDRESS>",
+    "nonce": 1000000011459,
+    "expires_after": null,
+    "is_mainnet": true,
+    "expected_action_hash": "<PRIVATE_KEY>",
+    "expected_r": "<PRIVATE_KEY>",
+    "expected_s": "<PRIVATE_KEY>",
+    "expected_v": 28
+  },
+  {
+    "private_key": "<PRIVATE_KEY>",
+    "action": {
+      "type": "cancelByCloid",
+      "cancels": [
+        {
+          "asset": 83,
+          "cloid": "0xc03f3538e4855aa1016b6287b00805cc"
+        }
+      ]
+    },
+    "vault_address": null,
+    "nonce": 1000000010925,
+    "expires_after": null,
+    "is_mainnet": true,
+    "expected_action_hash": "<PRIVATE_KEY>",
+    "expected_r": "<PRIVATE_KEY>",
+    "expected_s": "<PRIVATE_KEY>",
+    "expected_v": 27
+  },
+  {
+    "private_key": "<PRIVATE_KEY>",
+    "action": {
+      "type": "cancel",
+      "cancels": [
+        {
+          "a": 14,
+          "o": 6519578900
+        },
+        {
+          "a": 3,
+          "o": 2394039674
+        },
+        {
+          "a": 7,
+          "o": 1960488640
+        }
+      ]
+    },
+    "vault_address": null,
+    "nonce": 1000000016928,
+    "expires_after": null,
+    "is_mainnet": true,
+    "expected_action_hash": "<PRIVATE_KEY>",
+    "expected_r": "0x6438eed1f111fbad8b7c312fc58603c07d4a766439d76f7d9340ee8719cc9e7",
+    "expected_s": "<PRIVATE_KEY>",
+    "expected_v": 27
+  },
+  {
+    "private_key": "<PRIVATE_KEY>",
+    "action": {
+      "type": "order",
+      "orders": [
+        {
+          "a": 85,
+          "b": true,
+          "p": "31914.80",
+          "s": "0.55937",
+          "r": false,
+          "t": {
+            "limit": {
+              "tif": "Gtc"
+            }
+          },
+          "c": "0xe4347d51c1581092f335cba3513a7052"
+        }
+      ],
+      "grouping": "na",
+      "builder": {
+        "b": "<EVM_ADDRESS>",
+        "f": 1
+      }
+    },
+    "vault_address": null,
+    "nonce": 1000000016704,
+    "expires_after": null,
+    "is_mainnet": true,
+    "expected_action_hash": "<PRIVATE_KEY>",
+    "expected_r": "<PRIVATE_KEY>",
+    "expected_s": "<PRIVATE_KEY>",
+    "expected_v": 27
+  },
+  {
+    "private_key": "<PRIVATE_KEY>",
+    "action": {
+      "type": "order",
+      "orders": [
+        {
+          "a": 39,
+          "b": false,
+          "p": "4093.53",
+          "s": "2.6771",
+          "r": true,
+          "t": {
+            "trigger": {
+              "isMarket": false,
+              "triggerPx": "4169.79",
+              "tpsl": "sl"
+            }
+          }
+        }
+      ],
+      "grouping": "na"
+    },
+    "vault_address": null,
+    "nonce": 1000000012197,
+    "expires_after": null,
+    "is_mainnet": false,
+    "expected_action_hash": "<PRIVATE_KEY>",
+    "expected_r": "<PRIVATE_KEY>",
+    "expected_s": "<PRIVATE_KEY>",
+    "expected_v": 28
+  },
+  {
+    "private_key": "<PRIVATE_KEY>",
+    "action": {
+      "type": "scheduleCancel",
+      "time": 16833288164232
+    },
+    "vault_address": null,
+    "nonce": 1000000013973,
+    "expires_after": 1000000313973,
+    "is_mainnet": true,
+    "expected_action_hash": "<PRIVATE_KEY>",
+    "expected_r": "<PRIVATE_KEY>",
+    "expected_s": "<PRIVATE_KEY>",
+    "expected_v": 27
+  },
+  {
+    "private_key": "<PRIVATE_KEY>",
+    "action": {
+      "type": "order",
+      "orders": [
+        {
+          "a": 192,
+          "b": true,
+          "p": "67205.0447",
+          "s": "2.773186",
+          "r": false,
+          "t": {
+            "limit": {
+              "tif": "Alo"
+            }
+          }
+        }
+      ],
+      "grouping": "na"
+    },
+    "vault_address": null,
+    "nonce": 1000000013783,
+    "expires_after": null,
+    "is_mainnet": true,
+    "expected_action_hash": "<PRIVATE_KEY>",
+    "expected_r": "<PRIVATE_KEY>",
+    "expected_s": "<PRIVATE_KEY>",
+    "expected_v": 27
+  },
+  {
+    "private_key": "<PRIVATE_KEY>",
+    "action": {
+      "type": "order",
+      "orders": [
+        {
+          "a": 28,
+          "b": true,
+          "p": "3570.589",
+          "s": "1.1801",
+          "r": false,
+          "t": {
+            "limit": {
+              "tif": "Gtc"
+            }
+          }
+        },
+        {
+          "a": 21,
+          "b": false,
+          "p": "4466.204",
+          "s": "0.4121",
+          "r": false,
+          "t": {
+            "limit": {
+              "tif": "Gtc"
+            }
+          }
+        },
+        {
+          "a": 9,
+          "b": true,
+          "p": "1921.346",
+          "s": "0.7725",
+          "r": false,
+          "t": {
+            "limit": {
+              "tif": "Gtc"
+            }
+          }
+        },
+        {
+          "a": 13,
+          "b": true,
+          "p": "2080.191",
+          "s": "1.6611",
+          "r": false,
+          "t": {
+            "limit": {
+              "tif": "Gtc"
+            }
+          }
+        }
+      ],
+      "grouping": "na"
+    },
+    "vault_address": "<EVM_ADDRESS>",
+    "nonce": 1000000017634,
+    "expires_after": null,
+    "is_mainnet": true,
+    "expected_action_hash": "<PRIVATE_KEY>",
+    "expected_r": "<PRIVATE_KEY>",
+    "expected_s": "<PRIVATE_KEY>",
+    "expected_v": 27
+  },
+  {
+    "private_key": "<PRIVATE_KEY>",
+    "action": {
+      "type": "cancel",
+      "cancels": [
+        {
+          "a": 53,
+          "o": 267429213
+        }
+      ]
+    },
+    "vault_address": null,
+    "nonce": 1000000017021,
+    "expires_after": null,
+    "is_mainnet": true,
+    "expected_action_hash": "<PRIVATE_KEY>",
+    "expected_r": "<PRIVATE_KEY>",
+    "expected_s": "<PRIVATE_KEY>",
+    "expected_v": 27
+  },
+  {
+    "private_key": "<PRIVATE_KEY>",
+    "action": {
+      "type": "cancelByCloid",
+      "cancels": [
+        {
+          "asset": 49,
+          "cloid": "0xf2311f1795863a76c51155ffe7a37e81"
+        }
+      ]
+    },
+    "vault_address": null,
+    "nonce": 1000000010595,
+    "expires_after": null,
+    "is_mainnet": false,
+    "expected_action_hash": "<PRIVATE_KEY>",
+    "expected_r": "0x7d0eb7033b48701d2fe49969e54e8bcb482bf846a72b70f1fb0c3238d8d7bfc",
+    "expected_s": "<PRIVATE_KEY>",
+    "expected_v": 28
+  },
+  {
+    "private_key": "<PRIVATE_KEY>",
+    "action": {
+      "type": "cancel",
+      "cancels": [
+        {
+          "a": 24,
+          "o": 2048612359
+        },
+        {
+          "a": 22,
+          "o": 7884394612
+        },
+        {
+          "a": 34,
+          "o": 5242173773
+        },
+        {
+          "a": 14,
+          "o": 5467215543
+        }
+      ]
+    },
+    "vault_address": null,
+    "nonce": 1000000018368,
+    "expires_after": null,
+    "is_mainnet": true,
+    "expected_action_hash": "<PRIVATE_KEY>",
+    "expected_r": "<PRIVATE_KEY>",
+    "expected_s": "0xc59893d56e12268bbf2649bec185ee72d05cc4d197dfb282c92a2322695bec9",
+    "expected_v": 27
+  },
+  {
+    "private_key": "<PRIVATE_KEY>",
+    "action": {
+      "type": "order",
+      "orders": [
+        {
+          "a": 3,
+          "b": true,
+          "p": "23392.55",
+          "s": "0.66920",
+          "r": false,
+          "t": {
+            "limit": {
+              "tif": "Gtc"
+            }
+          },
+          "c": "0x2a405f12b963f37f67814c1fcc530e36"
+        }
+      ],
+      "grouping": "na",
+      "builder": {
+        "b": "<EVM_ADDRESS>",
+        "f": 1
+      }
+    },
+    "vault_address": null,
+    "nonce": 1000000018206,
+    "expires_after": null,
+    "is_mainnet": true,
+    "expected_action_hash": "<PRIVATE_KEY>",
+    "expected_r": "<PRIVATE_KEY>",
+    "expected_s": "<PRIVATE_KEY>",
+    "expected_v": 27
+  },
+  {
+    "private_key": "<PRIVATE_KEY>",
+    "action": {
+      "type": "order",
+      "orders": [
+        {
+          "a": 8,
+          "b": false,
+          "p": "4905.54",
+          "s": "1.6070",
+          "r": true,
+          "t": {
+            "trigger": {
+              "isMarket": false,
+              "triggerPx": "3000.27",
+              "tpsl": "tp"
+            }
+          }
+        }
+      ],
+      "grouping": "na"
+    },
+    "vault_address": null,
+    "nonce": 1000000012061,
+    "expires_after": null,
+    "is_mainnet": true,
+    "expected_action_hash": "<PRIVATE_KEY>",
+    "expected_r": "<PRIVATE_KEY>",
+    "expected_s": "<PRIVATE_KEY>",
+    "expected_v": 28
+  },
+  {
+    "private_key": "<PRIVATE_KEY>",
+    "action": {
+      "type": "scheduleCancel",
+      "time": 16082390764990
+    },
+    "vault_address": null,
+    "nonce": 1000000013046,
+    "expires_after": null,
+    "is_mainnet": true,
+    "expected_action_hash": "<PRIVATE_KEY>",
+    "expected_r": "<PRIVATE_KEY>",
+    "expected_s": "<PRIVATE_KEY>",
+    "expected_v": 27
+  },
+  {
+    "private_key": "<PRIVATE_KEY>",
+    "action": {
+      "type": "order",
+      "orders": [
+        {
+          "a": 118,
+          "b": true,
+          "p": "4117.7422",
+          "s": "3.791101",
+          "r": true,
+          "t": {
+            "limit": {
+              "tif": "Ioc"
+            }
+          }
+        }
+      ],
+      "grouping": "na"
+    },
+    "vault_address": "<EVM_ADDRESS>",
+    "nonce": 1000000016315,
+    "expires_after": null,
+    "is_mainnet": false,
+    "expected_action_hash": "<PRIVATE_KEY>",
+    "expected_r": "<PRIVATE_KEY>",
+    "expected_s": "<PRIVATE_KEY>",
+    "expected_v": 28
+  },
+  {
+    "private_key": "<PRIVATE_KEY>",
+    "action": {
+      "type": "order",
+      "orders": [
+        {
+          "a": 48,
+          "b": false,
+          "p": "1398.501",
+          "s": "4.7565",
+          "r": false,
+          "t": {
+            "limit": {
+              "tif": "Gtc"
+            }
+          }
+        },
+        {
+          "a": 26,
+          "b": false,
+          "p": "4176.205",
+          "s": "2.3568",
+          "r": false,
+          "t": {
+            "limit": {
+              "tif": "Gtc"
+            }
+          }
+        },
+        {
+          "a": 47,
+          "b": true,
+          "p": "4999.540",
+          "s": "1.7563",
+          "r": false,
+          "t": {
+            "limit": {
+              "tif": "Gtc"
+            }
+          }
+        },
+        {
+          "a": 41,
+          "b": true,
+          "p": "3908.353",
+          "s": "3.2623",
+          "r": false,
+          "t": {
+            "limit": {
+              "tif": "Gtc"
+            }
+          }
+        }
+      ],
+      "grouping": "na"
+    },
+    "vault_address": null,
+    "nonce": 1000000011605,
+    "expires_after": null,
+    "is_mainnet": true,
+    "expected_action_hash": "<PRIVATE_KEY>",
+    "expected_r": "<PRIVATE_KEY>",
+    "expected_s": "0x266a7734b23937ed8be748bb45580189237fb00aac8d595bc1efd5c32dcf8f2",
+    "expected_v": 28
+  },
+  {
+    "private_key": "<PRIVATE_KEY>",
+    "action": {
+      "type": "cancel",
+      "cancels": [
+        {
+          "a": 31,
+          "o": 8677466103
+        }
+      ]
+    },
+    "vault_address": null,
+    "nonce": 1000000013730,
+    "expires_after": 1000000313730,
+    "is_mainnet": true,
+    "expected_action_hash": "<PRIVATE_KEY>",
+    "expected_r": "<PRIVATE_KEY>",
+    "expected_s": "<PRIVATE_KEY>",
+    "expected_v": 27
+  },
+  {
+    "private_key": "<PRIVATE_KEY>",
+    "action": {
+      "type": "cancelByCloid",
+      "cancels": [
+        {
+          "asset": 30,
+          "cloid": "0x1d48a071ab61a7b1793b4c3220500494"
+        }
+      ]
+    },
+    "vault_address": null,
+    "nonce": 1000000020611,
+    "expires_after": null,
+    "is_mainnet": true,
+    "expected_action_hash": "<PRIVATE_KEY>",
+    "expected_r": "<PRIVATE_KEY>",
+    "expected_s": "<PRIVATE_KEY>",
+    "expected_v": 27
+  },
+  {
+    "private_key": "<PRIVATE_KEY>",
+    "action": {
+      "type": "cancel",
+      "cancels": [
+        {
+          "a": 29,
+          "o": 7299146481
+        },
+        {
+          "a": 49,
+          "o": 1584392712
+        }
+      ]
+    },
+    "vault_address": null,
+    "nonce": 1000000021434,
+    "expires_after": null,
+    "is_mainnet": true,
+    "expected_action_hash": "<PRIVATE_KEY>",
+    "expected_r": "<PRIVATE_KEY>",
+    "expected_s": "<PRIVATE_KEY>",
+    "expected_v": 28
+  },
+  {
+    "private_key": "<PRIVATE_KEY>",
+    "action": {
+      "type": "order",
+      "orders": [
+        {
+          "a": 77,
+          "b": true,
+          "p": "57827.71",
+          "s": "0.71864",
+          "r": false,
+          "t": {
+            "limit": {
+              "tif": "Gtc"
+            }
+          },
+          "c": "0xf6f7f0cc29ec8e49d1bdb8c0c71d5e60"
+        }
+      ],
+      "grouping": "na",
+      "builder": {
+        "b": "<EVM_ADDRESS>",
+        "f": 1
+      }
+    },
+    "vault_address": null,
+    "nonce": 1000000016741,
+    "expires_after": null,
+    "is_mainnet": false,
+    "expected_action_hash": "<PRIVATE_KEY>",
+    "expected_r": "<PRIVATE_KEY>",
+    "expected_s": "<PRIVATE_KEY>",
+    "expected_v": 27
+  },
+  {
+    "private_key": "<PRIVATE_KEY>",
+    "action": {
+      "type": "order",
+      "orders": [
+        {
+          "a": 6,
+          "b": false,
+          "p": "2935.56",
+          "s": "2.7874",
+          "r": true,
+          "t": {
+            "trigger": {
+              "isMarket": false,
+              "triggerPx": "2043.61",
+              "tpsl": "tp"
+            }
+          }
+        }
+      ],
+      "grouping": "na"
+    },
+    "vault_address": null,
+    "nonce": 1000000013027,
+    "expires_after": null,
+    "is_mainnet": true,
+    "expected_action_hash": "<PRIVATE_KEY>",
+    "expected_r": "0x477144f4973ca25872209ac8b6de91e4919d6124c0d0b4ed09c2c38c8dad424",
+    "expected_s": "<PRIVATE_KEY>",
+    "expected_v": 28
+  },
+  {
+    "private_key": "<PRIVATE_KEY>",
+    "action": {
+      "type": "scheduleCancel",
+      "time": 4583045755025
+    },
+    "vault_address": "<EVM_ADDRESS>",
+    "nonce": 1000000016860,
+    "expires_after": null,
+    "is_mainnet": true,
+    "expected_action_hash": "<PRIVATE_KEY>",
+    "expected_r": "<PRIVATE_KEY>",
+    "expected_s": "<PRIVATE_KEY>",
+    "expected_v": 27
+  },
+  {
+    "private_key": "<PRIVATE_KEY>",
+    "action": {
+      "type": "order",
+      "orders": [
+        {
+          "a": 175,
+          "b": true,
+          "p": "63718.5546",
+          "s": "5.659369",
+          "r": true,
+          "t": {
+            "limit": {
+              "tif": "Ioc"
+            }
+          }
+        }
+      ],
+      "grouping": "na"
+    },
+    "vault_address": null,
+    "nonce": 1000000020784,
+    "expires_after": null,
+    "is_mainnet": true,
+    "expected_action_hash": "<PRIVATE_KEY>",
+    "expected_r": "<PRIVATE_KEY>",
+    "expected_s": "<PRIVATE_KEY>",
+    "expected_v": 28
+  },
+  {
+    "private_key": "<PRIVATE_KEY>",
+    "action": {
+      "type": "order",
+      "orders": [
+        {
+          "a": 42,
+          "b": false,
+          "p": "354.094",
+          "s": "3.2412",
+          "r": false,
+          "t": {
+            "limit": {
+              "tif": "Gtc"
+            }
+          }
+        },
+        {
+          "a": 0,
+          "b": false,
+          "p": "4113.431",
+          "s": "0.5366",
+          "r": false,
+          "t": {
+            "limit": {
+              "tif": "Gtc"
+            }
+          }
+        },
+        {
+          "a": 23,
+          "b": false,
+          "p": "3539.470",
+          "s": "2.1831",
+          "r": false,
+          "t": {
+            "limit": {
+              "tif": "Gtc"
+            }
+          }
+        },
+        {
+          "a": 46,
+          "b": false,
+          "p": "3083.403",
+          "s": "4.5989",
+          "r": false,
+          "t": {
+            "limit": {
+              "tif": "Gtc"
+            }
+          }
+        },
+        {
+          "a": 49,
+          "b": false,
+          "p": "2329.720",
+          "s": "4.1304",
+          "r": false,
+          "t": {
+            "limit": {
+              "tif": "Gtc"
+            }
+          }
+        }
+      ],
+      "grouping": "na"
+    },
+    "vault_address": null,
+    "nonce": 1000000021900,
+    "expires_after": null,
+    "is_mainnet": true,
+    "expected_action_hash": "<PRIVATE_KEY>",
+    "expected_r": "<PRIVATE_KEY>",
+    "expected_s": "<PRIVATE_KEY>",
+    "expected_v": 27
+  },
+  {
+    "private_key": "<PRIVATE_KEY>",
+    "action": {
+      "type": "cancel",
+      "cancels": [
+        {
+          "a": 34,
+          "o": 4014170429
+        }
+      ]
+    },
+    "vault_address": null,
+    "nonce": 1000000016899,
+    "expires_after": null,
+    "is_mainnet": false,
+    "expected_action_hash": "<PRIVATE_KEY>",
+    "expected_r": "<PRIVATE_KEY>",
+    "expected_s": "<PRIVATE_KEY>",
+    "expected_v": 28
+  },
+  {
+    "private_key": "<PRIVATE_KEY>",
+    "action": {
+      "type": "cancelByCloid",
+      "cancels": [
+        {
+          "asset": 57,
+          "cloid": "0x91e1aa9676f72255c01f36bf3e6dd58b"
+        }
+      ]
+    },
+    "vault_address": null,
+    "nonce": 1000000022466,
+    "expires_after": null,
+    "is_mainnet": true,
+    "expected_action_hash": "<PRIVATE_KEY>",
+    "expected_r": "<PRIVATE_KEY>",
+    "expected_s": "<PRIVATE_KEY>",
+    "expected_v": 27
+  },
+  {
+    "private_key": "<PRIVATE_KEY>",
+    "action": {
+      "type": "cancel",
+      "cancels": [
+        {
+          "a": 24,
+          "o": 1444812498
+        },
+        {
+          "a": 31,
+          "o": 7949781902
+        },
+        {
+          "a": 11,
+          "o": 2094011038
+        },
+        {
+          "a": 22,
+          "o": 7721631199
+        }
+      ]
+    },
+    "vault_address": null,
+    "nonce": 1000000018180,
+    "expires_after": null,
+    "is_mainnet": true,
+    "expected_action_hash": "<PRIVATE_KEY>",
+    "expected_r": "<PRIVATE_KEY>",
+    "expected_s": "<PRIVATE_KEY>",
+    "expected_v": 27
+  },
+  {
+    "private_key": "<PRIVATE_KEY>",
+    "action": {
+      "type": "order",
+      "orders": [
+        {
+          "a": 35,
+          "b": true,
+          "p": "52831.17",
+          "s": "0.70148",
+          "r": false,
+          "t": {
+            "limit": {
+              "tif": "Gtc"
+            }
+          },
+          "c": "0x8441aefd0299436a8e48522346b98991"
+        }
+      ],
+      "grouping": "na",
+      "builder": {
+        "b": "<EVM_ADDRESS>",
+        "f": 1
+      }
+    },
+    "vault_address": null,
+    "nonce": 1000000015871,
+    "expires_after": 1000000315871,
+    "is_mainnet": true,
+    "expected_action_hash": "<PRIVATE_KEY>",
+    "expected_r": "<PRIVATE_KEY>",
+    "expected_s": "<PRIVATE_KEY>",
+    "expected_v": 28
+  },
+  {
+    "private_key": "<PRIVATE_KEY>",
+    "action": {
+      "type": "order",
+      "orders": [
+        {
+          "a": 5,
+          "b": false,
+          "p": "1282.64",
+          "s": "1.2252",
+          "r": true,
+          "t": {
+            "trigger": {
+              "isMarket": true,
+              "triggerPx": "3483.99",
+              "tpsl": "sl"
+            }
+          }
+        }
+      ],
+      "grouping": "na"
+    },
+    "vault_address": "<EVM_ADDRESS>",
+    "nonce": 1000000020220,
+    "expires_after": null,
+    "is_mainnet": true,
+    "expected_action_hash": "<PRIVATE_KEY>",
+    "expected_r": "0x3e18543b8a87924db61e23fcfeed6d915fc2c7216edb32c82108378fccdd207",
+    "expected_s": "<PRIVATE_KEY>",
+    "expected_v": 27
+  },
+  {
+    "private_key": "<PRIVATE_KEY>",
+    "action": {
+      "type": "scheduleCancel",
+      "time": 1608996009491
+    },
+    "vault_address": null,
+    "nonce": 1000000014539,
+    "expires_after": null,
+    "is_mainnet": false,
+    "expected_action_hash": "<PRIVATE_KEY>",
+    "expected_r": "<PRIVATE_KEY>",
+    "expected_s": "<PRIVATE_KEY>",
+    "expected_v": 28
+  },
+  {
+    "private_key": "<PRIVATE_KEY>",
+    "action": {
+      "type": "order",
+      "orders": [
+        {
+          "a": 75,
+          "b": true,
+          "p": "32411.6502",
+          "s": "2.433127",
+          "r": false,
+          "t": {
+            "limit": {
+              "tif": "Ioc"
+            }
+          }
+        }
+      ],
+      "grouping": "na"
+    },
+    "vault_address": null,
+    "nonce": 1000000022220,
+    "expires_after": null,
+    "is_mainnet": true,
+    "expected_action_hash": "<PRIVATE_KEY>",
+    "expected_r": "<PRIVATE_KEY>",
+    "expected_s": "<PRIVATE_KEY>",
+    "expected_v": 27
+  },
+  {
+    "private_key": "<PRIVATE_KEY>",
+    "action": {
+      "type": "order",
+      "orders": [
+        {
+          "a": 27,
+          "b": false,
+          "p": "1765.535",
+          "s": "2.2742",
+          "r": false,
+          "t": {
+            "limit": {
+              "tif": "Gtc"
+            }
+          }
+        },
+        {
+          "a": 19,
+          "b": false,
+          "p": "1160.385",
+          "s": "3.6092",
+          "r": false,
+          "t": {
+            "limit": {
+              "tif": "Gtc"
+            }
+          }
+        },
+        {
+          "a": 20,
+          "b": true,
+          "p": "3716.977",
+          "s": "4.7549",
+          "r": false,
+          "t": {
+            "limit": {
+              "tif": "Gtc"
+            }
+          }
+        },
+        {
+          "a": 44,
+          "b": true,
+          "p": "965.789",
+          "s": "3.6956",
+          "r": false,
+          "t": {
+            "limit": {
+              "tif": "Gtc"
+            }
+          }
+        }
+      ],
+      "grouping": "na"
+    },
+    "vault_address": null,
+    "nonce": 1000000017819,
+    "expires_after": null,
+    "is_mainnet": true,
+    "expected_action_hash": "<PRIVATE_KEY>",
+    "expected_r": "<PRIVATE_KEY>",
+    "expected_s": "<PRIVATE_KEY>",
+    "expected_v": 28
+  },
+  {
+    "private_key": "<PRIVATE_KEY>",
+    "action": {
+      "type": "cancel",
+      "cancels": [
+        {
+          "a": 92,
+          "o": 6858164011
+        }
+      ]
+    },
+    "vault_address": null,
+    "nonce": 1000000015073,
+    "expires_after": null,
+    "is_mainnet": true,
+    "expected_action_hash": "<PRIVATE_KEY>",
+    "expected_r": "<PRIVATE_KEY>",
+    "expected_s": "<PRIVATE_KEY>",
+    "expected_v": 27
+  },
+  {
+    "private_key": "<PRIVATE_KEY>",
+    "action": {
+      "type": "cancelByCloid",
+      "cancels": [
+        {
+          "asset": 24,
+          "cloid": "0x2defe1935c62b3a23a3c563e4bd6cee6"
+        }
+      ]
+    },
+    "vault_address": null,
+    "nonce": 1000000018515,
+    "expires_after": null,
+    "is_mainnet": true,
+    "expected_action_hash": "<PRIVATE_KEY>",
+    "expected_r": "<PRIVATE_KEY>",
+    "expected_s": "<PRIVATE_KEY>",
+    "expected_v": 28
+  }
+]

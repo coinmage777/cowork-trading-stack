@@ -1,0 +1,64 @@
+{
+  "symbol": "BTC/USDT:USDT",
+  "timeframe": "1d",
+  "bars": 1500,
+  "start": "2022-03-17T00:00:00+00:00",
+  "end": "2026-04-24T00:00:00+00:00",
+  "params": {
+    "atr_period": 10,
+    "multiplier": 8.5
+  },
+  "costs": {
+    "fee_per_side": 0.0004,
+    "slippage_per_side": 0.0005,
+    "notional": 10000.0
+  },
+  "stats": {
+    "trades": 2,
+    "wins": 2,
+    "losses": 0,
+    "wr_pct": 100.0,
+    "gross_win": 20225.19,
+    "gross_loss": 0,
+    "profit_factor": "inf",
+    "total_net_pnl": 20225.19,
+    "total_pct_on_notional": 202.25,
+    "max_win_streak": 2,
+    "max_loss_streak": 0,
+    "mdd_dollar": 0.0,
+    "mdd_pct_of_notional": 0.0,
+    "sharpe_daily_ann": 0.575,
+    "sharpe_per_trade": 1.455
+  },
+  "trades": [
+    {
+      "entry_ts": 1673568000000,
+      "entry_date": "2023-01-13",
+      "entry_price": 19934.16,
+      "exit_ts": 1722816000000,
+      "exit_date": "2024-08-05",
+      "exit_price": 53976.1,
+      "qty": 0.501651,
+      "gross_pnl": 17077.18,
+      "fees": 14.83,
+      "net_pnl": 17062.35,
+      "pnl_pct": 170.624,
+      "bars_held": 570
+    },
+    {
+      "entry_ts": 1730851200000,
+      "entry_date": "2024-11-06",
+      "entry_price": 75617.69,
+      "exit_ts": 1762992000000,
+      "exit_date": "2025-11-13",
+      "exit_price": 99604.47,
+      "qty": 0.132244,
+      "gross_pnl": 3172.11,
+      "fees": 9.27,
+      "net_pnl": 3162.84,
+      "pnl_pct": 31.628,
+      "bars_held": 372
+    }
+  ],
+  "open_mtm": null
+}

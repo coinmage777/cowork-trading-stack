@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Polymarket BTC Paper Dashboard</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="bg-orb orb-a"></div>
+  <div class="bg-orb orb-b"></div>
+  <div class="bg-grid"></div>
+
+  <main class="app-shell">
+    <header class="hero card">
+      <div>
+        <p class="eyebrow">Paper Mission Control</p>
+        <h1>페이퍼 모드 성과 대시보드</h1>
+        <p class="subtitle">실시간 성과, 복구 진행도, 자가개선 이력, 전략별 성과, 시간대별 편차를 한 화면에서 추적합니다.</p>
+      </div>
+      <div class="hero-meta">
+        <div class="pill" id="goal-pill">목표 확인 중</div>
+        <div class="stamp" id="generated-at">업데이트 준비 중</div>
+      </div>
+    </header>
+
+    <section class="kpi-grid">
+      <article class="card kpi spotlight">
+        <span class="label">오늘 페이퍼 손익</span>
+        <strong id="paper-today-pnl">--</strong>
+        <p id="paper-goal-copy">플러스 수익과 충분한 거래 수가 확인될 때까지 자동 검증합니다.</p>
+      </article>
+      <article class="card kpi">
+        <span class="label">오늘 승률</span>
+        <strong id="paper-win-rate">--</strong>
+        <p>단순 승률보다 손익과 함께 판단합니다.</p>
+      </article>
+      <article class="card kpi">
+        <span class="label">최근 20건 손익</span>
+        <strong id="recent20-pnl">--</strong>
+        <p>가장 최근 성과가 살아있는지 빠르게 체크합니다.</p>
+      </article>
+      <article class="card kpi">
+        <span class="label">복구 남은 금액</span>
+        <strong id="recovery-remaining">--</strong>
+        <p>실거래 재개 전까지 채워야 할 잔여 금액입니다.</p>
+      </article>
+    </section>
+
+    <section class="layout-grid">
+      <article class="card panel panel-wide">
+        <div class="panel-head">
+          <div>
+            <p class="eyebrow">Performance Curve</p>
+            <h2>누적 수익률 곡선</h2>
+          </div>
+          <p class="explain">최근 페이퍼 종료 거래 기준으로 누적 손익이 어떤 흐름인지 보여줍니다.</p>
+        </div>
+        <svg id="equity-chart" class="chart" viewBox="0 0 900 320" preserveAspectRatio="none"></svg>
+      </article>
+
+      <article class="card panel">
+        <div class="panel-head">
+          <div>
+            <p class="eyebrow">Recovery</p>
+            <h2>복구 진행도</h2>
+          </div>
+        </div>
+        <div class="meter-wrap">
+          <div class="meter">
+            <div class="meter-fill" id="recovery-fill"></div>
+          </div>
+          <div class="meter-meta">
+            <span id="recovery-progress">--</span>
+            <span id="recovery-effective">--</span>
+          </div>
+        </div>
+        <dl class="detail-list" id="recovery-detail"></dl>
+      </article>
+
+      <article class="card panel panel-wide">
+        <div class="panel-head">
+          <div>
+            <p class="eyebrow">Live Readiness</p>
+            <h2>실전 허용 게이트</h2>
+          </div>
+          <p class="explain">최근 페이퍼 표본이 최소 거래 수, 최소 손익, 최소 승률을 동시에 넘겨야 실전 후보로 봅니다.</p>
+        </div>
+        <div class="gate-grid">
+          <div class="gate-status" id="live-gate-status"></div>
+          <div class="gate-requirements" id="live-gate-requirements"></div>
+        </div>
+      </article>
+
+      <article class="card panel panel-wide">
+        <div class="panel-head">
+          <div>
+            <p class="eyebrow">Recommendation</p>
+            <h2>자동 추천 문구</h2>
+          </div>
+          <p class="explain">현재 표본 기준으로 무엇을 유지하고 무엇을 줄여야 하는지 자동으로 요약합니다.</p>
+        </div>
+        <div class="recommendation-grid">
+          <div class="recommendation-hero">
+            <div class="confidence-pill" id="recommendation-confidence">--</div>
+            <h3 id="recommendation-headline">--</h3>
+            <p id="recommendation-summary">--</p>
+          </div>
+          <div class="recommendation-list" id="recommendation-actions"></div>
+        </div>
+      </article>
+
+      <article class="card panel panel-wide">
+        <div class="panel-head">
+          <div>
+            <p class="eyebrow">Strategy Curves</p>
+            <h2>전략별 누적 곡선</h2>
+          </div>
+          <p class="explain">현재 성과가 좋은 상위 전략 3개의 누적 손익 흐름을 비교합니다.</p>
+        </div>
+        <div id="strategy-legend" class="legend-row"></div>
+        <svg id="strategy-chart" class="chart" viewBox="0 0 900 320" preserveAspectRatio="none"></svg>
+      </article>
+
+      <article class="card panel panel-wide">
+        <div class="panel-head">
+          <div>
+            <p class="eyebrow">Daily Result</p>
+            <h2>일별 손익 바 차트</h2>
+          </div>
+          <p class="explain">최근 일자별 성과와 변동성을 확인합니다.</p>
+        </div>
+        <svg id="daily-chart" class="chart" viewBox="0 0 900 250" preserveAspectRatio="none"></svg>
+      </article>
+
+      <article class="card panel panel-wide">
+        <div class="panel-head">
+          <div>
+            <p class="eyebrow">Hourly Edge</p>
+            <h2>시간대별 성과</h2>
+          </div>
+          <p class="explain">어느 시간대에 손익이 좋은지, 어느 시간대가 취약한지 빠르게 찾습니다.</p>
+        </div>
+        <svg id="hourly-chart" class="chart" viewBox="0 0 900 250" preserveAspectRatio="none"></svg>
+        <div class="hourly-summary" id="hourly-summary"></div>
+      </article>
+
+      <article class="card panel panel-wide">
+        <div class="panel-head">
+          <div>
+            <p class="eyebrow">Drift Monitor</p>
+            <h2>랭킹 변화와 시간당 변화</h2>
+          </div>
+          <p class="explain">최근 20건 대비 이전 20건의 전략 순위 변동과, 직전 1시간 대비 손익/승률 변화를 함께 표시합니다.</p>
+        </div>
+        <div class="drift-grid">
+          <div class="drift-box">
+            <h3>전략 랭킹 변동</h3>
+            <div id="strategy-rank-changes" class="timeline"></div>
+          </div>
+          <div class="drift-box">
+            <h3>시간당 변화</h3>
+            <div id="hourly-delta" class="hourly-delta"></div>
+          </div>
+        </div>
+      </article>
+      <article class="card panel">
+        <div class="panel-head">
+          <div>
+            <p class="eyebrow">Win / Loss Spread</p>
+            <h2>손익 분포</h2>
+          </div>
+        </div>
+        <svg id="histogram-chart" class="chart small-chart" viewBox="0 0 420 250" preserveAspectRatio="none"></svg>
+      </article>
+
+      <article class="card panel panel-wide">
+        <div class="panel-head">
+          <div>
+            <p class="eyebrow">Optimizer</p>
+            <h2>자가개선 상태</h2>
+          </div>
+          <p class="explain">최근 샘플 성과가 약하면 다른 프로필로 자동 전환하고, 필요하면 베팅 크기를 줄입니다.</p>
+        </div>
+        <div class="optimizer-grid">
+          <div class="optimizer-main">
+            <div class="stat-row"><span>현재 단계</span><strong id="optimizer-phase">--</strong></div>
+            <div class="stat-row"><span>현재 프로필</span><strong id="optimizer-profile">--</strong></div>
+            <div class="stat-row"><span>리스크 스케일</span><strong id="optimizer-risk">--</strong></div>
+            <div class="stat-row"><span>샘플 성과</span><strong id="optimizer-sample">--</strong></div>
+            <div class="stat-row"><span>한글 해석</span><strong id="optimizer-message">--</strong></div>
+          </div>
+          <div class="config-card" id="optimizer-config"></div>
+        </div>
+        <div class="blocked-box">
+          <h3>자동 차단 전략</h3>
+          <div id="blocked-strategies" class="chip-row"></div>
+        </div>
+        <div class="timeline" id="optimizer-history"></div>
+      </article>
+
+      <article class="card panel">
+        <div class="panel-head">
+          <div>
+            <p class="eyebrow">Mode Breakdown</p>
+            <h2>모드별 손익</h2>
+          </div>
+        </div>
+        <div id="mode-breakdown" class="mode-breakdown"></div>
+      </article>
+
+      <article class="card panel panel-wide">
+        <div class="panel-head">
+          <div>
+            <p class="eyebrow">Strategy Scoreboard</p>
+            <h2>전략별 손익 랭킹</h2>
+          </div>
+          <p class="explain">어떤 진입 타입이 실제로 돈을 벌었는지, 어떤 전략이 계속 새는지 바로 확인합니다.</p>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>전략</th>
+                <th>거래 수</th>
+                <th>승률</th>
+                <th>평균 손익</th>
+                <th>누적 손익</th>
+              </tr>
+            </thead>
+            <tbody id="strategy-score-body"></tbody>
+          </table>
+        </div>
+      </article>
+
+      <article class="card panel panel-wide">
+        <div class="panel-head">
+          <div>
+            <p class="eyebrow">Profile Scoreboard</p>
+            <h2>프로필별 성과</h2>
+          </div>
+          <p class="explain">옵티마이저가 쓰는 프로필 중 어떤 설정이 가장 안정적인지 추적합니다.</p>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>프로필</th>
+                <th>거래 수</th>
+                <th>승률</th>
+                <th>평균 손익</th>
+                <th>누적 손익</th>
+              </tr>
+            </thead>
+            <tbody id="profile-score-body"></tbody>
+          </table>
+        </div>
+      </article>
+
+      <article class="card panel panel-wide">
+        <div class="panel-head">
+          <div>
+            <p class="eyebrow">Market Groups</p>
+            <h2>시장군별 성과</h2>
+          </div>
+          <p class="explain">btc_15m, btc_1h, eth_15m 성과를 따로 봐야 뭐가 진짜 먹히는지 안 헷갈립니다.</p>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>시장군</th>
+                <th>자산</th>
+                <th>거래 수</th>
+                <th>승률</th>
+                <th>평균 손익</th>
+                <th>누적 손익</th>
+              </tr>
+            </thead>
+            <tbody id="group-score-body"></tbody>
+          </table>
+        </div>
+      </article>
+
+      <article class="card panel panel-wide">
+        <div class="panel-head">
+          <div>
+            <p class="eyebrow">Paper History</p>
+            <h2>페이퍼 거래 내역</h2>
+          </div>
+          <p class="explain">최근 종결된 페이퍼 트레이드와 손익을 확인합니다.</p>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>시각</th>
+                <th>시장</th>
+                <th>전략</th>
+                <th>방향</th>
+                <th>진입가</th>
+                <th>청산가</th>
+                <th>손익</th>
+              </tr>
+            </thead>
+            <tbody id="paper-history-body"></tbody>
+          </table>
+        </div>
+      </article>
+
+      <article class="card panel panel-wide">
+        <div class="panel-head">
+          <div>
+            <p class="eyebrow">Open Positions</p>
+            <h2>현재 포지션</h2>
+          </div>
+          <p class="explain">열린 포지션의 노출 금액과 만기 시각을 봅니다.</p>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>시장</th>
+                <th>모드</th>
+                <th>방향</th>
+                <th>사이즈</th>
+                <th>진입가</th>
+                <th>만기</th>
+              </tr>
+            </thead>
+            <tbody id="open-positions-body"></tbody>
+          </table>
+        </div>
+      </article>
+    </section>
+
+    <footer class="footer-note card">
+      <p id="translation-paper-goal">--</p>
+      <p id="translation-profit-notice">--</p>
+      <p id="translation-optimizer-note">--</p>
+    </footer>
+  </main>
+
+  <script src="./app.js"></script>
+</body>
+</html>
+

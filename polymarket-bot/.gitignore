@@ -1,0 +1,13 @@
+.env
+.env.example
+*.db
+*.db-journal
+__pycache__/
+*.pyc
+bot.log
+*.command
+node_modules/
+.venv/
+web_dashboard.out
+web_dashboard.err
+paper_optimizer_state.json

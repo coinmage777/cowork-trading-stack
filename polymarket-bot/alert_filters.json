@@ -1,0 +1,8 @@
+{
+  "disabled_prefixes": [
+    "merge_split_dry", "cold_split_dry", "reversal_dry",
+    "reversal_reject", "merge_split_stub", "cold_split_stub",
+    "live_mode_start", "bnb_recovered"
+  ],
+  "disabled_keys": []
+}

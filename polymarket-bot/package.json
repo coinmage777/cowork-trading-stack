@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "@polymarket/clob-client": "^5.8.0",
+    "dotenv": "^17.3.1",
+    "ethers": "^5.8.0"
+  }
+}
