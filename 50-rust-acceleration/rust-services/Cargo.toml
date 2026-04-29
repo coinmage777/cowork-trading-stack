@@ -1,0 +1,19 @@
+[workspace]
+resolver = "2"
+members = ["gap-recorder", "bbo-loop"]
+
+[workspace.package]
+edition = "2021"
+rust-version = "1.75"
+license = "MIT"
+repository = "internal"
+
+[profile.release]
+lto = "thin"
+codegen-units = 1
+opt-level = 3
+strip = true
+panic = "abort"
+
+[profile.dev]
+opt-level = 1
